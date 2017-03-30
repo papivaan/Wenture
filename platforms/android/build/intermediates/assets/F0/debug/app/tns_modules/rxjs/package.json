@@ -10,7 +10,7 @@
         "spec": ">=5.0.1 <5.1.0",
         "type": "range"
       },
-      "/Users/renne/Documents/code/Wenture/node_modules/nativescript-template-ng-groceries"
+      "/Users/renne/Documents/code/Wenture"
     ]
   ],
   "_from": "rxjs@>=5.0.1 <5.1.0",
@@ -38,14 +38,14 @@
     "type": "range"
   },
   "_requiredBy": [
-    "/nativescript-angular",
-    "/nativescript-template-ng-groceries"
+    "/",
+    "/nativescript-angular"
   ],
   "_resolved": "https://registry.npmjs.org/rxjs/-/rxjs-5.0.3.tgz",
   "_shasum": "fc8bdf464ebf938812748e4196788f392fef9754",
   "_shrinkwrap": null,
   "_spec": "rxjs@~5.0.1",
-  "_where": "/Users/renne/Documents/code/Wenture/node_modules/nativescript-template-ng-groceries",
+  "_where": "/Users/renne/Documents/code/Wenture",
   "author": {
     "name": "Ben Lesh",
     "email": "blesh@netflix.com"

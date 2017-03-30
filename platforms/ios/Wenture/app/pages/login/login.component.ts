@@ -28,6 +28,7 @@ export class LoginComponent implements OnInit {
   }
   ngOnInit() {
     this.page.actionBarHidden = true;
+    // TODO: Background doesn't work for some reason...
     this.page.backgroundImage = "res://bg_login";
   }
   submit() {
@@ -44,7 +45,7 @@ export class LoginComponent implements OnInit {
   login() {
     this.userService.login(this.user)
       .subscribe(
-        () => this.router.navigate(["/list"]),
+        () => this.router.navigate(["/map-page"]),
         (error) => alert("Unfortunately we could not find your account.")
       );
   }
