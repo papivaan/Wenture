@@ -1,0 +1,531 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+/* Begin PBXBuildFile section */
+		858B842D18CA22B800AB12DE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 858B833A18CA111C00AB12DE /* InfoPlist.strings */; };
+		CD45EE7C18DC2D5800FB50C0 /* app in Resources */ = {isa = PBXBuildFile; fileRef = CD45EE7A18DC2D5800FB50C0 /* app */; };
+		CD62955D1BB2678900AE3A93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD62955C1BB2678900AE3A93 /* main.m */; };
+		2F9774CCC76E4513B2047819 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A268B31727C4CAE8367FB69 /* LaunchScreen.storyboard */; };
+		74A5BAE3A0F248CCB8616C68 /* build.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 6DE2082AA21A4B47852F8B8E /* build.xcconfig */; };
+		D124AAA5AEDF4CDFA9F997DC /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7381EC62EC244E45A643EBB7 /* iTunesArtwork@2x.png */; };
+		438BAD80D76947A7BADAD5C4 /* icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = DFE905090FF147CCB43A26E5 /* icon-60.png */; };
+		2267337FC3C0469C98BDDE5A /* icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C11A7CEC57EE4E4E8D83DFA5 /* icon-60@2x.png */; };
+		A3073C9D65064B0CB682F723 /* icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A10F5C0D6714284BADADA18 /* icon-72.png */; };
+		BFD3A0F33E5046429A8DF9B3 /* icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6393199C18654F75B4483F0D /* icon-72@2x.png */; };
+		B9FE4AF791C246949D660423 /* icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D0DF9B904884C8EB6181E5F /* icon-76.png */; };
+		FF658B9F92AE43D09757A06C /* icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7A64CC2895F4D8EB357A9AB /* icon-76@2x.png */; };
+		FF4E731849594CCEAFC4CED4 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BFD35377E4942318F40EDCA /* icon.png */; };
+		C8399FD7311B4272BFA403C1 /* TNSWidgets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5053C640E3B84CBA8B41A729 /* TNSWidgets.framework */; };
+		6A6F77DC7CF7426AA85ED90C /* TNSWidgets.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5053C640E3B84CBA8B41A729 /* TNSWidgets.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		00A7D43D0E884894B70AA55D /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = A24699646DA64B98B55FD05B /* iTunesArtwork.png */; };
+		7C8307F05AB4432F83856BED /* icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F811FB7677E4DA48B4BFEEB /* icon-120.png */; };
+		3DE83842222A442CA1489EE9 /* icon-20.png in Resources */ = {isa = PBXBuildFile; fileRef = D404FB607F9541CC991F0C4D /* icon-20.png */; };
+		5EB5AB1E72D7407C8DCA6432 /* icon-20@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DFF6C9A6E17479594B49B2D /* icon-20@2x.png */; };
+		C0D541CE91F24C63AC1BD7AA /* icon-20@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8802143393A14C24B23AFA0D /* icon-20@3x.png */; };
+		1EC0A76B7C274740B94FEF3C /* icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = A259C8D9156A4B2F89EC7B82 /* icon-29.png */; };
+		4EA3A6CBFED349BAAA36AB21 /* icon-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C12E98B6927843E48FD82614 /* icon-29@2x.png */; };
+		E0E9EA83F8744EB2BAE2B6A3 /* icon-29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86300C5C4FED43608D3E2A47 /* icon-29@3x.png */; };
+		0AA3B5A1DD924A0FB57B3E03 /* icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = B528D8318AD8447DBF6016AF /* icon-40.png */; };
+		40D7ED26041144DD8D0A3F64 /* icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13D6D85408EF438DA45315DA /* icon-40@2x.png */; };
+		DB890A2FFFA94E04845F3B67 /* icon-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 667A8D1832954AD98854EBD3 /* icon-40@3x.png */; };
+		C0A45746D5D84E2A92EE3413 /* icon-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C5D4EBDB32B439C9CDA71B4 /* icon-50.png */; };
+		B7DD814A2CE044D098867476 /* icon-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E83A49CA4F646D591B1FFDC /* icon-50@2x.png */; };
+		6D6CA278CCD543B088906AEF /* icon-50@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 00511839F339489BB827B0C5 /* icon-50@3x.png */; };
+		88C71F6E5A6E47018E5DA1A7 /* icon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = 204C8B4C094043C0A8227AC2 /* icon-57.png */; };
+		2C050AD9BA70430092A09A17 /* icon-57@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ABA001D24A44441BE5FD63F /* icon-57@2x.png */; };
+		BBF771BB1D81434FBAEF27F5 /* icon-57@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1F10EC5296D4D1994ECBF81 /* icon-57@3x.png */; };
+		DDAEE17461174020BECB30AF /* icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D5F86064D374AACA6DD1688 /* icon-60@3x.png */; };
+		A660535EBBA84D23989EC49B /* icon-72@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F17D966BE7174E57B5E5D728 /* icon-72@3x.png */; };
+		EBA38E1D567E412BA95F6884 /* icon-76@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77EAF8DB0DD74EA187AEC6A8 /* icon-76@3x.png */; };
+		AA64E891AF9D4DD2884452CE /* icon-83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C64C3ED87DAB47E5AE0BE175 /* icon-83.5@2x.png */; };
+		1C936D38B4D24D528285B337 /* icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = F645B45276B04E55AE8FBAED /* icon-Small.png */; };
+		CC1C5054C0C04D1392E5CD09 /* icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 51941CF7322F43998E3875B5 /* icon-Small@2x.png */; };
+		AA41B5C59DE0437DAA34BEB9 /* icon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D444B6C5AE8C4E9AAE492D85 /* icon-Small@3x.png */; };
+		E8F81F265B904928B681BE80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0DB6B1A89394632B81EEC1F /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		85F5BDFC1A9363BE006B9701 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6A6F77DC7CF7426AA85ED90C /* TNSWidgets.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		858B832E18CA111C00AB12DE /* Wenture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wenture.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		858B833918CA111C00AB12DE /* Wenture-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Wenture-Info.plist"; sourceTree = "<group>"; };
+		858B833B18CA111C00AB12DE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		858B833F18CA111C00AB12DE /* Wenture-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Wenture-Prefix.pch"; sourceTree = "<group>"; };
+		858B843318CA22B800AB12DE /* Wenture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wenture.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD45EE7A18DC2D5800FB50C0 /* app */ = {isa = PBXFileReference; lastKnownFileType = folder; path = app; sourceTree = "<group>"; };
+		CD62955C1BB2678900AE3A93 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = internal/main.m; sourceTree = SOURCE_ROOT; };
+		CDD59A261BB43B5D00EC2671 /* build-debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "build-debug.xcconfig"; sourceTree = "<group>"; };
+		CDD59A271BB43B5D00EC2671 /* build-release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "build-release.xcconfig"; sourceTree = "<group>"; };
+		CDF4743E1BA4855C0087EA85 /* build.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = build.xcconfig; sourceTree = "<group>"; };
+		7A268B31727C4CAE8367FB69 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = LaunchScreen.storyboard; path = "Wenture/Resources/LaunchScreen.storyboard"; sourceTree = "<group>"; fileEncoding = 4; };
+		6DE2082AA21A4B47852F8B8E /* build.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = build.xcconfig; path = "Wenture/Resources/build.xcconfig"; sourceTree = "<group>"; fileEncoding = 4; };
+		7381EC62EC244E45A643EBB7 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iTunesArtwork@2x.png"; path = "Wenture/Resources/iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		DFE905090FF147CCB43A26E5 /* icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-60.png"; path = "Wenture/Resources/icon-60.png"; sourceTree = "<group>"; };
+		C11A7CEC57EE4E4E8D83DFA5 /* icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-60@2x.png"; path = "Wenture/Resources/icon-60@2x.png"; sourceTree = "<group>"; };
+		5A10F5C0D6714284BADADA18 /* icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-72.png"; path = "Wenture/Resources/icon-72.png"; sourceTree = "<group>"; };
+		6393199C18654F75B4483F0D /* icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-72@2x.png"; path = "Wenture/Resources/icon-72@2x.png"; sourceTree = "<group>"; };
+		9D0DF9B904884C8EB6181E5F /* icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-76.png"; path = "Wenture/Resources/icon-76.png"; sourceTree = "<group>"; };
+		D7A64CC2895F4D8EB357A9AB /* icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-76@2x.png"; path = "Wenture/Resources/icon-76@2x.png"; sourceTree = "<group>"; };
+		7BFD35377E4942318F40EDCA /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = "Wenture/Resources/icon.png"; sourceTree = "<group>"; };
+		5053C640E3B84CBA8B41A729 /* TNSWidgets.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TNSWidgets.framework; path = "$(SRCROOT)/../../node_modules/tns-core-modules-widgets/platforms/ios/TNSWidgets.framework"; sourceTree = "<group>"; };
+		A24699646DA64B98B55FD05B /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iTunesArtwork.png; path = "Wenture/Resources/iTunesArtwork.png"; sourceTree = "<group>"; };
+		8F811FB7677E4DA48B4BFEEB /* icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-120.png"; path = "Wenture/Resources/icon-120.png"; sourceTree = "<group>"; };
+		D404FB607F9541CC991F0C4D /* icon-20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-20.png"; path = "Wenture/Resources/icon-20.png"; sourceTree = "<group>"; };
+		2DFF6C9A6E17479594B49B2D /* icon-20@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-20@2x.png"; path = "Wenture/Resources/icon-20@2x.png"; sourceTree = "<group>"; };
+		8802143393A14C24B23AFA0D /* icon-20@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-20@3x.png"; path = "Wenture/Resources/icon-20@3x.png"; sourceTree = "<group>"; };
+		A259C8D9156A4B2F89EC7B82 /* icon-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-29.png"; path = "Wenture/Resources/icon-29.png"; sourceTree = "<group>"; };
+		C12E98B6927843E48FD82614 /* icon-29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-29@2x.png"; path = "Wenture/Resources/icon-29@2x.png"; sourceTree = "<group>"; };
+		86300C5C4FED43608D3E2A47 /* icon-29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-29@3x.png"; path = "Wenture/Resources/icon-29@3x.png"; sourceTree = "<group>"; };
+		B528D8318AD8447DBF6016AF /* icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-40.png"; path = "Wenture/Resources/icon-40.png"; sourceTree = "<group>"; };
+		13D6D85408EF438DA45315DA /* icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-40@2x.png"; path = "Wenture/Resources/icon-40@2x.png"; sourceTree = "<group>"; };
+		667A8D1832954AD98854EBD3 /* icon-40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-40@3x.png"; path = "Wenture/Resources/icon-40@3x.png"; sourceTree = "<group>"; };
+		2C5D4EBDB32B439C9CDA71B4 /* icon-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-50.png"; path = "Wenture/Resources/icon-50.png"; sourceTree = "<group>"; };
+		7E83A49CA4F646D591B1FFDC /* icon-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-50@2x.png"; path = "Wenture/Resources/icon-50@2x.png"; sourceTree = "<group>"; };
+		00511839F339489BB827B0C5 /* icon-50@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-50@3x.png"; path = "Wenture/Resources/icon-50@3x.png"; sourceTree = "<group>"; };
+		204C8B4C094043C0A8227AC2 /* icon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-57.png"; path = "Wenture/Resources/icon-57.png"; sourceTree = "<group>"; };
+		5ABA001D24A44441BE5FD63F /* icon-57@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-57@2x.png"; path = "Wenture/Resources/icon-57@2x.png"; sourceTree = "<group>"; };
+		E1F10EC5296D4D1994ECBF81 /* icon-57@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-57@3x.png"; path = "Wenture/Resources/icon-57@3x.png"; sourceTree = "<group>"; };
+		7D5F86064D374AACA6DD1688 /* icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-60@3x.png"; path = "Wenture/Resources/icon-60@3x.png"; sourceTree = "<group>"; };
+		F17D966BE7174E57B5E5D728 /* icon-72@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-72@3x.png"; path = "Wenture/Resources/icon-72@3x.png"; sourceTree = "<group>"; };
+		77EAF8DB0DD74EA187AEC6A8 /* icon-76@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-76@3x.png"; path = "Wenture/Resources/icon-76@3x.png"; sourceTree = "<group>"; };
+		C64C3ED87DAB47E5AE0BE175 /* icon-83.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-83.5@2x.png"; path = "Wenture/Resources/icon-83.5@2x.png"; sourceTree = "<group>"; };
+		F645B45276B04E55AE8FBAED /* icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-Small.png"; path = "Wenture/Resources/icon-Small.png"; sourceTree = "<group>"; };
+		51941CF7322F43998E3875B5 /* icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-Small@2x.png"; path = "Wenture/Resources/icon-Small@2x.png"; sourceTree = "<group>"; };
+		D444B6C5AE8C4E9AAE492D85 /* icon-Small@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-Small@3x.png"; path = "Wenture/Resources/icon-Small@3x.png"; sourceTree = "<group>"; };
+		E0DB6B1A89394632B81EEC1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = Assets.xcassets; path = "Wenture/Resources/Assets.xcassets"; sourceTree = "<group>"; fileEncoding = 4; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		858B83F418CA22B800AB12DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8399FD7311B4272BFA403C1 /* TNSWidgets.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		858B832518CA111C00AB12DE = {
+			isa = PBXGroup;
+			children = (
+				E070579D1B39A9D000214BF1 /* Resources */,
+				858B833718CA111C00AB12DE /* Wenture */,
+				858B833018CA111C00AB12DE /* Frameworks */,
+				858B832F18CA111C00AB12DE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		858B832F18CA111C00AB12DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				858B832E18CA111C00AB12DE /* Wenture.app */,
+				858B843318CA22B800AB12DE /* Wenture.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		858B833018CA111C00AB12DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5053C640E3B84CBA8B41A729 /* TNSWidgets.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		858B833718CA111C00AB12DE /* Wenture */ = {
+			isa = PBXGroup;
+			children = (
+				CD45EE7A18DC2D5800FB50C0 /* app */,
+				858B833818CA111C00AB12DE /* Supporting Files */,
+			);
+			path = Wenture;
+			sourceTree = "<group>";
+		};
+		858B833818CA111C00AB12DE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CDF4743E1BA4855C0087EA85 /* build.xcconfig */,
+				CDD59A261BB43B5D00EC2671 /* build-debug.xcconfig */,
+				CDD59A271BB43B5D00EC2671 /* build-release.xcconfig */,
+				858B833918CA111C00AB12DE /* Wenture-Info.plist */,
+				858B833A18CA111C00AB12DE /* InfoPlist.strings */,
+				CD62955C1BB2678900AE3A93 /* main.m */,
+				858B833F18CA111C00AB12DE /* Wenture-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E070579D1B39A9D000214BF1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7A268B31727C4CAE8367FB69 /* LaunchScreen.storyboard */,
+				6DE2082AA21A4B47852F8B8E /* build.xcconfig */,
+				7381EC62EC244E45A643EBB7 /* iTunesArtwork@2x.png */,
+				DFE905090FF147CCB43A26E5 /* icon-60.png */,
+				C11A7CEC57EE4E4E8D83DFA5 /* icon-60@2x.png */,
+				5A10F5C0D6714284BADADA18 /* icon-72.png */,
+				6393199C18654F75B4483F0D /* icon-72@2x.png */,
+				9D0DF9B904884C8EB6181E5F /* icon-76.png */,
+				D7A64CC2895F4D8EB357A9AB /* icon-76@2x.png */,
+				7BFD35377E4942318F40EDCA /* icon.png */,
+				A24699646DA64B98B55FD05B /* iTunesArtwork.png */,
+				8F811FB7677E4DA48B4BFEEB /* icon-120.png */,
+				D404FB607F9541CC991F0C4D /* icon-20.png */,
+				2DFF6C9A6E17479594B49B2D /* icon-20@2x.png */,
+				8802143393A14C24B23AFA0D /* icon-20@3x.png */,
+				A259C8D9156A4B2F89EC7B82 /* icon-29.png */,
+				C12E98B6927843E48FD82614 /* icon-29@2x.png */,
+				86300C5C4FED43608D3E2A47 /* icon-29@3x.png */,
+				B528D8318AD8447DBF6016AF /* icon-40.png */,
+				13D6D85408EF438DA45315DA /* icon-40@2x.png */,
+				667A8D1832954AD98854EBD3 /* icon-40@3x.png */,
+				2C5D4EBDB32B439C9CDA71B4 /* icon-50.png */,
+				7E83A49CA4F646D591B1FFDC /* icon-50@2x.png */,
+				00511839F339489BB827B0C5 /* icon-50@3x.png */,
+				204C8B4C094043C0A8227AC2 /* icon-57.png */,
+				5ABA001D24A44441BE5FD63F /* icon-57@2x.png */,
+				E1F10EC5296D4D1994ECBF81 /* icon-57@3x.png */,
+				7D5F86064D374AACA6DD1688 /* icon-60@3x.png */,
+				F17D966BE7174E57B5E5D728 /* icon-72@3x.png */,
+				77EAF8DB0DD74EA187AEC6A8 /* icon-76@3x.png */,
+				C64C3ED87DAB47E5AE0BE175 /* icon-83.5@2x.png */,
+				F645B45276B04E55AE8FBAED /* icon-Small.png */,
+				51941CF7322F43998E3875B5 /* icon-Small@2x.png */,
+				D444B6C5AE8C4E9AAE492D85 /* icon-Small@3x.png */,
+				E0DB6B1A89394632B81EEC1F /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		858B83EF18CA22B800AB12DE /* Wenture */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 858B843018CA22B800AB12DE /* Build configuration list for PBXNativeTarget "Wenture" */;
+			buildPhases = (
+				C97FD7AC1ADE5369004DB2A4 /* NativeScript PreBuild */,
+				858B83F218CA22B800AB12DE /* Sources */,
+				CD62955B1BB2651D00AE3A93 /* NativeScript PreLink */,
+				858B83F418CA22B800AB12DE /* Frameworks */,
+				858B842C18CA22B800AB12DE /* Resources */,
+				85F5BDFC1A9363BE006B9701 /* Embed Frameworks */,
+				CD3EAD351B05FF060042DBFC /* NativeScript PostBuild */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Wenture;
+			productName = JDBridgeApp;
+			productReference = 858B843318CA22B800AB12DE /* Wenture.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		858B832618CA111C00AB12DE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TNS;
+				LastUpgradeCheck = 500;
+				ORGANIZATIONNAME = Telerik;
+			};
+			buildConfigurationList = 858B832918CA111C00AB12DE /* Build configuration list for PBXProject "Wenture" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 858B832518CA111C00AB12DE;
+			productRefGroup = 858B832F18CA111C00AB12DE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				858B83EF18CA22B800AB12DE /* Wenture */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		858B842C18CA22B800AB12DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD45EE7C18DC2D5800FB50C0 /* app in Resources */,
+				858B842D18CA22B800AB12DE /* InfoPlist.strings in Resources */,
+				2F9774CCC76E4513B2047819 /* LaunchScreen.storyboard in Resources */,
+				74A5BAE3A0F248CCB8616C68 /* build.xcconfig in Resources */,
+				D124AAA5AEDF4CDFA9F997DC /* iTunesArtwork@2x.png in Resources */,
+				438BAD80D76947A7BADAD5C4 /* icon-60.png in Resources */,
+				2267337FC3C0469C98BDDE5A /* icon-60@2x.png in Resources */,
+				A3073C9D65064B0CB682F723 /* icon-72.png in Resources */,
+				BFD3A0F33E5046429A8DF9B3 /* icon-72@2x.png in Resources */,
+				B9FE4AF791C246949D660423 /* icon-76.png in Resources */,
+				FF658B9F92AE43D09757A06C /* icon-76@2x.png in Resources */,
+				FF4E731849594CCEAFC4CED4 /* icon.png in Resources */,
+				00A7D43D0E884894B70AA55D /* iTunesArtwork.png in Resources */,
+				7C8307F05AB4432F83856BED /* icon-120.png in Resources */,
+				3DE83842222A442CA1489EE9 /* icon-20.png in Resources */,
+				5EB5AB1E72D7407C8DCA6432 /* icon-20@2x.png in Resources */,
+				C0D541CE91F24C63AC1BD7AA /* icon-20@3x.png in Resources */,
+				1EC0A76B7C274740B94FEF3C /* icon-29.png in Resources */,
+				4EA3A6CBFED349BAAA36AB21 /* icon-29@2x.png in Resources */,
+				E0E9EA83F8744EB2BAE2B6A3 /* icon-29@3x.png in Resources */,
+				0AA3B5A1DD924A0FB57B3E03 /* icon-40.png in Resources */,
+				40D7ED26041144DD8D0A3F64 /* icon-40@2x.png in Resources */,
+				DB890A2FFFA94E04845F3B67 /* icon-40@3x.png in Resources */,
+				C0A45746D5D84E2A92EE3413 /* icon-50.png in Resources */,
+				B7DD814A2CE044D098867476 /* icon-50@2x.png in Resources */,
+				6D6CA278CCD543B088906AEF /* icon-50@3x.png in Resources */,
+				88C71F6E5A6E47018E5DA1A7 /* icon-57.png in Resources */,
+				2C050AD9BA70430092A09A17 /* icon-57@2x.png in Resources */,
+				BBF771BB1D81434FBAEF27F5 /* icon-57@3x.png in Resources */,
+				DDAEE17461174020BECB30AF /* icon-60@3x.png in Resources */,
+				A660535EBBA84D23989EC49B /* icon-72@3x.png in Resources */,
+				EBA38E1D567E412BA95F6884 /* icon-76@3x.png in Resources */,
+				AA64E891AF9D4DD2884452CE /* icon-83.5@2x.png in Resources */,
+				1C936D38B4D24D528285B337 /* icon-Small.png in Resources */,
+				CC1C5054C0C04D1392E5CD09 /* icon-Small@2x.png in Resources */,
+				AA41B5C59DE0437DAA34BEB9 /* icon-Small@3x.png in Resources */,
+				E8F81F265B904928B681BE80 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C97FD7AC1ADE5369004DB2A4 /* NativeScript PreBuild */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "NativeScript PreBuild";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SRCROOT/internal/nativescript-pre-build\"";
+			showEnvVarsInLog = 0;
+		};
+		CD3EAD351B05FF060042DBFC /* NativeScript PostBuild */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "NativeScript PostBuild";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SRCROOT/internal/nativescript-post-build\"";
+			showEnvVarsInLog = 0;
+		};
+		CD62955B1BB2651D00AE3A93 /* NativeScript PreLink */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "NativeScript PreLink";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SRCROOT/internal/nativescript-pre-link\"";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		858B83F218CA22B800AB12DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD62955D1BB2678900AE3A93 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		858B833A18CA111C00AB12DE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				858B833B18CA111C00AB12DE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		858B835818CA111C00AB12DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "armv7 arm64";
+			};
+			name = Debug;
+		};
+		858B835918CA111C00AB12DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv7 arm64";
+			};
+			name = Release;
+		};
+		858B843118CA22B800AB12DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDD59A261BB43B5D00EC2671 /* build-debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_MODULES = NO;
+				CLANG_MODULES_AUTOLINK = NO;
+				ENABLE_BITCODE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Wenture/Wenture-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Wenture/Wenture-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = Wenture;
+				VALID_ARCHS = "armv7 arm64";
+				WRAPPER_EXTENSION = app;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../node_modules/tns-core-modules-widgets/platforms/ios\"",
+				);
+			};
+			name = Debug;
+		};
+		858B843218CA22B800AB12DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDD59A271BB43B5D00EC2671 /* build-release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_MODULES = NO;
+				CLANG_MODULES_AUTOLINK = NO;
+				ENABLE_BITCODE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Wenture/Wenture-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Wenture/Wenture-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = Wenture;
+				VALID_ARCHS = "armv7 arm64";
+				WRAPPER_EXTENSION = app;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../node_modules/tns-core-modules-widgets/platforms/ios\"",
+				);
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		858B832918CA111C00AB12DE /* Build configuration list for PBXProject "Wenture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				858B835818CA111C00AB12DE /* Debug */,
+				858B835918CA111C00AB12DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		858B843018CA22B800AB12DE /* Build configuration list for PBXNativeTarget "Wenture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				858B843118CA22B800AB12DE /* Debug */,
+				858B843218CA22B800AB12DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 858B832618CA111C00AB12DE /* Project object */;
+}
