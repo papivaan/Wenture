@@ -23,8 +23,8 @@ export class LoginComponent implements OnInit {
 
   constructor(private router: Router, private userService: UserService, private page: Page) {
     this.user = new User();
-    this.user.email = "user@nativescript.org";
-    this.user.password = "password";
+    //this.user.email = "user@nativescript.org";
+    //this.user.password = "password";
   }
   ngOnInit() {
     this.page.actionBarHidden = true;
@@ -43,13 +43,20 @@ export class LoginComponent implements OnInit {
     }
   }
   login() {
+    if (this.user.email === "jalkanen@jaakko.fi" && this.user.password === "pasipekka") {
+      this.router.navigate(["/map-page"]);
+    } else alert("Unfortunately we could not find your account.");
+    /* This section is for everlive.
     this.userService.login(this.user)
       .subscribe(
         () => this.router.navigate(["/map-page"]),
         (error) => alert("Unfortunately we could not find your account.")
       );
+    */
   }
   signUp() {
+    alert("Registration is not yet available.")
+    /* This section is for everlive.
     this.userService.register(this.user)
       .subscribe(
         () => {
@@ -58,6 +65,7 @@ export class LoginComponent implements OnInit {
         },
         ()  => alert("Unfortunately we were unable to create your account.")
       );
+    */
   }
   toggleDisplay() {
     this.isLoggingIn = !this.isLoggingIn;
