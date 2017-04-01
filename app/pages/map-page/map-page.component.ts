@@ -19,5 +19,6 @@ export class MapPageComponent implements OnInit {
   //Map events
   onMapReady = (event) => {
     console.log("Map Ready");
+    // TODO: Set marker etc.
   };
 }
