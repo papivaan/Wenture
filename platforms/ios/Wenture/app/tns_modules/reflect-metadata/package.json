@@ -10,7 +10,7 @@
         "spec": ">=0.1.8 <0.2.0",
         "type": "range"
       },
-      "/Users/renne/Documents/code/Wenture/node_modules/nativescript-template-ng-groceries"
+      "/Users/renne/Documents/code/Wenture"
     ]
   ],
   "_from": "reflect-metadata@>=0.1.8 <0.2.0",
@@ -38,14 +38,14 @@
     "type": "range"
   },
   "_requiredBy": [
-    "/nativescript-angular",
-    "/nativescript-template-ng-groceries"
+    "/",
+    "/nativescript-angular"
   ],
   "_resolved": "https://registry.npmjs.org/reflect-metadata/-/reflect-metadata-0.1.10.tgz",
   "_shasum": "b4f83704416acad89988c9b15635d47e03b9344a",
   "_shrinkwrap": null,
   "_spec": "reflect-metadata@~0.1.8",
-  "_where": "/Users/renne/Documents/code/Wenture/node_modules/nativescript-template-ng-groceries",
+  "_where": "/Users/renne/Documents/code/Wenture",
   "author": {
     "name": "Ron Buckton",
     "email": "ron.buckton@microsoft.com",

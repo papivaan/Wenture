@@ -10,7 +10,7 @@
         "spec": "2.4.3",
         "type": "version"
       },
-      "/Users/renne/Documents/code/Wenture/node_modules/nativescript-template-ng-groceries"
+      "/Users/renne/Documents/code/Wenture"
     ]
   ],
   "_from": "@angular/platform-browser-dynamic@2.4.3",
@@ -38,14 +38,14 @@
     "type": "version"
   },
   "_requiredBy": [
-    "/nativescript-angular",
-    "/nativescript-template-ng-groceries"
+    "/",
+    "/nativescript-angular"
   ],
   "_resolved": "https://registry.npmjs.org/@angular/platform-browser-dynamic/-/platform-browser-dynamic-2.4.3.tgz",
   "_shasum": "d65cc9bc4487e2a86e2c6f6641c711fccfa90c5a",
   "_shrinkwrap": null,
   "_spec": "@angular/platform-browser-dynamic@2.4.3",
-  "_where": "/Users/renne/Documents/code/Wenture/node_modules/nativescript-template-ng-groceries",
+  "_where": "/Users/renne/Documents/code/Wenture",
   "author": {
     "name": "angular"
   },

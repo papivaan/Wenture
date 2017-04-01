@@ -16,6 +16,7 @@
     "rxjs": true,
     "symbol-observable": true,
     "url": true,
+    "nativescript-google-maps-sdk": true,
     "nativescript-theme-core": true,
     "tns-core-modules": true,
     "tns-core-modules-widgets": true
