@@ -23,12 +23,13 @@ export class LoginComponent implements OnInit {
 
   constructor(private router: Router, private userService: UserService, private page: Page) {
     this.user = new User();
-    this.user.email = "user@nativescript.org";
-    this.user.password = "password";
+    //this.user.email = "user@nativescript.org";
+    //this.user.password = "password";
   }
   ngOnInit() {
     this.page.actionBarHidden = true;
-    this.page.backgroundImage = "res://bg_login";
+    // TODO: Background doesn't work for some reason...
+    this.page.backgroundImage = "res://loginbg";
   }
   submit() {
     if (!this.user.isValidEmail()) {
@@ -42,13 +43,20 @@ export class LoginComponent implements OnInit {
     }
   }
   login() {
+    if (this.user.email === "jalkanen@jaakko.fi" && this.user.password === "pasipekka") {
+      this.router.navigate(["/map-page"]);
+    } else alert("Unfortunately we could not find your account.");
+    /* This section is for everlive.
     this.userService.login(this.user)
       .subscribe(
-        () => this.router.navigate(["/list"]),
+        () => this.router.navigate(["/map-page"]),
         (error) => alert("Unfortunately we could not find your account.")
       );
+    */
   }
   signUp() {
+    alert("Registration is not yet available.")
+    /* This section is for everlive.
     this.userService.register(this.user)
       .subscribe(
         () => {
@@ -57,13 +65,14 @@ export class LoginComponent implements OnInit {
         },
         ()  => alert("Unfortunately we were unable to create your account.")
       );
+    */
   }
   toggleDisplay() {
     this.isLoggingIn = !this.isLoggingIn;
     this.setTextFieldColors();
     let container = <View>this.container.nativeElement;
     container.animate({
-      backgroundColor: this.isLoggingIn ? new Color("white") : new Color("#301217"),
+      backgroundColor: this.isLoggingIn ? new Color("white") : new Color("#595459"),
       duration: 200
     });
   }
@@ -71,7 +80,7 @@ export class LoginComponent implements OnInit {
     let emailTextField = <TextField>this.email.nativeElement;
     let passwordTextField = <TextField>this.password.nativeElement;
 
-    let mainTextColor = new Color(this.isLoggingIn ? "black" : "#C4AFB4");
+    let mainTextColor = new Color(this.isLoggingIn ? "black" : "white");
     emailTextField.color = mainTextColor;
     passwordTextField.color = mainTextColor;
 

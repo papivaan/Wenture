@@ -46,6 +46,12 @@
 		CC1C5054C0C04D1392E5CD09 /* icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 51941CF7322F43998E3875B5 /* icon-Small@2x.png */; };
 		AA41B5C59DE0437DAA34BEB9 /* icon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D444B6C5AE8C4E9AAE492D85 /* icon-Small@3x.png */; };
 		E8F81F265B904928B681BE80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0DB6B1A89394632B81EEC1F /* Assets.xcassets */; };
+		F56B0115F8B54CDF9AE55C58 /* bg_login.png in Resources */ = {isa = PBXBuildFile; fileRef = D7897F8633164581B69944E5 /* bg_login.png */; };
+		6AEC45CD1C9B4CC8B6B20649 /* bg_login@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CAF5CC6F810B4196BB619C18 /* bg_login@2x.png */; };
+		F950B5F40C3A4DEDBA205B64 /* bg_login@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EBD98C5F0FAD4A38B2DD4845 /* bg_login@3x.png */; };
+		C97422AEEE0D49E19A41BEEA /* loginbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8565753E3C9E46BF8F6D8958 /* loginbg.png */; };
+		4B07E30DA75E480E9603B717 /* loginbg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E4F2AB4520745FA8536CC1C /* loginbg@2x.png */; };
+		C4BC341474DC41A5932B8174 /* loginbg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 738770691EB543278B8D510E /* loginbg@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -109,6 +115,12 @@
 		51941CF7322F43998E3875B5 /* icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-Small@2x.png"; path = "Wenture/Resources/icon-Small@2x.png"; sourceTree = "<group>"; };
 		D444B6C5AE8C4E9AAE492D85 /* icon-Small@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-Small@3x.png"; path = "Wenture/Resources/icon-Small@3x.png"; sourceTree = "<group>"; };
 		E0DB6B1A89394632B81EEC1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = Assets.xcassets; path = "Wenture/Resources/Assets.xcassets"; sourceTree = "<group>"; fileEncoding = 4; };
+		D7897F8633164581B69944E5 /* bg_login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg_login.png; path = "Wenture/Resources/bg_login.png"; sourceTree = "<group>"; };
+		CAF5CC6F810B4196BB619C18 /* bg_login@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bg_login@2x.png"; path = "Wenture/Resources/bg_login@2x.png"; sourceTree = "<group>"; };
+		EBD98C5F0FAD4A38B2DD4845 /* bg_login@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bg_login@3x.png"; path = "Wenture/Resources/bg_login@3x.png"; sourceTree = "<group>"; };
+		8565753E3C9E46BF8F6D8958 /* loginbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loginbg.png; path = "Wenture/Resources/loginbg.png"; sourceTree = "<group>"; };
+		6E4F2AB4520745FA8536CC1C /* loginbg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "loginbg@2x.png"; path = "Wenture/Resources/loginbg@2x.png"; sourceTree = "<group>"; };
+		738770691EB543278B8D510E /* loginbg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "loginbg@3x.png"; path = "Wenture/Resources/loginbg@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +223,12 @@
 				51941CF7322F43998E3875B5 /* icon-Small@2x.png */,
 				D444B6C5AE8C4E9AAE492D85 /* icon-Small@3x.png */,
 				E0DB6B1A89394632B81EEC1F /* Assets.xcassets */,
+				D7897F8633164581B69944E5 /* bg_login.png */,
+				CAF5CC6F810B4196BB619C18 /* bg_login@2x.png */,
+				EBD98C5F0FAD4A38B2DD4845 /* bg_login@3x.png */,
+				8565753E3C9E46BF8F6D8958 /* loginbg.png */,
+				6E4F2AB4520745FA8536CC1C /* loginbg@2x.png */,
+				738770691EB543278B8D510E /* loginbg@3x.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -308,6 +326,12 @@
 				CC1C5054C0C04D1392E5CD09 /* icon-Small@2x.png in Resources */,
 				AA41B5C59DE0437DAA34BEB9 /* icon-Small@3x.png in Resources */,
 				E8F81F265B904928B681BE80 /* Assets.xcassets in Resources */,
+				F56B0115F8B54CDF9AE55C58 /* bg_login.png in Resources */,
+				6AEC45CD1C9B4CC8B6B20649 /* bg_login@2x.png in Resources */,
+				F950B5F40C3A4DEDBA205B64 /* bg_login@3x.png in Resources */,
+				C97422AEEE0D49E19A41BEEA /* loginbg.png in Resources */,
+				4B07E30DA75E480E9603B717 /* loginbg@2x.png in Resources */,
+				C4BC341474DC41A5932B8174 /* loginbg@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,7 +1,1 @@
-/Users/renne/Documents/code/Wenture/platforms/android/src/main/assets/app/shared/user/user.service.js
-/Users/renne/Documents/code/Wenture/platforms/android/src/main/assets/app/shared/user/user.js
 /Users/renne/Documents/code/Wenture/platforms/android/src/main/assets/app/pages/login/login.component.js
-/Users/renne/Documents/code/Wenture/platforms/android/src/main/assets/app/app.module.js
-/Users/renne/Documents/code/Wenture/platforms/android/src/main/assets/app/app.component.js
-/Users/renne/Documents/code/Wenture/platforms/android/src/main/assets/app/app.routing.js
-/Users/renne/Documents/code/Wenture/platforms/android/src/main/assets/app/utils/hint-util.js

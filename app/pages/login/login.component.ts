@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     this.page.actionBarHidden = true;
     // TODO: Background doesn't work for some reason...
-    this.page.backgroundImage = "res://bg_login";
+    this.page.backgroundImage = "res://loginbg";
   }
   submit() {
     if (!this.user.isValidEmail()) {
@@ -72,7 +72,8 @@ export class LoginComponent implements OnInit {
     this.setTextFieldColors();
     let container = <View>this.container.nativeElement;
     container.animate({
-      backgroundColor: this.isLoggingIn ? new Color("white") : new Color("#301217"),
+      // TODO: Change the signup background color to something more appealing
+      backgroundColor: this.isLoggingIn ? new Color("white") : new Color("#8B4513"),
       duration: 200
     });
   }
@@ -80,7 +81,7 @@ export class LoginComponent implements OnInit {
     let emailTextField = <TextField>this.email.nativeElement;
     let passwordTextField = <TextField>this.password.nativeElement;
 
-    let mainTextColor = new Color(this.isLoggingIn ? "black" : "#C4AFB4");
+    let mainTextColor = new Color(this.isLoggingIn ? "black" : "white");
     emailTextField.color = mainTextColor;
     passwordTextField.color = mainTextColor;
 

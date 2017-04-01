@@ -12,6 +12,7 @@ export class UserService {
   constructor(private http: Http) {}
 
   register(user: User) {
+    /* This section is for everlive.
     let headers = new Headers();
     headers.append("Content-type", "application/json");
 
@@ -25,9 +26,11 @@ export class UserService {
       { headers: headers }
     )
     .catch(this.handleErrors);
+    */
   }
 
   login(user: User) {
+    /* This section is for everlive.
     let headers = new Headers();
     headers.append("Content-Type", "application/json");
 
@@ -45,6 +48,7 @@ export class UserService {
       Config.token = data.Result.access_token;
     })
     .catch(this.handleErrors);
+    */
   }
 
   handleErrors(error: Response) {

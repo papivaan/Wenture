@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/Users/renne/Documents/code/Wenture/platforms/android/build/intermediates/res/merged/F0/debug/drawable/abc_list_selector_holo_light.xml",
-        "source": "/Users/renne/Documents/code/Wenture/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/drawable/abc_list_selector_holo_light.xml"
-    },
-    {
         "merged": "/Users/renne/Documents/code/Wenture/platforms/android/build/intermediates/res/merged/F0/debug/drawable/abc_ic_voice_search_api_material.xml",
         "source": "/Users/renne/Documents/code/Wenture/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/drawable/abc_ic_voice_search_api_material.xml"
+    },
+    {
+        "merged": "/Users/renne/Documents/code/Wenture/platforms/android/build/intermediates/res/merged/F0/debug/drawable/abc_list_selector_holo_light.xml",
+        "source": "/Users/renne/Documents/code/Wenture/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/drawable/abc_list_selector_holo_light.xml"
     },
     {
         "merged": "/Users/renne/Documents/code/Wenture/platforms/android/build/intermediates/res/merged/F0/debug/drawable/design_snackbar_background.xml",

@@ -86,7 +86,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		RvBSZhZQ5aZ94UDZmIVz/CVCTBU=
+		iECp7W+Jyc/jIiI7N75TmSNM2bc=
 		</data>
 		<key>Frameworks/NativeScript.framework/Info.plist</key>
 		<data>
@@ -194,7 +194,7 @@
 		</data>
 		<key>LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		t0TsiFb63k49Wqxk1szlKnCGnHE=
+		W5tHVW4eLMez76I5t1uXd4aNntU=
 		</data>
 		<key>LaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -202,343 +202,11 @@
 		</data>
 		<key>LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		xJ7WvYx11/2B1cMRqS7LilgDAz4=
+		0LHOuLXk/+HRTre0+ywz58c+yWs=
 		</data>
 		<key>PkgInfo</key>
 		<data>
 		n57qDP4tZfLD1rCS43W0B4LQjzE=
-		</data>
-		<key>app/App_Resources/Android/AndroidManifest.xml</key>
-		<data>
-		G57xHGVhv9DpRdsmW24KD0f4eFQ=
-		</data>
-		<key>app/App_Resources/Android/app.gradle</key>
-		<data>
-		diCP4jUJf26nOFjbHzwPQ4BpqGI=
-		</data>
-		<key>app/App_Resources/Android/drawable-hdpi/icon.png</key>
-		<data>
-		z7RssznL7XbC9wwo2pPZ5UhPngg=
-		</data>
-		<key>app/App_Resources/Android/drawable-ldpi/icon.png</key>
-		<data>
-		+6t9oOQ7biSY3nTUTqfGrvR881o=
-		</data>
-		<key>app/App_Resources/Android/drawable-mdpi/icon.png</key>
-		<data>
-		OFTlNxQ8+wUmeef1rVa17mYVDPY=
-		</data>
-		<key>app/App_Resources/Android/drawable-xhdpi/icon.png</key>
-		<data>
-		tHOjlJuzLvLo/F5g02AumvHSI98=
-		</data>
-		<key>app/App_Resources/Android/drawable-xxhdpi/icon.png</key>
-		<data>
-		hIbdF3XmSBomYF9xd8pGJzjJ3HE=
-		</data>
-		<key>app/App_Resources/Android/drawable-xxxhdpi/icon.png</key>
-		<data>
-		UT4YXAnt1haSuzRPPl7D/upBrJI=
-		</data>
-		<key>app/App_Resources/Android/values/strings.xml</key>
-		<data>
-		NW+oaL38xdsZy2hJyxnkX3zTSak=
-		</data>
-		<key>app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/Contents.json</key>
-		<data>
-		lhDYIlbgX9UNHgtfW5+1F9tf2fs=
-		</data>
-		<key>app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/icon-29.png</key>
-		<data>
-		3nKajCk4aNyEnXanoXL1Hy/cwt8=
-		</data>
-		<key>app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/icon-29@2x.png</key>
-		<data>
-		0uMWBQ2ww0RLtNfNkjMMNVtIY88=
-		</data>
-		<key>app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/icon-29@3x.png</key>
-		<data>
-		Q4fFmqfr5+ah/SpbeV2PbBokbOo=
-		</data>
-		<key>app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/icon-40.png</key>
-		<data>
-		/2XjeAfC0TX8WKrR3y1bDaKtcf4=
-		</data>
-		<key>app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/icon-40@2x.png</key>
-		<data>
-		eJC3whlZhFt/txp47Ow3+Udtsis=
-		</data>
-		<key>app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/icon-40@3x.png</key>
-		<data>
-		00p2AYSQFjSKJ0hGg1cyXUkpzPo=
-		</data>
-		<key>app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/icon-50.png</key>
-		<data>
-		+gKbjse5yLldMLir0VhMUMXRfHI=
-		</data>
-		<key>app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/icon-50@2x.png</key>
-		<data>
-		EKykxTm5LgAE6EadzP8TG4KOzIY=
-		</data>
-		<key>app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/icon-57.png</key>
-		<data>
-		5hdoVdcXBEoIEueyAIg8bM9AAhU=
-		</data>
-		<key>app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/icon-57@2x.png</key>
-		<data>
-		/TQIuTxaw8O9VCo2UZvBPxe3c3s=
-		</data>
-		<key>app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/icon-60@2x.png</key>
-		<data>
-		9mo7CF8Xfjmb85LTr0hfTABm6NU=
-		</data>
-		<key>app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/icon-60@3x.png</key>
-		<data>
-		RCp3FPbpnTVqd9XDyCo1tX/TIgw=
-		</data>
-		<key>app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/icon-72.png</key>
-		<data>
-		DAwlriaGheAstyQLfdzP0RFwj8w=
-		</data>
-		<key>app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/icon-72@2x.png</key>
-		<data>
-		JveZGbKW6EGxg9V3aRmFR+/KbeY=
-		</data>
-		<key>app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/icon-76.png</key>
-		<data>
-		GAVmwlj9qOHPAafevf9nI6kWqA0=
-		</data>
-		<key>app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/icon-76@2x.png</key>
-		<data>
-		PShdxJmvtOGDHTv4BSBptGfASLk=
-		</data>
-		<key>app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/icon-83.5@2x.png</key>
-		<data>
-		+vANSsuDbXA/ROLi8Y88RsS40mU=
-		</data>
-		<key>app/App_Resources/iOS/Assets.xcassets/Contents.json</key>
-		<data>
-		Yk4quB7W9gNQWeYqHrf1Zhl1JW4=
-		</data>
-		<key>app/App_Resources/iOS/Assets.xcassets/LaunchImage.launchimage/Contents.json</key>
-		<data>
-		/PMCaYf6ukQro5/eYCRYFYJJAYI=
-		</data>
-		<key>app/App_Resources/iOS/Assets.xcassets/LaunchImage.launchimage/Default-568h@2x.png</key>
-		<data>
-		VmHTptUrPuWY7yNjVc09e8tr7A0=
-		</data>
-		<key>app/App_Resources/iOS/Assets.xcassets/LaunchImage.launchimage/Default-667h@2x.png</key>
-		<data>
-		Z0H3WvqXNO46fcQRjJd4TG7T9lY=
-		</data>
-		<key>app/App_Resources/iOS/Assets.xcassets/LaunchImage.launchimage/Default-736h@3x.png</key>
-		<data>
-		0gSilJHkuDQ3/f588EBoqhtJKLc=
-		</data>
-		<key>app/App_Resources/iOS/Assets.xcassets/LaunchImage.launchimage/Default-Landscape.png</key>
-		<data>
-		N9s+iiOZn1HiJY0y0xfJUDEtG7I=
-		</data>
-		<key>app/App_Resources/iOS/Assets.xcassets/LaunchImage.launchimage/Default-Landscape@2x.png</key>
-		<data>
-		k21aIUTg02Sq+tQ4Vzubcl4Pb5g=
-		</data>
-		<key>app/App_Resources/iOS/Assets.xcassets/LaunchImage.launchimage/Default-Landscape@3x.png</key>
-		<data>
-		1uvU7ilcauI7R80FIhaEmEkvrB4=
-		</data>
-		<key>app/App_Resources/iOS/Assets.xcassets/LaunchImage.launchimage/Default-Portrait.png</key>
-		<data>
-		Zk/jItPuBD1wNNU8b58CfB0SO0c=
-		</data>
-		<key>app/App_Resources/iOS/Assets.xcassets/LaunchImage.launchimage/Default-Portrait@2x.png</key>
-		<data>
-		sWmnObyHWHBba7nEKnhZijZEmqo=
-		</data>
-		<key>app/App_Resources/iOS/Assets.xcassets/LaunchImage.launchimage/Default.png</key>
-		<data>
-		UpilHjIdUEDGS/eFgFVyt4X2qF8=
-		</data>
-		<key>app/App_Resources/iOS/Assets.xcassets/LaunchImage.launchimage/Default@2x.png</key>
-		<data>
-		5FwPyf/KfAgLkhx5lgXp74beCKw=
-		</data>
-		<key>app/App_Resources/iOS/Assets.xcassets/LaunchScreen.AspectFill.imageset/Contents.json</key>
-		<data>
-		oBER3OVb+zTwA1TWy3Kx2yjAoXA=
-		</data>
-		<key>app/App_Resources/iOS/Assets.xcassets/LaunchScreen.AspectFill.imageset/LaunchScreen-AspectFill.png</key>
-		<data>
-		0UGBvimzBtsi3pNvsuxIJkp4igU=
-		</data>
-		<key>app/App_Resources/iOS/Assets.xcassets/LaunchScreen.AspectFill.imageset/LaunchScreen-AspectFill@2x.png</key>
-		<data>
-		vAhRSJV0WJwrJ7rgBg0HhWfP06Y=
-		</data>
-		<key>app/App_Resources/iOS/Assets.xcassets/LaunchScreen.Center.imageset/Contents.json</key>
-		<data>
-		OP7FevzLwyjrpG6eB0tfOf+byn8=
-		</data>
-		<key>app/App_Resources/iOS/Assets.xcassets/LaunchScreen.Center.imageset/LaunchScreen-Center.png</key>
-		<data>
-		1NMaXeZuQnCDEiiQWc1MXoHNf/M=
-		</data>
-		<key>app/App_Resources/iOS/Assets.xcassets/LaunchScreen.Center.imageset/LaunchScreen-Center@2x.png</key>
-		<data>
-		EvFQYq0WCWmE9aIsGDd+WwSTK/w=
-		</data>
-		<key>app/App_Resources/iOS/Info.plist</key>
-		<data>
-		fLa+LVCBvOR9wKKBllnyfWCYz/E=
-		</data>
-		<key>app/App_Resources/iOS/LaunchScreen.storyboard</key>
-		<data>
-		RlpE48nZZW3fqeW0VmTjaECkmlU=
-		</data>
-		<key>app/App_Resources/iOS/bg_login.png</key>
-		<data>
-		JNTW8lsYRvZ8Gj5J5tbc85EYp4g=
-		</data>
-		<key>app/App_Resources/iOS/bg_login@2x.png</key>
-		<data>
-		2E/GmcRHf3rfsg9wf2qNTmhpXFo=
-		</data>
-		<key>app/App_Resources/iOS/bg_login@3x.png</key>
-		<data>
-		Sq7Ol5X+VlIOv5h8EsZLv3qyars=
-		</data>
-		<key>app/App_Resources/iOS/build.xcconfig</key>
-		<data>
-		JWO3NQlntze55FFPjdsav+EU/L8=
-		</data>
-		<key>app/App_Resources/iOS/iTunesArtwork.png</key>
-		<data>
-		35HDhewvRskArOorqlrcv6m8R64=
-		</data>
-		<key>app/App_Resources/iOS/iTunesArtwork@2x.png</key>
-		<data>
-		AJ0vwiQ/jexmmJBmfOOP+X7zfEM=
-		</data>
-		<key>app/App_Resources/iOS/icon-120.png</key>
-		<data>
-		TA3ItdxTCV3+Xdc6hWkMd+1DdiU=
-		</data>
-		<key>app/App_Resources/iOS/icon-20.png</key>
-		<data>
-		v8TJdp0+pXBgISgcrKnWdmr9f8g=
-		</data>
-		<key>app/App_Resources/iOS/icon-20@2x.png</key>
-		<data>
-		pQkWZgaJMSI1SoMwQ0Jf9xULbjk=
-		</data>
-		<key>app/App_Resources/iOS/icon-20@3x.png</key>
-		<data>
-		rY7rA5fQJLMAbU87YU8oiqEaXts=
-		</data>
-		<key>app/App_Resources/iOS/icon-29.png</key>
-		<data>
-		OaowgkpJ1Gs2i2Axb6Z1IV0nRAs=
-		</data>
-		<key>app/App_Resources/iOS/icon-29@2x.png</key>
-		<data>
-		CRKU7ImQMduHTT2tf2n/XdT27Xw=
-		</data>
-		<key>app/App_Resources/iOS/icon-29@3x.png</key>
-		<data>
-		oRsWlLiO713DzNEVpmajgLdcdGk=
-		</data>
-		<key>app/App_Resources/iOS/icon-40.png</key>
-		<data>
-		pQkWZgaJMSI1SoMwQ0Jf9xULbjk=
-		</data>
-		<key>app/App_Resources/iOS/icon-40@2x.png</key>
-		<data>
-		YG/qKFhilm7JiwM5Z6CqIBT9d48=
-		</data>
-		<key>app/App_Resources/iOS/icon-40@3x.png</key>
-		<data>
-		TA3ItdxTCV3+Xdc6hWkMd+1DdiU=
-		</data>
-		<key>app/App_Resources/iOS/icon-50.png</key>
-		<data>
-		zpL9D/lHFNPikM1nD3iZi6ZmRhQ=
-		</data>
-		<key>app/App_Resources/iOS/icon-50@2x.png</key>
-		<data>
-		NbhKCWBcDJHZllE8NX217jbtAyk=
-		</data>
-		<key>app/App_Resources/iOS/icon-50@3x.png</key>
-		<data>
-		O/5AEeJVnsjLl6EMRK0QHQTQpXA=
-		</data>
-		<key>app/App_Resources/iOS/icon-57.png</key>
-		<data>
-		dKAIuV6IUPyKvEuL/aOKs0qJacg=
-		</data>
-		<key>app/App_Resources/iOS/icon-57@2x.png</key>
-		<data>
-		iD68L0o62j8nBgCN45mdkwnXQOk=
-		</data>
-		<key>app/App_Resources/iOS/icon-57@3x.png</key>
-		<data>
-		7j6Q86vV/kTmi4fTua7AvdgxRIY=
-		</data>
-		<key>app/App_Resources/iOS/icon-60.png</key>
-		<data>
-		rY7rA5fQJLMAbU87YU8oiqEaXts=
-		</data>
-		<key>app/App_Resources/iOS/icon-60@2x.png</key>
-		<data>
-		TA3ItdxTCV3+Xdc6hWkMd+1DdiU=
-		</data>
-		<key>app/App_Resources/iOS/icon-60@3x.png</key>
-		<data>
-		eAREk6pIzONoYGxjV7XwVNn49Uo=
-		</data>
-		<key>app/App_Resources/iOS/icon-72.png</key>
-		<data>
-		z7RssznL7XbC9wwo2pPZ5UhPngg=
-		</data>
-		<key>app/App_Resources/iOS/icon-72@2x.png</key>
-		<data>
-		hIbdF3XmSBomYF9xd8pGJzjJ3HE=
-		</data>
-		<key>app/App_Resources/iOS/icon-72@3x.png</key>
-		<data>
-		+tMHn09uTe3TUPiwnY7vzzLolt8=
-		</data>
-		<key>app/App_Resources/iOS/icon-76.png</key>
-		<data>
-		xB8Ug8vm6RkfUPExcWlELo950vU=
-		</data>
-		<key>app/App_Resources/iOS/icon-76@2x.png</key>
-		<data>
-		Cz1QQYNE6GjA8hX3W48JMAh3SJA=
-		</data>
-		<key>app/App_Resources/iOS/icon-76@3x.png</key>
-		<data>
-		YdlUbhns/k7AieOh5u1PID8k33Y=
-		</data>
-		<key>app/App_Resources/iOS/icon-83.5@2x.png</key>
-		<data>
-		Bjv9RYUNj46xGunQyuqo9sMLjjE=
-		</data>
-		<key>app/App_Resources/iOS/icon-Small.png</key>
-		<data>
-		OaowgkpJ1Gs2i2Axb6Z1IV0nRAs=
-		</data>
-		<key>app/App_Resources/iOS/icon-Small@2x.png</key>
-		<data>
-		CRKU7ImQMduHTT2tf2n/XdT27Xw=
-		</data>
-		<key>app/App_Resources/iOS/icon-Small@3x.png</key>
-		<data>
-		oRsWlLiO713DzNEVpmajgLdcdGk=
-		</data>
-		<key>app/App_Resources/iOS/icon.png</key>
-		<data>
-		dKAIuV6IUPyKvEuL/aOKs0qJacg=
 		</data>
 		<key>app/app.component.js</key>
 		<data>
@@ -562,11 +230,11 @@
 		</data>
 		<key>app/app.routing.js</key>
 		<data>
-		wAI37SD3glSKd6XjT0Qrq9Oma00=
+		fcNToLglnw49ET1F2ThxwkM10Y8=
 		</data>
 		<key>app/app.routing.ts</key>
 		<data>
-		ssBXYIvQNleA5jzXBGxoot9gvWc=
+		BW1Jb2JOyyZY1pF6ruUR9ckNEM4=
 		</data>
 		<key>app/main.js</key>
 		<data>
@@ -586,11 +254,11 @@
 		</data>
 		<key>app/pages/login/login.component.js</key>
 		<data>
-		FNJx92tU20wXqCbY7R8ZB0vEeQo=
+		WbO2Uwrn05nq8nc5CtZKo96Agco=
 		</data>
 		<key>app/pages/login/login.component.ts</key>
 		<data>
-		wX6squZvcS/dV/1dNjaWPWAhwjA=
+		H7Indy99U95AMjGKTdGah6UiBzI=
 		</data>
 		<key>app/pages/login/login.css</key>
 		<data>
@@ -606,11 +274,11 @@
 		</data>
 		<key>app/pages/map-page/map-page.component.js</key>
 		<data>
-		Y4YoU0KR0FDfVn3dHLuJG3aWSTo=
+		ymMQryOvlRRp6cU6+9vZ2gL6UqE=
 		</data>
 		<key>app/pages/map-page/map-page.component.ts</key>
 		<data>
-		2jmj7l5rSw0yVb/vlWAYkK/YBwk=
+		CotfXiCcbitpJK7SNkkYl7RDvqk=
 		</data>
 		<key>app/pages/map-page/map-page.css</key>
 		<data>
@@ -638,11 +306,11 @@
 		</data>
 		<key>app/shared/user/user.service.js</key>
 		<data>
-		qTsJkDiJQAfEK2S52NR0aL7jhLY=
+		sIxMOiho7H5liyAf0rqt9dQzG/Y=
 		</data>
 		<key>app/shared/user/user.service.ts</key>
 		<data>
-		DB9vA9rdV+zCAWIpaOibch9mKaI=
+		Ihbp+BhYkCKN/XSw/8eQPz4BXiI=
 		</data>
 		<key>app/shared/user/user.ts</key>
 		<data>
@@ -15428,6 +15096,18 @@
 		<data>
 		zrLQog5ieA+uyQxTEMI1kr7R2C8=
 		</data>
+		<key>bg_login.png</key>
+		<data>
+		tp7BcKHvUsxvUt1EsK1hEXDUPdw=
+		</data>
+		<key>bg_login@2x.png</key>
+		<data>
+		E6aX3gSBN0nnhTHBGdvPb+Wtz+M=
+		</data>
+		<key>bg_login@3x.png</key>
+		<data>
+		t/w6EBPHFEL6Aqq3mwH4nAbU8YU=
+		</data>
 		<key>build.xcconfig</key>
 		<data>
 		JWO3NQlntze55FFPjdsav+EU/L8=
@@ -15568,6 +15248,18 @@
 		<key>icon.png</key>
 		<data>
 		+KW9LmdMGlgzHqP+Ghzjza17M6Q=
+		</data>
+		<key>loginbg.png</key>
+		<data>
+		tp7BcKHvUsxvUt1EsK1hEXDUPdw=
+		</data>
+		<key>loginbg@2x.png</key>
+		<data>
+		E6aX3gSBN0nnhTHBGdvPb+Wtz+M=
+		</data>
+		<key>loginbg@3x.png</key>
+		<data>
+		t/w6EBPHFEL6Aqq3mwH4nAbU8YU=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -15796,11 +15488,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			RvBSZhZQ5aZ94UDZmIVz/CVCTBU=
+			iECp7W+Jyc/jIiI7N75TmSNM2bc=
 			</data>
 			<key>hash2</key>
 			<data>
-			QPbeBw9l3MbD6ixJwv+pexHsvaSH6jFZR8wbzQoz2CY=
+			x5u3RMzwh6knBW5me99v2/k7SzEM9dzu8906luHptuA=
 			</data>
 		</dict>
 		<key>Frameworks/NativeScript.framework/Info.plist</key>
@@ -16082,11 +15774,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			t0TsiFb63k49Wqxk1szlKnCGnHE=
+			W5tHVW4eLMez76I5t1uXd4aNntU=
 			</data>
 			<key>hash2</key>
 			<data>
-			z13lAM/IjY4kRo1ABRGUhkC+EVzttmwdW5r05Wy0Bu4=
+			jMFfmTFgoW1Gm5eUZWSVgU3hJ1t5TvP2awk9+zYduEI=
 			</data>
 		</dict>
 		<key>LaunchScreen.storyboardc/Info.plist</key>
@@ -16104,924 +15796,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			xJ7WvYx11/2B1cMRqS7LilgDAz4=
+			0LHOuLXk/+HRTre0+ywz58c+yWs=
 			</data>
 			<key>hash2</key>
 			<data>
-			F0EWKSQXVY3nZzuJ0WSvrbyy2d6hNLyL1pwloLAce74=
-			</data>
-		</dict>
-		<key>app/App_Resources/Android/AndroidManifest.xml</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			G57xHGVhv9DpRdsmW24KD0f4eFQ=
-			</data>
-			<key>hash2</key>
-			<data>
-			McDZUoTpFBGnTJRMsGEcXnQ++4q/QpDKp+ROsloOMBs=
-			</data>
-		</dict>
-		<key>app/App_Resources/Android/app.gradle</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			diCP4jUJf26nOFjbHzwPQ4BpqGI=
-			</data>
-			<key>hash2</key>
-			<data>
-			w0o90Z45Nk+nKiFReX/vgw8rLnGJkV/RS/rnE1VVMXM=
-			</data>
-		</dict>
-		<key>app/App_Resources/Android/drawable-hdpi/icon.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			z7RssznL7XbC9wwo2pPZ5UhPngg=
-			</data>
-			<key>hash2</key>
-			<data>
-			OBzRQ3A5+H0XqJl2ZAIuf4FetQvIvLKavaG2oPL5mJQ=
-			</data>
-		</dict>
-		<key>app/App_Resources/Android/drawable-ldpi/icon.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			+6t9oOQ7biSY3nTUTqfGrvR881o=
-			</data>
-			<key>hash2</key>
-			<data>
-			NdaQN9bDZUIZ3TFPfdMNfJhX6GuwH/84YxxdjdS9k8I=
-			</data>
-		</dict>
-		<key>app/App_Resources/Android/drawable-mdpi/icon.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			OFTlNxQ8+wUmeef1rVa17mYVDPY=
-			</data>
-			<key>hash2</key>
-			<data>
-			t684bwQ5WrBERk5uuF21Exb/bFg/7HoYGDWS5PsgJG4=
-			</data>
-		</dict>
-		<key>app/App_Resources/Android/drawable-xhdpi/icon.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			tHOjlJuzLvLo/F5g02AumvHSI98=
-			</data>
-			<key>hash2</key>
-			<data>
-			q7MSPpkrmYCaSZZujjJAnckjNcr+UYjoz7LYwaVCDpk=
-			</data>
-		</dict>
-		<key>app/App_Resources/Android/drawable-xxhdpi/icon.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			hIbdF3XmSBomYF9xd8pGJzjJ3HE=
-			</data>
-			<key>hash2</key>
-			<data>
-			NsgeS+DIr2Eso943/3822WNt++5oI1AICyvJvg3Qsfs=
-			</data>
-		</dict>
-		<key>app/App_Resources/Android/drawable-xxxhdpi/icon.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			UT4YXAnt1haSuzRPPl7D/upBrJI=
-			</data>
-			<key>hash2</key>
-			<data>
-			7q1zJ8xGnRMUGEhU/SqAkx0KStWMxBzhne+dTEsldv8=
-			</data>
-		</dict>
-		<key>app/App_Resources/Android/values/strings.xml</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			NW+oaL38xdsZy2hJyxnkX3zTSak=
-			</data>
-			<key>hash2</key>
-			<data>
-			s4lVS7+EBGJkBjT5CMDiyUxWOdtHWStFcEdgweZTu2I=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/Contents.json</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			lhDYIlbgX9UNHgtfW5+1F9tf2fs=
-			</data>
-			<key>hash2</key>
-			<data>
-			Fips0Olvs5aWf4QyaoxdJbyR9EZVQy4rgCIu2Dlbr3Y=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/icon-29.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			3nKajCk4aNyEnXanoXL1Hy/cwt8=
-			</data>
-			<key>hash2</key>
-			<data>
-			qztrlxwjBCrEkfKudh9qUZz0RF9rP2ihtWsxMNTKD9M=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/icon-29@2x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			0uMWBQ2ww0RLtNfNkjMMNVtIY88=
-			</data>
-			<key>hash2</key>
-			<data>
-			VKkZi4NlwAv+kehpWjcgeX8388tfrCb1lUDjkBo/p1g=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/icon-29@3x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			Q4fFmqfr5+ah/SpbeV2PbBokbOo=
-			</data>
-			<key>hash2</key>
-			<data>
-			0/S4jKvBFx9W8yuXGTik/OuhuJMfLgjpj5wJ8DJwHiw=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/icon-40.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			/2XjeAfC0TX8WKrR3y1bDaKtcf4=
-			</data>
-			<key>hash2</key>
-			<data>
-			Ml+7gJHmEEuevSF1rPs1csaSFJ7cgf7RVM40nofrLxc=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/icon-40@2x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			eJC3whlZhFt/txp47Ow3+Udtsis=
-			</data>
-			<key>hash2</key>
-			<data>
-			5y9J9GDES92Lf4/HQKl9xE0mLnlUWwS3I1GTb7wGIMw=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/icon-40@3x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			00p2AYSQFjSKJ0hGg1cyXUkpzPo=
-			</data>
-			<key>hash2</key>
-			<data>
-			S8bgpwfghmKGD5xNVyKVpg5p3fl++zKQE86oIwnSpeI=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/icon-50.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			+gKbjse5yLldMLir0VhMUMXRfHI=
-			</data>
-			<key>hash2</key>
-			<data>
-			RIWEzCKEwSjRcZBtNmtivjTVS9gJ3kLOBt6apZFFLiM=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/icon-50@2x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			EKykxTm5LgAE6EadzP8TG4KOzIY=
-			</data>
-			<key>hash2</key>
-			<data>
-			rJqwG2N4QdO2+peMWzwbXtWSvO5yEZ5ceTyEAK//BQE=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/icon-57.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			5hdoVdcXBEoIEueyAIg8bM9AAhU=
-			</data>
-			<key>hash2</key>
-			<data>
-			SbP9gZhSxs33DS5YAaAHLoO58pse33zx8krPtwl/76g=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/icon-57@2x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			/TQIuTxaw8O9VCo2UZvBPxe3c3s=
-			</data>
-			<key>hash2</key>
-			<data>
-			vnBR4cS5SE0/pNlbad8lEqRm79jK3gCNLM5bt2dZhPE=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/icon-60@2x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			9mo7CF8Xfjmb85LTr0hfTABm6NU=
-			</data>
-			<key>hash2</key>
-			<data>
-			svx9e3uPSdFbkvMBaMSQlmGp3Y3cggGxwvqF6XpFGrA=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/icon-60@3x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			RCp3FPbpnTVqd9XDyCo1tX/TIgw=
-			</data>
-			<key>hash2</key>
-			<data>
-			16NCXSaOizKNwmful9tl9tPaw10MOevmlIG8YgpJKt0=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/icon-72.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			DAwlriaGheAstyQLfdzP0RFwj8w=
-			</data>
-			<key>hash2</key>
-			<data>
-			JV82I8z4dBdvx0POvar0yjxRq6u+QK73jq4gv37N5uM=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/icon-72@2x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			JveZGbKW6EGxg9V3aRmFR+/KbeY=
-			</data>
-			<key>hash2</key>
-			<data>
-			6zSAy8Bwf1ndOPadQsV5z8wX+sKeZFyMGcwTo4cQIN4=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/icon-76.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			GAVmwlj9qOHPAafevf9nI6kWqA0=
-			</data>
-			<key>hash2</key>
-			<data>
-			MU142MbarTLIgJImqTXHygvWaU3TLTASBcCp41VPTTk=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/icon-76@2x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			PShdxJmvtOGDHTv4BSBptGfASLk=
-			</data>
-			<key>hash2</key>
-			<data>
-			s2xsk69so/tidUuW8HZbpILMVroz4aX6UbLXHFPHW98=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/icon-83.5@2x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			+vANSsuDbXA/ROLi8Y88RsS40mU=
-			</data>
-			<key>hash2</key>
-			<data>
-			HsWmGKr3S4J7XJ5LwI/9Zs70xsg/cy/00QKrM9c2gsQ=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/Assets.xcassets/Contents.json</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			Yk4quB7W9gNQWeYqHrf1Zhl1JW4=
-			</data>
-			<key>hash2</key>
-			<data>
-			ly7B/UIyWHJDjrCFrCnpT1HBB4jsGOxVSUOZUIZsVB0=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/Assets.xcassets/LaunchImage.launchimage/Contents.json</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			/PMCaYf6ukQro5/eYCRYFYJJAYI=
-			</data>
-			<key>hash2</key>
-			<data>
-			0U835hi4lom5soVVTgcboLxnZ/pie0vSBmv63h6Csok=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/Assets.xcassets/LaunchImage.launchimage/Default-568h@2x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			VmHTptUrPuWY7yNjVc09e8tr7A0=
-			</data>
-			<key>hash2</key>
-			<data>
-			VWzYdlTORuAgRRGDMfw4XKZGPuAeRKHMYz6Zm2pPW4U=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/Assets.xcassets/LaunchImage.launchimage/Default-667h@2x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			Z0H3WvqXNO46fcQRjJd4TG7T9lY=
-			</data>
-			<key>hash2</key>
-			<data>
-			yfCkk1+aBwzYoAdWvMgzM2NtxVdFb+73WPttVxF/3GE=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/Assets.xcassets/LaunchImage.launchimage/Default-736h@3x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			0gSilJHkuDQ3/f588EBoqhtJKLc=
-			</data>
-			<key>hash2</key>
-			<data>
-			gqt89v1Cua6sNMpn30Bf0bskIST5djHbOQ0ctMFLhUU=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/Assets.xcassets/LaunchImage.launchimage/Default-Landscape.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			N9s+iiOZn1HiJY0y0xfJUDEtG7I=
-			</data>
-			<key>hash2</key>
-			<data>
-			XWsdkAslYS3BARgeMF0RrMgxckPTSSrqGKucgUprQcs=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/Assets.xcassets/LaunchImage.launchimage/Default-Landscape@2x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			k21aIUTg02Sq+tQ4Vzubcl4Pb5g=
-			</data>
-			<key>hash2</key>
-			<data>
-			3JoNcUCCsvfOzgc8piz3dcmmqNCYEaMDM6Y6+wGB0zk=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/Assets.xcassets/LaunchImage.launchimage/Default-Landscape@3x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			1uvU7ilcauI7R80FIhaEmEkvrB4=
-			</data>
-			<key>hash2</key>
-			<data>
-			JRjDn4eHBZ/d4r6sRixI7oMG4hGMUy2e/T0xfjZYCr0=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/Assets.xcassets/LaunchImage.launchimage/Default-Portrait.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			Zk/jItPuBD1wNNU8b58CfB0SO0c=
-			</data>
-			<key>hash2</key>
-			<data>
-			WGf/kUc7s93zNhcXPk1FTg9usLhBzUuuZGAlVWLa7Tw=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/Assets.xcassets/LaunchImage.launchimage/Default-Portrait@2x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			sWmnObyHWHBba7nEKnhZijZEmqo=
-			</data>
-			<key>hash2</key>
-			<data>
-			JNQXmumg5/0ovHIjmVHdBkfgUMBc22iANdEkB9wrxnA=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/Assets.xcassets/LaunchImage.launchimage/Default.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			UpilHjIdUEDGS/eFgFVyt4X2qF8=
-			</data>
-			<key>hash2</key>
-			<data>
-			4/fXWcSPSaxNK8M2ZwIXTlQczAbOtHZIBSF0dfsIWvw=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/Assets.xcassets/LaunchImage.launchimage/Default@2x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			5FwPyf/KfAgLkhx5lgXp74beCKw=
-			</data>
-			<key>hash2</key>
-			<data>
-			7FhMDIov73IMvT2r+CfasHQVWrA0aSOO2iT/zVNvcUk=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/Assets.xcassets/LaunchScreen.AspectFill.imageset/Contents.json</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			oBER3OVb+zTwA1TWy3Kx2yjAoXA=
-			</data>
-			<key>hash2</key>
-			<data>
-			mjX0iQ0quPZKUB9tzyE6BgBROAyU6sCZHQeYlmSAz/s=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/Assets.xcassets/LaunchScreen.AspectFill.imageset/LaunchScreen-AspectFill.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			0UGBvimzBtsi3pNvsuxIJkp4igU=
-			</data>
-			<key>hash2</key>
-			<data>
-			mWimHBH0MQTdCo9NNx89pEI+vw0Oln+577TIizkvCII=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/Assets.xcassets/LaunchScreen.AspectFill.imageset/LaunchScreen-AspectFill@2x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			vAhRSJV0WJwrJ7rgBg0HhWfP06Y=
-			</data>
-			<key>hash2</key>
-			<data>
-			7PfsDMMQq0R96sRVU2g+ZytKOFFUCKt5N5gKfBHYoM0=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/Assets.xcassets/LaunchScreen.Center.imageset/Contents.json</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			OP7FevzLwyjrpG6eB0tfOf+byn8=
-			</data>
-			<key>hash2</key>
-			<data>
-			T7o3F/zUvaAyu8NjlA3CMO1/5ls6l50x7OoWf+W31Oo=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/Assets.xcassets/LaunchScreen.Center.imageset/LaunchScreen-Center.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			1NMaXeZuQnCDEiiQWc1MXoHNf/M=
-			</data>
-			<key>hash2</key>
-			<data>
-			bQggqZjiNPY98XPre2e6jvngnRLJeIop+of1NmJxwi8=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/Assets.xcassets/LaunchScreen.Center.imageset/LaunchScreen-Center@2x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			EvFQYq0WCWmE9aIsGDd+WwSTK/w=
-			</data>
-			<key>hash2</key>
-			<data>
-			23G302Ez5C9R53aE2QV8nZ/udiunN9kYqlR8YxsNO9U=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/Info.plist</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			fLa+LVCBvOR9wKKBllnyfWCYz/E=
-			</data>
-			<key>hash2</key>
-			<data>
-			aT9NAyN7flaxZgPIULrPD8PnHx0Cxv7FZoTwkbuFTvE=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/LaunchScreen.storyboard</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			RlpE48nZZW3fqeW0VmTjaECkmlU=
-			</data>
-			<key>hash2</key>
-			<data>
-			cc5E/rtH3bum32LMk2mAZCenTUcUz6DvRZYdqK66iMU=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/bg_login.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			JNTW8lsYRvZ8Gj5J5tbc85EYp4g=
-			</data>
-			<key>hash2</key>
-			<data>
-			brbBPhocEtjwQ1YjcR1wsw8Azq/v9xwXb5F2Q6oDtog=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/bg_login@2x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			2E/GmcRHf3rfsg9wf2qNTmhpXFo=
-			</data>
-			<key>hash2</key>
-			<data>
-			OWvGG5oAEAwh3/8UKg5G1zWy8FxnK0ym6os7Gt/6Emo=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/bg_login@3x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			Sq7Ol5X+VlIOv5h8EsZLv3qyars=
-			</data>
-			<key>hash2</key>
-			<data>
-			EMEE9WbiF8pnsHvTCqsAKNmOSPbY/Fc+i2ZUlYFdczo=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/build.xcconfig</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			JWO3NQlntze55FFPjdsav+EU/L8=
-			</data>
-			<key>hash2</key>
-			<data>
-			Pxgmdv5DJuwJlpw5c93j08hL+lxBNjyuuZrwWK2mpNU=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/iTunesArtwork.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			35HDhewvRskArOorqlrcv6m8R64=
-			</data>
-			<key>hash2</key>
-			<data>
-			Ge4BFYeK1Bb1q9jpg9GexUk+67YYZwcInr3Y8IN+/6M=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/iTunesArtwork@2x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			AJ0vwiQ/jexmmJBmfOOP+X7zfEM=
-			</data>
-			<key>hash2</key>
-			<data>
-			tNeCr77CUDv3aFi9D6aIlYoV55c0p5Z6RoideyElGFI=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/icon-120.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			TA3ItdxTCV3+Xdc6hWkMd+1DdiU=
-			</data>
-			<key>hash2</key>
-			<data>
-			1n2CZxKEDqaD77MAK666oYDzuNYi8wU4lCnPMYBkMm8=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/icon-20.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			v8TJdp0+pXBgISgcrKnWdmr9f8g=
-			</data>
-			<key>hash2</key>
-			<data>
-			wvV4y2O5QECFmC1YjSaOU9VRS/2EFVQPf66KT6ke9iA=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/icon-20@2x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			pQkWZgaJMSI1SoMwQ0Jf9xULbjk=
-			</data>
-			<key>hash2</key>
-			<data>
-			3VTmbqqoLsD5d+unjYJUU1C6wXuSz2nFq2BlSEQ1Ips=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/icon-20@3x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			rY7rA5fQJLMAbU87YU8oiqEaXts=
-			</data>
-			<key>hash2</key>
-			<data>
-			s1Okk9yvzsWa1TUQz5e76fdK8tvlYN9hGDVgAbvSujo=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/icon-29.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			OaowgkpJ1Gs2i2Axb6Z1IV0nRAs=
-			</data>
-			<key>hash2</key>
-			<data>
-			/Ad9tT8TqwesyJhPiuALl5lFlIbZzGdNbi2BjlxOXbc=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/icon-29@2x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			CRKU7ImQMduHTT2tf2n/XdT27Xw=
-			</data>
-			<key>hash2</key>
-			<data>
-			Fa7Nd6+vlWwMjPfCa9w97Z0VNOMAlx+bqziWyx4VfOQ=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/icon-29@3x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			oRsWlLiO713DzNEVpmajgLdcdGk=
-			</data>
-			<key>hash2</key>
-			<data>
-			IiDa5BjtpJBeEsZMTWunOo6xQ4SVWsW4xohq2w9xfII=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/icon-40.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			pQkWZgaJMSI1SoMwQ0Jf9xULbjk=
-			</data>
-			<key>hash2</key>
-			<data>
-			3VTmbqqoLsD5d+unjYJUU1C6wXuSz2nFq2BlSEQ1Ips=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/icon-40@2x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			YG/qKFhilm7JiwM5Z6CqIBT9d48=
-			</data>
-			<key>hash2</key>
-			<data>
-			Wf2hFt+H2+RfvqP/2pSGRvzTEjwhf1yaWxPwL7Gh+Z4=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/icon-40@3x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			TA3ItdxTCV3+Xdc6hWkMd+1DdiU=
-			</data>
-			<key>hash2</key>
-			<data>
-			1n2CZxKEDqaD77MAK666oYDzuNYi8wU4lCnPMYBkMm8=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/icon-50.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			zpL9D/lHFNPikM1nD3iZi6ZmRhQ=
-			</data>
-			<key>hash2</key>
-			<data>
-			GLiOHHLh6psdfle+hBroKbC1s9fa5fSJZ9gpGhPziGQ=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/icon-50@2x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			NbhKCWBcDJHZllE8NX217jbtAyk=
-			</data>
-			<key>hash2</key>
-			<data>
-			ZinwEuFQw1cEUBMw5NLHTgtxtnDv1LxXuC5T8jOvZNs=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/icon-50@3x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			O/5AEeJVnsjLl6EMRK0QHQTQpXA=
-			</data>
-			<key>hash2</key>
-			<data>
-			tjqXY9E/MhSt9haFIkMZ0AUmJXjKqoxVc7uOVy9SW6U=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/icon-57.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			dKAIuV6IUPyKvEuL/aOKs0qJacg=
-			</data>
-			<key>hash2</key>
-			<data>
-			96+AYxiu1IZrdi4fIo7HzFg0Ior/ftQwuMUPlWmroBA=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/icon-57@2x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			iD68L0o62j8nBgCN45mdkwnXQOk=
-			</data>
-			<key>hash2</key>
-			<data>
-			QgbxVk5b5kzHT664bCX0i8WYkHM2hKg8b9mlxkqMKB8=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/icon-57@3x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			7j6Q86vV/kTmi4fTua7AvdgxRIY=
-			</data>
-			<key>hash2</key>
-			<data>
-			XH7u/z8/2add6gQJY8RAlEvgjTifidOHF95CvbSLmfA=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/icon-60.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			rY7rA5fQJLMAbU87YU8oiqEaXts=
-			</data>
-			<key>hash2</key>
-			<data>
-			s1Okk9yvzsWa1TUQz5e76fdK8tvlYN9hGDVgAbvSujo=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/icon-60@2x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			TA3ItdxTCV3+Xdc6hWkMd+1DdiU=
-			</data>
-			<key>hash2</key>
-			<data>
-			1n2CZxKEDqaD77MAK666oYDzuNYi8wU4lCnPMYBkMm8=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/icon-60@3x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			eAREk6pIzONoYGxjV7XwVNn49Uo=
-			</data>
-			<key>hash2</key>
-			<data>
-			k1LHmf/+dL0wE9gkriQyDH1NzAbHwyd+UTgTewvCyNk=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/icon-72.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			z7RssznL7XbC9wwo2pPZ5UhPngg=
-			</data>
-			<key>hash2</key>
-			<data>
-			OBzRQ3A5+H0XqJl2ZAIuf4FetQvIvLKavaG2oPL5mJQ=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/icon-72@2x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			hIbdF3XmSBomYF9xd8pGJzjJ3HE=
-			</data>
-			<key>hash2</key>
-			<data>
-			NsgeS+DIr2Eso943/3822WNt++5oI1AICyvJvg3Qsfs=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/icon-72@3x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			+tMHn09uTe3TUPiwnY7vzzLolt8=
-			</data>
-			<key>hash2</key>
-			<data>
-			4vbSsOrGGdN8AyVqVfPbL3xTlRuLpNW6CGj9NzvG+u8=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/icon-76.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			xB8Ug8vm6RkfUPExcWlELo950vU=
-			</data>
-			<key>hash2</key>
-			<data>
-			IUvH3wMLJLBxdrl02w0oLrea1h+RY+W4XTLtHI0D62I=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/icon-76@2x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			Cz1QQYNE6GjA8hX3W48JMAh3SJA=
-			</data>
-			<key>hash2</key>
-			<data>
-			Lv/8dNJ09L+YX7kVSUiZdZAa619UUBsD/6dl6ovzsmQ=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/icon-76@3x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			YdlUbhns/k7AieOh5u1PID8k33Y=
-			</data>
-			<key>hash2</key>
-			<data>
-			nIQlWbL7TM/ZkRCo8nJBCT4DIgnhsyd/6fIuhg2drsI=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/icon-83.5@2x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			Bjv9RYUNj46xGunQyuqo9sMLjjE=
-			</data>
-			<key>hash2</key>
-			<data>
-			1TFEZ5NddvKyy04mWV2zB4FbwzgifLANJpazolDQaQo=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/icon-Small.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			OaowgkpJ1Gs2i2Axb6Z1IV0nRAs=
-			</data>
-			<key>hash2</key>
-			<data>
-			/Ad9tT8TqwesyJhPiuALl5lFlIbZzGdNbi2BjlxOXbc=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/icon-Small@2x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			CRKU7ImQMduHTT2tf2n/XdT27Xw=
-			</data>
-			<key>hash2</key>
-			<data>
-			Fa7Nd6+vlWwMjPfCa9w97Z0VNOMAlx+bqziWyx4VfOQ=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/icon-Small@3x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			oRsWlLiO713DzNEVpmajgLdcdGk=
-			</data>
-			<key>hash2</key>
-			<data>
-			IiDa5BjtpJBeEsZMTWunOo6xQ4SVWsW4xohq2w9xfII=
-			</data>
-		</dict>
-		<key>app/App_Resources/iOS/icon.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			dKAIuV6IUPyKvEuL/aOKs0qJacg=
-			</data>
-			<key>hash2</key>
-			<data>
-			96+AYxiu1IZrdi4fIo7HzFg0Ior/ftQwuMUPlWmroBA=
+			we9ustpmO0wWAxuZbw/U/gjUoEsG7XI5CMKd0gKNoT8=
 			</data>
 		</dict>
 		<key>app/app.component.js</key>
@@ -17083,22 +15862,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			wAI37SD3glSKd6XjT0Qrq9Oma00=
+			fcNToLglnw49ET1F2ThxwkM10Y8=
 			</data>
 			<key>hash2</key>
 			<data>
-			AmVLKcn7eSXRUxuhQf3d8Z6AxcJ4O8y0BbPvbPwBYy8=
+			d8/qHgnv+Cccse1ucyKyI/enfl04R9VJUwkRFoFTKBM=
 			</data>
 		</dict>
 		<key>app/app.routing.ts</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ssBXYIvQNleA5jzXBGxoot9gvWc=
+			BW1Jb2JOyyZY1pF6ruUR9ckNEM4=
 			</data>
 			<key>hash2</key>
 			<data>
-			hkkdmU1opT3MYWsPNF/59H1CRtKCgN2cXnJIQro+WBM=
+			wbPnCB5sA1XQO6XN6fAa6j2Rk05T86EOdu2/t/FJiKg=
 			</data>
 		</dict>
 		<key>app/main.js</key>
@@ -17149,22 +15928,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			FNJx92tU20wXqCbY7R8ZB0vEeQo=
+			WbO2Uwrn05nq8nc5CtZKo96Agco=
 			</data>
 			<key>hash2</key>
 			<data>
-			Z4od2QreY7VlZn+QVTAkfc0i060b7lONTOTqw2nOmFU=
+			TtazSakaIzQYpHAK0tXPmgFBjOKnJ7BVks9joW76OmY=
 			</data>
 		</dict>
 		<key>app/pages/login/login.component.ts</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			wX6squZvcS/dV/1dNjaWPWAhwjA=
+			H7Indy99U95AMjGKTdGah6UiBzI=
 			</data>
 			<key>hash2</key>
 			<data>
-			hoy0NjyPJOCtEMcW6jap+zNIDqtGxRH5iWtDzrV+0t0=
+			t+FplEctOouoHlznnAyhk2uGdrgqcEvXEml7Zo6VWQg=
 			</data>
 		</dict>
 		<key>app/pages/login/login.css</key>
@@ -17204,22 +15983,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Y4YoU0KR0FDfVn3dHLuJG3aWSTo=
+			ymMQryOvlRRp6cU6+9vZ2gL6UqE=
 			</data>
 			<key>hash2</key>
 			<data>
-			s3ox9w/Ra+UI4llsoX3tV2FHaO1S1e5oWPTOVPCavKU=
+			62YV5+elp249uUJlagujHVszlU6slKKUFPDWiQ6Fm7U=
 			</data>
 		</dict>
 		<key>app/pages/map-page/map-page.component.ts</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			2jmj7l5rSw0yVb/vlWAYkK/YBwk=
+			CotfXiCcbitpJK7SNkkYl7RDvqk=
 			</data>
 			<key>hash2</key>
 			<data>
-			47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+			PwHjV86sPPzhU/Y6Y/g/6fIn6wBgszzVxB9XWfW8uFA=
 			</data>
 		</dict>
 		<key>app/pages/map-page/map-page.css</key>
@@ -17292,22 +16071,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			qTsJkDiJQAfEK2S52NR0aL7jhLY=
+			sIxMOiho7H5liyAf0rqt9dQzG/Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			mBaans1sD5xRIlqGgmhMsBDTvuS0vp5+3x/N3QnODdU=
+			SypyFRvXicGy+wZt1Afr5ao0fE+sTLeWagNtwIXN8/0=
 			</data>
 		</dict>
 		<key>app/shared/user/user.service.ts</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			DB9vA9rdV+zCAWIpaOibch9mKaI=
+			Ihbp+BhYkCKN/XSw/8eQPz4BXiI=
 			</data>
 			<key>hash2</key>
 			<data>
-			MAr44+33y/A/OfCSWzeaUqMUTfMbZL+Oy/eBGjJnhPo=
+			fGmEZiHYkwlRmgr2YkrPOvax3ss+/jq0OKue9MUQeys=
 			</data>
 		</dict>
 		<key>app/shared/user/user.ts</key>
@@ -57966,6 +56745,39 @@
 			QzoimnAqPVq9ugBHBwLV0FUtEBg5mJRmmo4gnYQpgTU=
 			</data>
 		</dict>
+		<key>bg_login.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			tp7BcKHvUsxvUt1EsK1hEXDUPdw=
+			</data>
+			<key>hash2</key>
+			<data>
+			SWxGOiWI+//4GTz2C4otQrwsPBt84HXeTcjbFP4jKhk=
+			</data>
+		</dict>
+		<key>bg_login@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			E6aX3gSBN0nnhTHBGdvPb+Wtz+M=
+			</data>
+			<key>hash2</key>
+			<data>
+			VMAsEldBHfbKGY6qJKVSn344jRgDkZB4cpPb35YKOtI=
+			</data>
+		</dict>
+		<key>bg_login@3x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			t/w6EBPHFEL6Aqq3mwH4nAbU8YU=
+			</data>
+			<key>hash2</key>
+			<data>
+			VubdfB7n+BK0jfmgRFVaMqy3f6B6F55PF3Y1DxZu478=
+			</data>
+		</dict>
 		<key>build.xcconfig</key>
 		<dict>
 			<key>hash</key>
@@ -58340,6 +57152,39 @@
 			<key>hash2</key>
 			<data>
 			O/sVZQcMLR4xJZLowAxMckDIDcDJ//QKrj+PPg2hqLU=
+			</data>
+		</dict>
+		<key>loginbg.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			tp7BcKHvUsxvUt1EsK1hEXDUPdw=
+			</data>
+			<key>hash2</key>
+			<data>
+			SWxGOiWI+//4GTz2C4otQrwsPBt84HXeTcjbFP4jKhk=
+			</data>
+		</dict>
+		<key>loginbg@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			E6aX3gSBN0nnhTHBGdvPb+Wtz+M=
+			</data>
+			<key>hash2</key>
+			<data>
+			VMAsEldBHfbKGY6qJKVSn344jRgDkZB4cpPb35YKOtI=
+			</data>
+		</dict>
+		<key>loginbg@3x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			t/w6EBPHFEL6Aqq3mwH4nAbU8YU=
+			</data>
+			<key>hash2</key>
+			<data>
+			VubdfB7n+BK0jfmgRFVaMqy3f6B6F55PF3Y1DxZu478=
 			</data>
 		</dict>
 	</dict>

@@ -16,6 +16,10 @@
         "source": "/Users/renne/Documents/code/Wenture/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/drawable-xxxhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png"
     },
     {
+        "merged": "/Users/renne/Documents/code/Wenture/platforms/android/build/intermediates/res/merged/F0/debug/drawable-xxxhdpi-v4/loginbg.png",
+        "source": "/Users/renne/Documents/code/Wenture/platforms/android/src/main/res/drawable-xxxhdpi/loginbg.png"
+    },
+    {
         "merged": "/Users/renne/Documents/code/Wenture/platforms/android/build/intermediates/res/merged/F0/debug/drawable-xxxhdpi-v4/design_ic_visibility.png",
         "source": "/Users/renne/Documents/code/Wenture/platforms/android/build/intermediates/exploded-aar/com.android.support/design/25.2.0/res/drawable-xxxhdpi-v4/design_ic_visibility.png"
     },

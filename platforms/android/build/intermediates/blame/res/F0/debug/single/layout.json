@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/Users/renne/Documents/code/Wenture/platforms/android/build/intermediates/res/merged/F0/debug/layout/design_navigation_item.xml",
-        "source": "/Users/renne/Documents/code/Wenture/platforms/android/build/intermediates/exploded-aar/com.android.support/design/25.2.0/res/layout/design_navigation_item.xml"
-    },
-    {
         "merged": "/Users/renne/Documents/code/Wenture/platforms/android/build/intermediates/res/merged/F0/debug/layout/error_activity.xml",
         "source": "/Users/renne/Documents/code/Wenture/platforms/android/src/debug/res/layout/error_activity.xml"
+    },
+    {
+        "merged": "/Users/renne/Documents/code/Wenture/platforms/android/build/intermediates/res/merged/F0/debug/layout/design_navigation_item.xml",
+        "source": "/Users/renne/Documents/code/Wenture/platforms/android/build/intermediates/exploded-aar/com.android.support/design/25.2.0/res/layout/design_navigation_item.xml"
     },
     {
         "merged": "/Users/renne/Documents/code/Wenture/platforms/android/build/intermediates/res/merged/F0/debug/layout/design_navigation_item_separator.xml",
@@ -52,24 +52,24 @@
         "source": "/Users/renne/Documents/code/Wenture/platforms/android/build/intermediates/exploded-aar/com.android.support/design/25.2.0/res/layout/design_navigation_item_header.xml"
     },
     {
-        "merged": "/Users/renne/Documents/code/Wenture/platforms/android/build/intermediates/res/merged/F0/debug/layout/design_layout_tab_icon.xml",
-        "source": "/Users/renne/Documents/code/Wenture/platforms/android/build/intermediates/exploded-aar/com.android.support/design/25.2.0/res/layout/design_layout_tab_icon.xml"
-    },
-    {
         "merged": "/Users/renne/Documents/code/Wenture/platforms/android/build/intermediates/res/merged/F0/debug/layout/abc_dialog_title_material.xml",
         "source": "/Users/renne/Documents/code/Wenture/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/layout/abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "/Users/renne/Documents/code/Wenture/platforms/android/build/intermediates/res/merged/F0/debug/layout/design_layout_tab_icon.xml",
+        "source": "/Users/renne/Documents/code/Wenture/platforms/android/build/intermediates/exploded-aar/com.android.support/design/25.2.0/res/layout/design_layout_tab_icon.xml"
     },
     {
         "merged": "/Users/renne/Documents/code/Wenture/platforms/android/build/intermediates/res/merged/F0/debug/layout/design_navigation_item_subheader.xml",
         "source": "/Users/renne/Documents/code/Wenture/platforms/android/build/intermediates/exploded-aar/com.android.support/design/25.2.0/res/layout/design_navigation_item_subheader.xml"
     },
     {
-        "merged": "/Users/renne/Documents/code/Wenture/platforms/android/build/intermediates/res/merged/F0/debug/layout/abc_screen_toolbar.xml",
-        "source": "/Users/renne/Documents/code/Wenture/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/layout/abc_screen_toolbar.xml"
-    },
-    {
         "merged": "/Users/renne/Documents/code/Wenture/platforms/android/build/intermediates/res/merged/F0/debug/layout/abc_action_menu_item_layout.xml",
         "source": "/Users/renne/Documents/code/Wenture/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/layout/abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "/Users/renne/Documents/code/Wenture/platforms/android/build/intermediates/res/merged/F0/debug/layout/abc_screen_toolbar.xml",
+        "source": "/Users/renne/Documents/code/Wenture/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/layout/abc_screen_toolbar.xml"
     },
     {
         "merged": "/Users/renne/Documents/code/Wenture/platforms/android/build/intermediates/res/merged/F0/debug/layout/design_navigation_menu.xml",
