@@ -61,6 +61,8 @@
 /Users/renne/Documents/code/Wenture/platforms/android/src/main/assets/app/tns_modules/nativescript-angular/value-accessors/text-value-accessor.js
 /Users/renne/Documents/code/Wenture/platforms/android/src/main/assets/app/tns_modules/nativescript-angular/value-accessors/time-value-accessor.js
 /Users/renne/Documents/code/Wenture/platforms/android/src/main/assets/app/tns_modules/nativescript-angular/zone-js/dist/zone-nativescript.js
+/Users/renne/Documents/code/Wenture/platforms/android/src/main/assets/app/tns_modules/nativescript-geolocation/nativescript-geolocation-common.js
+/Users/renne/Documents/code/Wenture/platforms/android/src/main/assets/app/tns_modules/nativescript-geolocation/nativescript-geolocation.js
 /Users/renne/Documents/code/Wenture/platforms/android/src/main/assets/app/tns_modules/nativescript-google-maps-sdk/map-view-common.js
 /Users/renne/Documents/code/Wenture/platforms/android/src/main/assets/app/tns_modules/nativescript-google-maps-sdk/map-view.js
 /Users/renne/Documents/code/Wenture/platforms/android/src/main/assets/app/tns_modules/nativescript-intl/index.js

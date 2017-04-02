@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00A7D43D0E884894B70AA55D /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = A24699646DA64B98B55FD05B /* iTunesArtwork.png */; };
 		0AA3B5A1DD924A0FB57B3E03 /* icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = B528D8318AD8447DBF6016AF /* icon-40.png */; };

@@ -1,5 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
 import {registerElement} from "nativescript-angular/element-registry";
+import geolocation = require("nativescript-geolocation");
 
 registerElement("MapView", () => require("nativescript-google-maps-sdk").MapView);
 
@@ -18,8 +19,11 @@ export class MapPageComponent implements OnInit {
 
   //Map events
   onMapReady = (event) => {
-    global.console.log("Map Ready");
+    console.log("Map Ready");
     // TODO: Set marker etc.
+    if (!geolocation.isEnabled()) {
+        geolocation.enableLocationRequest();
+    } else console.log("Alles in Ordnung");
   };
   onMarkerSelect = (event) => {
     console.log("MarkerSelect");

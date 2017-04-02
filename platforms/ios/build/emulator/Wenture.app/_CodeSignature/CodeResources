@@ -86,7 +86,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		KtZgE1Td7gbC2XSoeh2UzjcSJnc=
+		yiv5fFChZ+JjuAX/iinH8Fi5s8s=
 		</data>
 		<key>Frameworks/NativeScript.framework/Info.plist</key>
 		<data>
@@ -805,7 +805,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		xjvatToJOYEIaaUnD/DvSZ81jNY=
+		o2qa2+GaN1QiG6Df7sm1F2JeeMo=
 		</data>
 		<key>LaunchImage-568h@2x.png</key>
 		<data>
@@ -873,7 +873,7 @@
 		</data>
 		<key>LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		kdejC7neguicZmVXqo7+8Ya/vGY=
+		OmETbncUqmfp7HLhfQxQX8lk/V4=
 		</data>
 		<key>LaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -881,7 +881,7 @@
 		</data>
 		<key>LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		Qw9i2DsbeuSbwNaVlx7mBrKsq+s=
+		Aa4sro1eII/VdCm7bLOmntVxXAg=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -953,11 +953,11 @@
 		</data>
 		<key>app/pages/map-page/map-page.component.js</key>
 		<data>
-		ymMQryOvlRRp6cU6+9vZ2gL6UqE=
+		SwGW3zkF30ibQKvrEtYZYzX2Fhg=
 		</data>
 		<key>app/pages/map-page/map-page.component.ts</key>
 		<data>
-		CotfXiCcbitpJK7SNkkYl7RDvqk=
+		b9Ae8bBO66DfHxtrA4C5xVtt0Go=
 		</data>
 		<key>app/pages/map-page/map-page.css</key>
 		<data>
@@ -965,7 +965,7 @@
 		</data>
 		<key>app/pages/map-page/map-page.html</key>
 		<data>
-		SznIp6KI/MuzaLBhpbxE/fPO1eI=
+		yLvhDLS081geiwfXJM7Lr73GCGc=
 		</data>
 		<key>app/platform.css</key>
 		<data>
@@ -8362,6 +8362,38 @@
 		<key>app/tns_modules/nativescript-angular/zone-js/dist/zone-nativescript.js</key>
 		<data>
 		skwBeAd0ZbVFH+t5yYUq7d2R0FI=
+		</data>
+		<key>app/tns_modules/nativescript-geolocation/README.md</key>
+		<data>
+		hKpJ9xuf+Q2PQlHjOW826FJ2DCs=
+		</data>
+		<key>app/tns_modules/nativescript-geolocation/index.d.ts</key>
+		<data>
+		aw9DfUn5usy3PKGZdCGfutjbsbM=
+		</data>
+		<key>app/tns_modules/nativescript-geolocation/location-monitor.d.ts</key>
+		<data>
+		lgu0C84U1DrI9FvZ0G8XJYeAPJo=
+		</data>
+		<key>app/tns_modules/nativescript-geolocation/location.d.ts</key>
+		<data>
+		JlBgMWO2qtQdhknLGV3290kF/Sw=
+		</data>
+		<key>app/tns_modules/nativescript-geolocation/nativescript-geolocation-common.js</key>
+		<data>
+		7Kd4rECHdGwjTCCM2fElOiBbisg=
+		</data>
+		<key>app/tns_modules/nativescript-geolocation/nativescript-geolocation.js</key>
+		<data>
+		5dRHz7VOUSrC4y8gEptZHwxTuJk=
+		</data>
+		<key>app/tns_modules/nativescript-geolocation/package.json</key>
+		<data>
+		w5yfmB7T5+owzoCVF2gJ8/ZB6I8=
+		</data>
+		<key>app/tns_modules/nativescript-geolocation/references.d.ts</key>
+		<data>
+		LHw1w3jrPinT/qjcIDCH1aS7VsI=
 		</data>
 		<key>app/tns_modules/nativescript-google-maps-sdk/.idea/.name</key>
 		<data>
@@ -16259,11 +16291,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			KtZgE1Td7gbC2XSoeh2UzjcSJnc=
+			yiv5fFChZ+JjuAX/iinH8Fi5s8s=
 			</data>
 			<key>hash2</key>
 			<data>
-			aYTU7HI2s+DahGA6UEDFo14QpF4qekxcJPbFsIhEdck=
+			bSAemVGqoUpOSibmsd2cNc85nOG0qvHjDj4vP89Z/+s=
 			</data>
 		</dict>
 		<key>Frameworks/NativeScript.framework/Info.plist</key>
@@ -17907,11 +17939,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			kdejC7neguicZmVXqo7+8Ya/vGY=
+			OmETbncUqmfp7HLhfQxQX8lk/V4=
 			</data>
 			<key>hash2</key>
 			<data>
-			TonpC1c3hvWrWRIKJmucY4EdAwxbM2hkZ95fOHitFrE=
+			chxLN3IpTyc/nnEiiV3xegPIDZ+3BpVp8E9SaYUsMps=
 			</data>
 		</dict>
 		<key>LaunchScreen.storyboardc/Info.plist</key>
@@ -17929,11 +17961,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Qw9i2DsbeuSbwNaVlx7mBrKsq+s=
+			Aa4sro1eII/VdCm7bLOmntVxXAg=
 			</data>
 			<key>hash2</key>
 			<data>
-			52138ve4pvCRROZnjPZ0G31mHK+lro0zxKiuz6Oflus=
+			B8vVJ6tefr4H+/HtLT9q9iqnKIYNabib/cnlBpJgms0=
 			</data>
 		</dict>
 		<key>app/app.component.js</key>
@@ -18116,22 +18148,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ymMQryOvlRRp6cU6+9vZ2gL6UqE=
+			SwGW3zkF30ibQKvrEtYZYzX2Fhg=
 			</data>
 			<key>hash2</key>
 			<data>
-			62YV5+elp249uUJlagujHVszlU6slKKUFPDWiQ6Fm7U=
+			ZgJb7336r3TpQJrQ3Lp/fitgvvHGNSC+LKKi9bcJl/8=
 			</data>
 		</dict>
 		<key>app/pages/map-page/map-page.component.ts</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			CotfXiCcbitpJK7SNkkYl7RDvqk=
+			b9Ae8bBO66DfHxtrA4C5xVtt0Go=
 			</data>
 			<key>hash2</key>
 			<data>
-			PwHjV86sPPzhU/Y6Y/g/6fIn6wBgszzVxB9XWfW8uFA=
+			VRJkRTqMk2EN0FBVpe55JfWVaB8CeH4pwLpDMeXjHIQ=
 			</data>
 		</dict>
 		<key>app/pages/map-page/map-page.css</key>
@@ -18149,11 +18181,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			SznIp6KI/MuzaLBhpbxE/fPO1eI=
+			yLvhDLS081geiwfXJM7Lr73GCGc=
 			</data>
 			<key>hash2</key>
 			<data>
-			1qqhQWijHCWc2VJXSnqW1KH5GSW+E/kwCDmc566k+jM=
+			mv1/vcV0VvQh5tfm2UPzoqwAbgXMy8aOoS+47ZMed5g=
 			</data>
 		</dict>
 		<key>app/platform.css</key>
@@ -38493,6 +38525,94 @@
 			<key>hash2</key>
 			<data>
 			gxBIxFjf8/07c6/mZI4E1B0vxXsBlVcDuZwCOv78iwk=
+			</data>
+		</dict>
+		<key>app/tns_modules/nativescript-geolocation/README.md</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			hKpJ9xuf+Q2PQlHjOW826FJ2DCs=
+			</data>
+			<key>hash2</key>
+			<data>
+			8GBMlFP8H3KtI6Nz6QbYO1+umR+qhOcAF2ahuF45+08=
+			</data>
+		</dict>
+		<key>app/tns_modules/nativescript-geolocation/index.d.ts</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			aw9DfUn5usy3PKGZdCGfutjbsbM=
+			</data>
+			<key>hash2</key>
+			<data>
+			gMmpn1cTuR/DScAKiNFK1vCfSUbu3o0w/LzlMK7HTsg=
+			</data>
+		</dict>
+		<key>app/tns_modules/nativescript-geolocation/location-monitor.d.ts</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			lgu0C84U1DrI9FvZ0G8XJYeAPJo=
+			</data>
+			<key>hash2</key>
+			<data>
+			cks3wMf5bZv3MHQy/zkAxHqQ3sfdI3S5H+NyPF767RA=
+			</data>
+		</dict>
+		<key>app/tns_modules/nativescript-geolocation/location.d.ts</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			JlBgMWO2qtQdhknLGV3290kF/Sw=
+			</data>
+			<key>hash2</key>
+			<data>
+			8l0ArY7zM2zNdSYp/iATKSryBrsKGPjtPYo/r1sfIBU=
+			</data>
+		</dict>
+		<key>app/tns_modules/nativescript-geolocation/nativescript-geolocation-common.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			7Kd4rECHdGwjTCCM2fElOiBbisg=
+			</data>
+			<key>hash2</key>
+			<data>
+			G6IYfPPigR+UB2va9TvdQJsMseIlj4GnnSYrDVf0xg4=
+			</data>
+		</dict>
+		<key>app/tns_modules/nativescript-geolocation/nativescript-geolocation.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			5dRHz7VOUSrC4y8gEptZHwxTuJk=
+			</data>
+			<key>hash2</key>
+			<data>
+			nm5SI0yN36exFUPWGTYRClbVNpKQCULYAnlxMi1IScI=
+			</data>
+		</dict>
+		<key>app/tns_modules/nativescript-geolocation/package.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			w5yfmB7T5+owzoCVF2gJ8/ZB6I8=
+			</data>
+			<key>hash2</key>
+			<data>
+			iEcakmyeMoBhr8Ow+dCrxCn1df4uqBLRBs/l4jQeNkk=
+			</data>
+		</dict>
+		<key>app/tns_modules/nativescript-geolocation/references.d.ts</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			LHw1w3jrPinT/qjcIDCH1aS7VsI=
+			</data>
+			<key>hash2</key>
+			<data>
+			chalVrXTxsUP1TgqZWMoJA7FjCbabcFI0+TmEIgsTgM=
 			</data>
 		</dict>
 		<key>app/tns_modules/nativescript-google-maps-sdk/.idea/.name</key>
