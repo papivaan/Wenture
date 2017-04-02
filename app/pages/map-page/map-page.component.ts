@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
 import {registerElement} from "nativescript-angular/element-registry";
 import geolocation = require("nativescript-geolocation");
+var mapsModule = require("nativescript-google-maps-sdk");
 
 registerElement("MapView", () => require("nativescript-google-maps-sdk").MapView);
 
@@ -26,6 +27,15 @@ export class MapPageComponent implements OnInit {
     if (!geolocation.isEnabled()) {
         geolocation.enableLocationRequest();
     } else console.log("Alles in Ordnung");
+
+    var mapView = event.object;
+
+    var marker = new mapsModule.Marker();
+    marker.position = mapsModule.Position.positionFromLatLng(62.2308912, 25.7343853);
+    marker.title = "Sydney";
+    marker.snippet = "Australia";
+    marker.userData = {index: 1};
+    mapView.addMarker(marker);
 
     var location = geolocation.getCurrentLocation({desiredAccuracy: 3, updateDistance: 10, maximumAge: 20000, timeout: 20000}).
     then(function(loc) {
