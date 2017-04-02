@@ -21,9 +21,20 @@ export class MapPageComponent implements OnInit {
   onMapReady = (event) => {
     console.log("Map Ready");
     // TODO: Set marker etc.
+
+    // Check if location services are enabled
     if (!geolocation.isEnabled()) {
         geolocation.enableLocationRequest();
     } else console.log("Alles in Ordnung");
+
+    var location = geolocation.getCurrentLocation({desiredAccuracy: 3, updateDistance: 10, maximumAge: 20000, timeout: 20000}).
+    then(function(loc) {
+      if (loc) {
+        console.log("Current location is: " + loc);
+      }
+    }, function(e){
+      console.log("Error: " + e.message);
+    });
   };
   onMarkerSelect = (event) => {
     console.log("MarkerSelect");

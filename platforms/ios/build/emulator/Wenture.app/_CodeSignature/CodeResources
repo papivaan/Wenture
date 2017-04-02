@@ -86,7 +86,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		yiv5fFChZ+JjuAX/iinH8Fi5s8s=
+		Y+aQC22DVJCNQYoXe+hChmzgk1s=
 		</data>
 		<key>Frameworks/NativeScript.framework/Info.plist</key>
 		<data>
@@ -805,7 +805,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		o2qa2+GaN1QiG6Df7sm1F2JeeMo=
+		l13YxeBfNErKGlcRd8r2YrCZEjs=
 		</data>
 		<key>LaunchImage-568h@2x.png</key>
 		<data>
@@ -873,7 +873,7 @@
 		</data>
 		<key>LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		OmETbncUqmfp7HLhfQxQX8lk/V4=
+		SlaVE4q5rxtzsjHaFb09ApiOzjE=
 		</data>
 		<key>LaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -881,7 +881,7 @@
 		</data>
 		<key>LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		Aa4sro1eII/VdCm7bLOmntVxXAg=
+		PQB+TT6qKkI1IBzFoGSqE5j5i6g=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -965,7 +965,7 @@
 		</data>
 		<key>app/pages/map-page/map-page.html</key>
 		<data>
-		yLvhDLS081geiwfXJM7Lr73GCGc=
+		zBv1BhbPHFQeSpvlEvN6yfNoDos=
 		</data>
 		<key>app/platform.css</key>
 		<data>
@@ -16291,11 +16291,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			yiv5fFChZ+JjuAX/iinH8Fi5s8s=
+			Y+aQC22DVJCNQYoXe+hChmzgk1s=
 			</data>
 			<key>hash2</key>
 			<data>
-			bSAemVGqoUpOSibmsd2cNc85nOG0qvHjDj4vP89Z/+s=
+			yAsPnu968CiK7Fxm+d6C2nbQib31IeN5KuVpOOgCR70=
 			</data>
 		</dict>
 		<key>Frameworks/NativeScript.framework/Info.plist</key>
@@ -17939,11 +17939,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			OmETbncUqmfp7HLhfQxQX8lk/V4=
+			SlaVE4q5rxtzsjHaFb09ApiOzjE=
 			</data>
 			<key>hash2</key>
 			<data>
-			chxLN3IpTyc/nnEiiV3xegPIDZ+3BpVp8E9SaYUsMps=
+			W4JCcH+aJXUqKWOOgwVcmcJIZDZ3JftsOkEN9aLh2pg=
 			</data>
 		</dict>
 		<key>LaunchScreen.storyboardc/Info.plist</key>
@@ -17961,11 +17961,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Aa4sro1eII/VdCm7bLOmntVxXAg=
+			PQB+TT6qKkI1IBzFoGSqE5j5i6g=
 			</data>
 			<key>hash2</key>
 			<data>
-			B8vVJ6tefr4H+/HtLT9q9iqnKIYNabib/cnlBpJgms0=
+			asbbCjXrwvjBwVxQ1gGRDGvTdI9j4uVaJkoy5cJnYcg=
 			</data>
 		</dict>
 		<key>app/app.component.js</key>
@@ -18181,11 +18181,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			yLvhDLS081geiwfXJM7Lr73GCGc=
+			zBv1BhbPHFQeSpvlEvN6yfNoDos=
 			</data>
 			<key>hash2</key>
 			<data>
-			mv1/vcV0VvQh5tfm2UPzoqwAbgXMy8aOoS+47ZMed5g=
+			00TlHoV8MSIlvc3B0JgMsuCcV6oGvU30hwUTyBtbMJE=
 			</data>
 		</dict>
 		<key>app/platform.css</key>
