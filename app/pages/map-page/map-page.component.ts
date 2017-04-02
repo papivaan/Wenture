@@ -18,7 +18,22 @@ export class MapPageComponent implements OnInit {
 
   //Map events
   onMapReady = (event) => {
-    console.log("Map Ready");
+    global.console.log("Map Ready");
     // TODO: Set marker etc.
+  };
+  onMarkerSelect = (event) => {
+    console.log("MarkerSelect");
+  };
+  onMarkerBeginDragging = (event) => {
+    console.log("MarkerBeginDragging");
+  };
+  onMarkerEndDragging = (event) => {
+    console.log("MarkerEndDragging");
+  };
+  onMarkerDrag = (event) => {
+    console.log("MarkerDrag");
+  };
+  onCameraChanged = (event) => {
+    console.log("CameraChange");
   };
 }

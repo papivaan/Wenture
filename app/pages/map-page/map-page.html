@@ -1,8 +1,15 @@
 <GridLayout>
-  <MapView latitude="62.2308912"
-                longitude="25.7343853"
-                zoom="14.93" bearing="1"
-                tilt="0" padding="0, 0, 0, 0"
-                mapReady="onMapReady">
+  <MapView  latitude="62.2308912"
+            longitude="25.7343853"
+            zoom="14.93"
+            bearing="1"
+            tilt="1000"
+            padding="0, 0, 0, 0"
+            (mapReady)="onMapReady($event)"
+            (markerSelect)="onMarkerSelect($event)"
+            (markerBeginDragging)="onMarkerBeginDragging($event)"
+   					(markerEndDragging)="onMarkerEndDragging($event)"
+            (markerDrag)="onMarkerDrag($event)"
+   					(cameraChanged)="onCameraChanged($event)">
   </MapView>
 </GridLayout>
