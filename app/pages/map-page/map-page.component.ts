@@ -47,6 +47,9 @@ export class MapPageComponent implements OnInit {
       console.log("Error: " + e.message);
     });
   };
+  onCoordinateLongPress = (event) => {
+    console.log("LongPress");
+  };
   onMarkerSelect = (event) => {
     console.log("MarkerSelect");
   };
