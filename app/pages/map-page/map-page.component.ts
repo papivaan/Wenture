@@ -1,6 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
 import {registerElement} from "nativescript-angular/element-registry";
-import geolocation = require("nativescript-geolocation");
+import * as geolocation from "nativescript-geolocation";
 
 var mapsModule = require("nativescript-google-maps-sdk");
 
@@ -39,8 +39,12 @@ export class MapPageComponent implements OnInit {
     marker.userData = {index: 1};
     mapView.addMarker(marker);
 
-    /*
-    var location = geolocation.getCurrentLocation({desiredAccuracy: 3, updateDistance: 10, maximumAge: 20000, timeout: 20000}).
+    var location = geolocation.getCurrentLocation({
+                              desiredAccuracy: 3,
+                              updateDistance: 10,
+                              maximumAge: 20000,
+                              timeout: 20000
+    }).
     then(function(loc) {
       if (loc) {
         console.log("Current location is: " + loc);
@@ -48,7 +52,7 @@ export class MapPageComponent implements OnInit {
     }, function(e){
       console.log("Error: " + e.message);
     });
-    */
+
   };
   onCoordinateLongPress = (event) => {
     console.log("LongPress");
