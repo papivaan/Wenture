@@ -20,5 +20,6 @@
     "nativescript-google-maps-sdk": true,
     "nativescript-theme-core": true,
     "tns-core-modules": true,
-    "tns-core-modules-widgets": true
+    "tns-core-modules-widgets": true,
+    "email-validator": true
 }

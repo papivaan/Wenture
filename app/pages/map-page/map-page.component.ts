@@ -30,6 +30,7 @@ export class MapPageComponent implements OnInit {
     } else console.log("Alles in Ordnung");
 
     var mapView = event.object;
+    var gMap = mapView.gMap;
 
     var marker = new mapsModule.Marker();
     marker.position = mapsModule.Position.positionFromLatLng(62.2308912, 25.7343853);
@@ -38,6 +39,7 @@ export class MapPageComponent implements OnInit {
     marker.userData = {index: 1};
     mapView.addMarker(marker);
 
+    /*
     var location = geolocation.getCurrentLocation({desiredAccuracy: 3, updateDistance: 10, maximumAge: 20000, timeout: 20000}).
     then(function(loc) {
       if (loc) {
@@ -46,9 +48,14 @@ export class MapPageComponent implements OnInit {
     }, function(e){
       console.log("Error: " + e.message);
     });
+    */
   };
   onCoordinateLongPress = (event) => {
     console.log("LongPress");
+
+    var mapView = event.object;
+
+    console.log("Tapped location: Latitude: " + event.position.latitude + ", Longtitude: " + event.position.longitude);
   };
   onMarkerSelect = (event) => {
     console.log("MarkerSelect");
