@@ -54,11 +54,21 @@ export class MapPageComponent implements OnInit {
     console.log("LongPress");
 
     var mapView = event.object;
+    var lat = event.position.latitude;
+    var lng = event.position.longitude;
 
-    console.log("Tapped location: Latitude: " + event.position.latitude + ", Longtitude: " + event.position.longitude);
+    console.log("Tapped location: Latitude: " + event.position.latitude +
+                    ", Longtitude: " + event.position.longitude);
+
+    var marker = new mapsModule.Marker();
+    marker.position = mapsModule.Position.positionFromLatLng(lat, lng);
+    marker.title = "Mattilanniemi";
+    marker.snippet = "University Campus";
+    marker.userData = {index: 1};
+    mapView.addMarker(marker);
   };
   onMarkerSelect = (event) => {
-    console.log("MarkerSelect");
+    console.log("MarkerSelect: " + event.marker.title);
   };
   onMarkerBeginDragging = (event) => {
     console.log("MarkerBeginDragging");
