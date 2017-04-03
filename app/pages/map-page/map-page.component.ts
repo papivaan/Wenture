@@ -47,7 +47,7 @@ export class MapPageComponent implements OnInit {
     }).
     then(function(loc) {
       if (loc) {
-        console.log("Current location is: " + loc);
+        console.log("Current location is: " + JSON.stringify(loc));
       }
     }, function(e){
       console.log("Error: " + e.message);
