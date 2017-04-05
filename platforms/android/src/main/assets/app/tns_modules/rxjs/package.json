@@ -10,7 +10,7 @@
         "spec": ">=5.0.1 <5.1.0",
         "type": "range"
       },
-      "/Users/renne/Documents/code/Wenture"
+      "C:\\Users\\kuhno\\Documents\\koodia\\angular\\Wenture"
     ]
   ],
   "_from": "rxjs@>=5.0.1 <5.1.0",
@@ -45,7 +45,7 @@
   "_shasum": "fc8bdf464ebf938812748e4196788f392fef9754",
   "_shrinkwrap": null,
   "_spec": "rxjs@~5.0.1",
-  "_where": "/Users/renne/Documents/code/Wenture",
+  "_where": "C:\\Users\\kuhno\\Documents\\koodia\\angular\\Wenture",
   "author": {
     "name": "Ben Lesh",
     "email": "blesh@netflix.com"

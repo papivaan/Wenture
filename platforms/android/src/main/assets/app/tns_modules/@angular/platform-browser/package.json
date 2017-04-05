@@ -10,7 +10,7 @@
         "spec": "2.4.3",
         "type": "version"
       },
-      "/Users/renne/Documents/code/Wenture"
+      "C:\\Users\\kuhno\\Documents\\koodia\\angular\\Wenture"
     ]
   ],
   "_from": "@angular/platform-browser@2.4.3",
@@ -45,7 +45,7 @@
   "_shasum": "eba8588d2fffc39d0b85a9180c297d9ca2f1f3a4",
   "_shrinkwrap": null,
   "_spec": "@angular/platform-browser@2.4.3",
-  "_where": "/Users/renne/Documents/code/Wenture",
+  "_where": "C:\\Users\\kuhno\\Documents\\koodia\\angular\\Wenture",
   "author": {
     "name": "angular"
   },

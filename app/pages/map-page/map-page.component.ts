@@ -67,11 +67,13 @@ export class MapPageComponent implements OnInit {
             var circle = new mapsModule.Circle();
             circle.center = mapsModule.Position.positionFromLatLng(this.latitude, this.longitude);
             circle.visible = true;
-            circle.radius = 5;
+            circle.radius = 20;
             circle.fillColor = new Color('#99ff8800');
             circle.strokeColor = new Color('#99ff0000');
             circle.strokeWidth = 2;
             mapView.addCircle(circle);
+            mapView.latitude = this.latitude;
+            mapView.longitude = this.longitude;
         }
     },
     function(e){
@@ -110,6 +112,7 @@ export class MapPageComponent implements OnInit {
     circle.strokeColor = new Color('#99ff0000');
     circle.strokeWidth = 2;
     mapView.addCircle(circle);
+
 
 /*
     var location = geolocation.getCurrentLocation({
