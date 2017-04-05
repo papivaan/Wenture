@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
 import {registerElement} from "nativescript-angular/element-registry";
 import * as geolocation from "nativescript-geolocation";
+import { Color } from "color";
 
 var mapsModule = require("nativescript-google-maps-sdk");
 
@@ -28,12 +29,16 @@ registerElement("MapView", () => require("nativescript-google-maps-sdk").MapView
 export class MapPageComponent implements OnInit {
   @ViewChild("MapView") mapView: ElementRef;
 
+  latitude: number;
+  longitude: number;
+  altitude: number;
+
   ngOnInit() {
     // TODO: Loader
-    this.startWatch();
+    //this.startWatch();
   }
 
-  startWatch = () => {
+  startWatch = (event) => {
     interface LocationObject {
       "latitude": number,
       "longitude": number,
@@ -45,26 +50,42 @@ export class MapPageComponent implements OnInit {
       "timestamp":string
     }
 
+    var mapView = event.object;
+
     var watchId = geolocation.watchLocation(
     function (loc) {
         if (loc) {
             let obj: LocationObject = JSON.parse(JSON.stringify(loc));
-            console.log("Received location:\n\tLatitude: " + obj.latitude
+            this.latitude = obj.latitude;
+            this.longitude = obj.longitude;
+            this.altitude = obj.altitude;
+            console.log(new Date() + "\nReceived location:\n\tLatitude: " + obj.latitude
                           + "\n\tLongitude: " + obj.longitude
                           + "\n\tAltitude: " + obj.altitude
                           + "\n\tTimestamp: " + obj.timestamp);
+
+            var circle = new mapsModule.Circle();
+            circle.center = mapsModule.Position.positionFromLatLng(this.latitude, this.longitude);
+            circle.visible = true;
+            circle.radius = 5;
+            circle.fillColor = new Color('#99ff8800');
+            circle.strokeColor = new Color('#99ff0000');
+            circle.strokeWidth = 2;
+            mapView.addCircle(circle);
         }
     },
     function(e){
         console.log("Error: " + e.message);
     },
     {desiredAccuracy: 3, updateDistance: 10, minimumUpdateTime : 1000 * 2});
+
+
   }
 
   //Map events
   onMapReady = (event) => {
     console.log("Map Ready");
-    // TODO: Set marker etc.
+    this.startWatch(event);
 
     // Check if location services are enabled
     if (!geolocation.isEnabled()) {
@@ -80,6 +101,15 @@ export class MapPageComponent implements OnInit {
     marker.snippet = "University Campus";
     marker.userData = {index: 1};
     mapView.addMarker(marker);
+
+    var circle = new mapsModule.Circle();
+    circle.center = mapsModule.Position.positionFromLatLng(62.23, 25.73);
+    circle.visible = true;
+    circle.radius = 50;
+    circle.fillColor = new Color('#99ff8800');
+    circle.strokeColor = new Color('#99ff0000');
+    circle.strokeWidth = 2;
+    mapView.addCircle(circle);
 
 /*
     var location = geolocation.getCurrentLocation({
