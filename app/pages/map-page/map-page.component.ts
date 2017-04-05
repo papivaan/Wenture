@@ -39,6 +39,17 @@ export class MapPageComponent implements OnInit {
     marker.userData = {index: 1};
     mapView.addMarker(marker);
 
+    interface LocationObject {
+      "latitude": number,
+      "longitude": number,
+      "altitude": number,
+      "horizontalAccuracy": number,
+      "verticalAccuracy": number,
+      "speed": number,
+      "direction": number,
+      "timestamp":string
+    }
+
     var location = geolocation.getCurrentLocation({
                               desiredAccuracy: 3,
                               updateDistance: 10,
@@ -47,7 +58,10 @@ export class MapPageComponent implements OnInit {
     }).
     then(function(loc) {
       if (loc) {
-        console.log("Current location is: " + JSON.stringify(loc));
+        let obj: LocationObject = JSON.parse(JSON.stringify(loc));
+        console.log("Current location:\nLatitude: " + obj.latitude
+                      + "\nLongitude: " + obj.longitude
+                      + "\nAltitude: " + obj.altitude);
       }
     }, function(e){
       console.log("Error: " + e.message);
