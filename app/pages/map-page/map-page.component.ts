@@ -12,11 +12,53 @@ registerElement("MapView", () => require("nativescript-google-maps-sdk").MapView
   styleUrls: ["pages/map-page/map-page-common.css", "pages/map-page/map-page.css"]
 })
 
+/*export function public startWatch() {
+    var watchId = geolocation.watchLocation(
+    function (loc) {
+        if (loc) {
+            console.log("Received location: " + loc);
+        }
+    },
+    function(e){
+        console.log("Error: " + e.message);
+    },
+    {desiredAccuracy: 3, updateDistance: 10, minimumUpdateTime : 1000 * 20}); // Should update every 20 seconds according to Googe documentation. Not verified.
+}*/
+
 export class MapPageComponent implements OnInit {
   @ViewChild("MapView") mapView: ElementRef;
 
   ngOnInit() {
     // TODO: Loader
+    this.startWatch();
+  }
+
+  startWatch = () => {
+    interface LocationObject {
+      "latitude": number,
+      "longitude": number,
+      "altitude": number,
+      "horizontalAccuracy": number,
+      "verticalAccuracy": number,
+      "speed": number,
+      "direction": number,
+      "timestamp":string
+    }
+
+    var watchId = geolocation.watchLocation(
+    function (loc) {
+        if (loc) {
+            let obj: LocationObject = JSON.parse(JSON.stringify(loc));
+            console.log("Received location:\n\tLatitude: " + obj.latitude
+                          + "\n\tLongitude: " + obj.longitude
+                          + "\n\tAltitude: " + obj.altitude
+                          + "\n\tTimestamp: " + obj.timestamp);
+        }
+    },
+    function(e){
+        console.log("Error: " + e.message);
+    },
+    {desiredAccuracy: 3, updateDistance: 10, minimumUpdateTime : 1000 * 2});
   }
 
   //Map events
@@ -39,17 +81,7 @@ export class MapPageComponent implements OnInit {
     marker.userData = {index: 1};
     mapView.addMarker(marker);
 
-    interface LocationObject {
-      "latitude": number,
-      "longitude": number,
-      "altitude": number,
-      "horizontalAccuracy": number,
-      "verticalAccuracy": number,
-      "speed": number,
-      "direction": number,
-      "timestamp":string
-    }
-
+/*
     var location = geolocation.getCurrentLocation({
                               desiredAccuracy: 3,
                               updateDistance: 10,
@@ -66,6 +98,7 @@ export class MapPageComponent implements OnInit {
     }, function(e){
       console.log("Error: " + e.message);
     });
+*/
 
   };
   onCoordinateLongPress = (event) => {
@@ -75,8 +108,8 @@ export class MapPageComponent implements OnInit {
     var lat = event.position.latitude;
     var lng = event.position.longitude;
 
-    console.log("Tapped location: Latitude: " + event.position.latitude +
-                    ", Longtitude: " + event.position.longitude);
+    console.log("Tapped location: \n\tLatitude: " + event.position.latitude +
+                    "\n\tLongitude: " + event.position.longitude);
 
     var marker = new mapsModule.Marker();
     marker.position = mapsModule.Position.positionFromLatLng(lat, lng);
