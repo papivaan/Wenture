@@ -61,7 +61,7 @@ export class MapPageComponent implements OnInit {
     marker.snippet = "University Campus";
     marker.userData = {index: 1};
     mapView.addMarker(marker);
-
+/*
     var circle = new mapsModule.Circle();
     circle.center = mapsModule.Position.positionFromLatLng(62.23, 25.73);
     circle.visible = true;
@@ -70,7 +70,7 @@ export class MapPageComponent implements OnInit {
     circle.strokeColor = new Color('#99ff0000');
     circle.strokeWidth = 2;
     mapView.addCircle(circle);
-
+*/
   };
 
   onCoordinateLongPress = (event) => {
@@ -97,18 +97,19 @@ export class MapPageComponent implements OnInit {
       "latitude": string,
       "longitude": string
     }
-    
+
     console.log("MarkerSelect: " + event.marker.title
                   + "\n\tPosition: " + JSON.stringify(event.marker.position));
 
     // TODO: Tämä on jostain syystä undefined. This:llä varmaan väärä scope.
-    let currentPos = JSON.stringify(this._currentPosition);
-    console.log(currentPos);
+    //let currentPos = JSON.stringify(this._currentPosition);
+    let currentPos = JSON.parse(JSON.stringify(geolocation.getCurrentLocation({desiredAccuracy: 3, updateDistance: 10, maximumAge: 20000, timeout: 20000})));
+    console.log("Current position: " + currentPos);
 
     let markerPos = JSON.parse(JSON.stringify(event.marker.position));
-    console.log(markerPos);
+    console.log("Marker position: " + markerPos);
 
-    console.log("Distance to marker: " + geolocation.distance(markerPos, markerPos));
+    console.log("Distance to marker: " + geolocation.distance(currentPos, markerPos));
   };
 
   onMarkerBeginDragging = (event) => {
@@ -161,8 +162,8 @@ export function startWatch(event) {
           circle.center = mapsModule.Position.positionFromLatLng(this.latitude, this.longitude);
           circle.visible = true;
           circle.radius = 20;
-          circle.fillColor = new Color('#99ff8800');
-          circle.strokeColor = new Color('#99ff0000');
+          circle.fillColor = new Color('#6c9df0'); //#99ff8800
+          circle.strokeColor = new Color('#396abd'); //#99ff0000
           circle.strokeWidth = 2;
           mapView.addCircle(circle);
           mapView.latitude = this.latitude;
