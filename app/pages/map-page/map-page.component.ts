@@ -5,6 +5,9 @@ import { Color } from "color";
 
 var mapsModule = require("nativescript-google-maps-sdk");
 
+var watchId: any;
+//var _currentPosition: any;
+
 registerElement("MapView", () => require("nativescript-google-maps-sdk").MapView);
 
 @Component({
@@ -32,62 +35,17 @@ export class MapPageComponent implements OnInit {
   latitude: number;
   longitude: number;
   altitude: number;
+  _currentPosition: any;
 
   ngOnInit() {
     // TODO: Loader
     //this.startWatch();
   }
 
-  startWatch = (event) => {
-    interface LocationObject {
-      "latitude": number,
-      "longitude": number,
-      "altitude": number,
-      "horizontalAccuracy": number,
-      "verticalAccuracy": number,
-      "speed": number,
-      "direction": number,
-      "timestamp":string
-    }
-
-    var mapView = event.object;
-
-    var watchId = geolocation.watchLocation(
-    function (loc) {
-        if (loc) {
-            let obj: LocationObject = JSON.parse(JSON.stringify(loc));
-            this.latitude = obj.latitude;
-            this.longitude = obj.longitude;
-            this.altitude = obj.altitude;
-            console.log(new Date() + "\nReceived location:\n\tLatitude: " + obj.latitude
-                          + "\n\tLongitude: " + obj.longitude
-                          + "\n\tAltitude: " + obj.altitude
-                          + "\n\tTimestamp: " + obj.timestamp);
-
-            var circle = new mapsModule.Circle();
-            circle.center = mapsModule.Position.positionFromLatLng(this.latitude, this.longitude);
-            circle.visible = true;
-            circle.radius = 20;
-            circle.fillColor = new Color('#99ff8800');
-            circle.strokeColor = new Color('#99ff0000');
-            circle.strokeWidth = 2;
-            mapView.addCircle(circle);
-            mapView.latitude = this.latitude;
-            mapView.longitude = this.longitude;
-        }
-    },
-    function(e){
-        console.log("Error: " + e.message);
-    },
-    {desiredAccuracy: 3, updateDistance: 10, minimumUpdateTime : 1000 * 2});
-
-
-  }
-
   //Map events
   onMapReady = (event) => {
     console.log("Map Ready");
-    this.startWatch(event);
+    startWatch(event);
 
     // Check if location services are enabled
     if (!geolocation.isEnabled()) {
@@ -113,27 +71,8 @@ export class MapPageComponent implements OnInit {
     circle.strokeWidth = 2;
     mapView.addCircle(circle);
 
-
-/*
-    var location = geolocation.getCurrentLocation({
-                              desiredAccuracy: 3,
-                              updateDistance: 10,
-                              maximumAge: 20000,
-                              timeout: 20000
-    }).
-    then(function(loc) {
-      if (loc) {
-        let obj: LocationObject = JSON.parse(JSON.stringify(loc));
-        console.log("Current location:\nLatitude: " + obj.latitude
-                      + "\nLongitude: " + obj.longitude
-                      + "\nAltitude: " + obj.altitude);
-      }
-    }, function(e){
-      console.log("Error: " + e.message);
-    });
-*/
-
   };
+
   onCoordinateLongPress = (event) => {
     console.log("LongPress");
 
@@ -151,19 +90,95 @@ export class MapPageComponent implements OnInit {
     marker.userData = {index: 1};
     mapView.addMarker(marker);
   };
+
   onMarkerSelect = (event) => {
-    console.log("MarkerSelect: " + event.marker.title);
+
+    interface PositionObject {
+      "latitude": string,
+      "longitude": string
+    }
+    
+    console.log("MarkerSelect: " + event.marker.title
+                  + "\n\tPosition: " + JSON.stringify(event.marker.position));
+
+    // TODO: Tämä on jostain syystä undefined. This:llä varmaan väärä scope.
+    let currentPos = JSON.stringify(this._currentPosition);
+    console.log(currentPos);
+
+    let markerPos = JSON.parse(JSON.stringify(event.marker.position));
+    console.log(markerPos);
+
+    console.log("Distance to marker: " + geolocation.distance(markerPos, markerPos));
   };
+
   onMarkerBeginDragging = (event) => {
     console.log("MarkerBeginDragging");
   };
+
   onMarkerEndDragging = (event) => {
     console.log("MarkerEndDragging");
   };
+
   onMarkerDrag = (event) => {
     console.log("MarkerDrag");
   };
+
   onCameraChanged = (event) => {
     console.log("CameraChange");
   };
+}
+
+export function startWatch(event) {
+
+  interface LocationObject {
+    "latitude": number,
+    "longitude": number,
+    "altitude": number,
+    "horizontalAccuracy": number,
+    "verticalAccuracy": number,
+    "speed": number,
+    "direction": number,
+    "timestamp":string
+  }
+
+  var mapView = event.object;
+
+  watchId = geolocation.watchLocation(
+  function (loc) {
+      if (loc) {
+          let obj: LocationObject = JSON.parse(JSON.stringify(loc));
+          this.latitude = obj.latitude;
+          this.longitude = obj.longitude;
+          this.altitude = obj.altitude;
+          var currentPosition = mapsModule.Position.positionFromLatLng(obj.latitude, obj.longitude);
+          console.log(new Date() + "\nReceived location:\n\tLatitude: " + obj.latitude
+                        + "\n\tLongitude: " + obj.longitude
+                        + "\n\tAltitude: " + obj.altitude
+                        + "\n\tTimestamp: " + obj.timestamp
+                        + "\n\nCurrentPos: " + JSON.stringify(currentPosition));
+
+          var circle = new mapsModule.Circle();
+          circle.center = mapsModule.Position.positionFromLatLng(this.latitude, this.longitude);
+          circle.visible = true;
+          circle.radius = 20;
+          circle.fillColor = new Color('#99ff8800');
+          circle.strokeColor = new Color('#99ff0000');
+          circle.strokeWidth = 2;
+          mapView.addCircle(circle);
+          mapView.latitude = this.latitude;
+          mapView.longitude = this.longitude;
+
+      }
+  },
+  function(e){
+      console.log("Error: " + e.message);
+  },
+  {desiredAccuracy: 3, updateDistance: 10, minimumUpdateTime : 1000 * 2});
+}
+
+export function endWatch() {
+    if (watchId) {
+        geolocation.clearWatch(watchId);
+        console.log("My watch is ended... T. Jon Snow");
+    }
 }
