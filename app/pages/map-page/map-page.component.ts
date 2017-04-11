@@ -6,6 +6,7 @@ import { Color } from "color";
 var mapsModule = require("nativescript-google-maps-sdk");
 
 var watchId: any;
+var currentPosition: any;
 //var _currentPosition: any;
 
 registerElement("MapView", () => require("nativescript-google-maps-sdk").MapView);
@@ -103,13 +104,15 @@ export class MapPageComponent implements OnInit {
 
     // TODO: Tämä on jostain syystä undefined. This:llä varmaan väärä scope.
     //let currentPos = JSON.stringify(this._currentPosition);
-    let currentPos = JSON.parse(JSON.stringify(geolocation.getCurrentLocation({desiredAccuracy: 3, updateDistance: 10, maximumAge: 20000, timeout: 20000})));
+    let currentPos = JSON.stringify(currentPosition);
     console.log("Current position: " + currentPos);
 
-    let markerPos = JSON.parse(JSON.stringify(event.marker.position));
+    let markerPos = JSON.stringify(event.marker.position);
     console.log("Marker position: " + markerPos);
 
-    console.log("Distance to marker: " + geolocation.distance(currentPos, markerPos));
+    let distance = geolocation.distance(JSON.parse(currentPos), JSON.parse(markerPos));
+
+    console.log("Distance to marker: " + distance);
   };
 
   onMarkerBeginDragging = (event) => {
@@ -151,11 +154,12 @@ export function startWatch(event) {
           this.latitude = obj.latitude;
           this.longitude = obj.longitude;
           this.altitude = obj.altitude;
-          var currentPosition = mapsModule.Position.positionFromLatLng(obj.latitude, obj.longitude);
+          /*var*/currentPosition = mapsModule.Position.positionFromLatLng(obj.latitude, obj.longitude);
           console.log(new Date() + "\nReceived location:\n\tLatitude: " + obj.latitude
                         + "\n\tLongitude: " + obj.longitude
                         + "\n\tAltitude: " + obj.altitude
                         + "\n\tTimestamp: " + obj.timestamp
+                        + "\n\tDirection: " + obj.direction
                         + "\n\nCurrentPos: " + JSON.stringify(currentPosition));
 
           var circle = new mapsModule.Circle();
