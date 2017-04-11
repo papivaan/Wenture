@@ -6,7 +6,7 @@ import { Color } from "color";
 var mapsModule = require("nativescript-google-maps-sdk");
 
 var watchId: any;
-var currentPosition: any;
+var currentPosition: Location;
 //var _currentPosition: any;
 
 registerElement("MapView", () => require("nativescript-google-maps-sdk").MapView);
@@ -99,20 +99,17 @@ export class MapPageComponent implements OnInit {
       "longitude": string
     }
 
-    console.log("MarkerSelect: " + event.marker.title
-                  + "\n\tPosition: " + JSON.stringify(event.marker.position));
-
-    // TODO: Tämä on jostain syystä undefined. This:llä varmaan väärä scope.
-    //let currentPos = JSON.stringify(this._currentPosition);
-    let currentPos = JSON.stringify(currentPosition);
-    console.log("Current position: " + currentPos);
-
     let markerPos = JSON.stringify(event.marker.position);
-    console.log("Marker position: " + markerPos);
 
-    let distance = geolocation.distance(JSON.parse(currentPos), JSON.parse(markerPos));
+    let currentPos = JSON.stringify(currentPosition);
 
-    console.log("Distance to marker: " + distance);
+    let distance = geolocation.distance(JSON.parse(currentPos), JSON.parse(currentPos));
+
+    console.log("\n\tMarkerSelect: " + event.marker.title
+                  + "\n\tMarker position: " + markerPos
+                  + "\n\tCurrent position: " + currentPos
+                  + "\n\tDistance to marker: " + distance);
+
   };
 
   onMarkerBeginDragging = (event) => {
@@ -129,6 +126,10 @@ export class MapPageComponent implements OnInit {
 
   onCameraChanged = (event) => {
     console.log("CameraChange");
+  };
+
+  onShapeSelect = (event) => {
+    console.log("Your current position is: " + JSON.stringify(currentPosition));
   };
 }
 
@@ -169,6 +170,7 @@ export function startWatch(event) {
           circle.fillColor = new Color('#6c9df0'); //#99ff8800
           circle.strokeColor = new Color('#396abd'); //#99ff0000
           circle.strokeWidth = 2;
+          circle.clickable = true;
           mapView.addCircle(circle);
           mapView.latitude = this.latitude;
           mapView.longitude = this.longitude;
