@@ -114,12 +114,12 @@ export class MapPageComponent implements OnInit {
       console.log("Could not find distance.");
     }
 
-
+    event.marker.snippet = "University Campus \nDistance: " + distance.toFixed(0) + " m";
 
     console.log("\n\tMarkerSelect: " + event.marker.title
                   + "\n\tMarker position: " + markerPos
                   + "\n\tCurrent position: " + currentPos
-                  + "\n\tDistance to marker: " + distance);
+                  + "\n\tDistance to marker: " + distance.toFixed(2) + "m");
 
   };
 
