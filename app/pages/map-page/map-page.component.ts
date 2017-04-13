@@ -8,6 +8,8 @@ var mapsModule = require("nativescript-google-maps-sdk");
 
 var watchId: any;
 var currentPosition: Location;
+var collectDistance: number; //distance in m on how close to enable collect-property
+var mapView: any;
 //var _currentPosition: any;
 
 registerElement("MapView", () => require("nativescript-google-maps-sdk").MapView);
@@ -111,6 +113,8 @@ export class MapPageComponent implements OnInit {
                   + "\n\tCurrent position: " + currentPos
                   + "\n\tDistance to marker: " + distance.toFixed(2) + "m");
 
+    //collectMarker(event.marker);
+
   };
 
   onMarkerBeginDragging = (event) => {
@@ -207,4 +211,16 @@ function getDistanceTo(obj) {
     console.log("Could not find distance.");
   }
     return distance;
+}
+
+// TODO: toimimaan
+function collectMarker(mark) {
+  collectDistance = 50;
+
+  if(getDistanceTo(mark) < collectDistance) {
+    console.log("Collected marker: " + mark.title);
+    mapView.removeMarker(mark);
+  } else {
+    console.log("\nMarker too far away, move closer.");
+  }
 }
