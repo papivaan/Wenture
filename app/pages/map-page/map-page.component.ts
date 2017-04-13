@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
+import { isAndroid, isIOS } from "platform";
 import {registerElement} from "nativescript-angular/element-registry";
 import * as geolocation from "nativescript-geolocation";
 import { Color } from "color";
@@ -100,10 +101,20 @@ export class MapPageComponent implements OnInit {
     }
 
     let markerPos = JSON.stringify(event.marker.position);
-
     let currentPos = JSON.stringify(currentPosition);
+    let distance = null;
 
-    let distance = geolocation.distance(JSON.parse(markerPos)._ios, JSON.parse(currentPos)._ios);
+    if(isIOS) {
+      distance = geolocation.distance(JSON.parse(markerPos)._ios, JSON.parse(currentPos)._ios);
+    } else if(isAndroid) {
+      console.log("Running on android.");
+      //distance = geolocation.distance(JSON.parse(markerPos)._android, JSON.parse(currentPos)._android);
+    } else {
+      distance = "error";
+      console.log("Could not find distance.");
+    }
+
+
 
     console.log("\n\tMarkerSelect: " + event.marker.title
                   + "\n\tMarker position: " + markerPos
