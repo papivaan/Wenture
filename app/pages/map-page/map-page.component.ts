@@ -102,17 +102,7 @@ export class MapPageComponent implements OnInit {
 
     let markerPos = JSON.stringify(event.marker.position);
     let currentPos = JSON.stringify(currentPosition);
-    let distance = null;
-
-    if(isIOS) {
-      distance = geolocation.distance(JSON.parse(markerPos)._ios, JSON.parse(currentPos)._ios);
-    } else if(isAndroid) {
-      console.log("Running on android.");
-      //distance = geolocation.distance(JSON.parse(markerPos)._android, JSON.parse(currentPos)._android);
-    } else {
-      distance = "error";
-      console.log("Could not find distance.");
-    }
+    let distance = getDistanceTo(event.marker);
 
     event.marker.snippet = "University Campus \nDistance: " + distance.toFixed(0) + " m";
 
@@ -199,4 +189,22 @@ export function endWatch() {
         geolocation.clearWatch(watchId);
         console.log("My watch is ended... T. Jon Snow");
     }
+}
+
+// TODO: toimimaan androidille kanssa
+function getDistanceTo(obj) {
+  let objPos = JSON.stringify(obj.position);
+  let currentPos = JSON.stringify(currentPosition);
+  let distance = null;
+
+  if(isIOS) {
+    distance = geolocation.distance(JSON.parse(objPos)._ios, JSON.parse(currentPos)._ios);
+  } else if(isAndroid) {
+    console.log("Running on android.");
+    //distance = geolocation.distance(JSON.parse(markerPos)._android, JSON.parse(currentPos)._android);
+  } else {
+    distance = "error";
+    console.log("Could not find distance.");
+  }
+    return distance;
 }
