@@ -103,7 +103,7 @@ export class MapPageComponent implements OnInit {
 
     let currentPos = JSON.stringify(currentPosition);
 
-    let distance = geolocation.distance(JSON.parse(currentPos), JSON.parse(currentPos));
+    let distance = geolocation.distance(JSON.parse(markerPos)._ios, JSON.parse(currentPos)._ios);
 
     console.log("\n\tMarkerSelect: " + event.marker.title
                   + "\n\tMarker position: " + markerPos
