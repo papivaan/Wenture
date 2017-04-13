@@ -113,7 +113,7 @@ export class MapPageComponent implements OnInit {
                   + "\n\tCurrent position: " + currentPos
                   + "\n\tDistance to marker: " + distance.toFixed(2) + "m");
 
-    //collectMarker(event.marker);
+    collectMarker(event.marker);
 
   };
 
@@ -219,7 +219,7 @@ function collectMarker(mark) {
 
   if(getDistanceTo(mark) < collectDistance) {
     console.log("Collected marker: " + mark.title);
-    mapView.removeMarker(mark);
+    //this.mark.setMap(null);
   } else {
     console.log("\nMarker too far away, move closer.");
   }
