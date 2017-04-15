@@ -102,6 +102,8 @@ export class MapPageComponent implements OnInit {
       "longitude": string
     }
 
+    var mapView = event.object;
+
     let markerPos = JSON.stringify(event.marker.position);
     let currentPos = JSON.stringify(currentPosition);
     let distance = getDistanceTo(event.marker);
@@ -113,8 +115,20 @@ export class MapPageComponent implements OnInit {
                   + "\n\tCurrent position: " + currentPos
                   + "\n\tDistance to marker: " + distance.toFixed(2) + "m");
 
-    collectMarker(event.marker);
+    // This might be stupid, but works for now :)
+    //TODO: adding collected marker to a list etc. b4 removing
+    function collectMarker(mark) {
+      collectDistance = 50;
+      if(getDistanceTo(mark) < collectDistance) {
+        console.log("Collected marker: " + mark.title);
+        mapView.removeMarker(mark);
+      } else {
+        console.log("\nMarker too far away, move closer.");
+      }
+    }
 
+    collectMarker(event.marker);
+    
   };
 
   onMarkerBeginDragging = (event) => {
@@ -212,15 +226,16 @@ function getDistanceTo(obj) {
   }
     return distance;
 }
-
+/*
 // TODO: toimimaan
 function collectMarker(mark) {
   collectDistance = 50;
 
   if(getDistanceTo(mark) < collectDistance) {
     console.log("Collected marker: " + mark.title);
-    //this.mark.setMap(null);
+    mapView.removeMarker(mark);
   } else {
     console.log("\nMarker too far away, move closer.");
   }
 }
+*/
