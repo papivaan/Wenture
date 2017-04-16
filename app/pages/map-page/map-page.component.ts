@@ -91,6 +91,7 @@ export class MapPageComponent implements OnInit {
     marker.position = mapsModule.Position.positionFromLatLng(lat, lng);
     marker.title = "Mattilanniemi";
     marker.snippet = "University Campus";
+    marker.draggable = true;
     marker.userData = {index: 1};
     mapView.addMarker(marker);
   };
@@ -120,6 +121,8 @@ export class MapPageComponent implements OnInit {
     function collectMarker(mark) {
       collectDistance = 50;
       if(getDistanceTo(mark) < collectDistance) {
+        //hauskoille kehuille joku lista josta josta vetää aina randomilla yhden?
+        alert("Venture point collected. Nice job!");
         console.log("Collected marker: " + mark.title);
         mapView.removeMarker(mark);
       } else {
@@ -216,6 +219,7 @@ function getDistanceTo(obj) {
   let distance = null;
 
   if(isIOS) {
+    console.log("Running on ios.")
     distance = geolocation.distance(JSON.parse(objPos)._ios, JSON.parse(currentPos)._ios);
   } else if(isAndroid) {
     console.log("Running on android.");
