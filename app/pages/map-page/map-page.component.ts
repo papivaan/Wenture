@@ -128,7 +128,7 @@ export class MapPageComponent implements OnInit {
     }
 
     collectMarker(event.marker);
-    
+
   };
 
   onMarkerBeginDragging = (event) => {
@@ -219,7 +219,7 @@ function getDistanceTo(obj) {
     distance = geolocation.distance(JSON.parse(objPos)._ios, JSON.parse(currentPos)._ios);
   } else if(isAndroid) {
     console.log("Running on android.");
-    //distance = geolocation.distance(JSON.parse(markerPos)._android, JSON.parse(currentPos)._android);
+    distance = geolocation.distance(JSON.parse(objPos)._android, JSON.parse(currentPos)._android);
   } else {
     distance = "error";
     console.log("Could not find distance.");
