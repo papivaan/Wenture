@@ -10,6 +10,7 @@ var watchId: any;
 var currentPosition: Location;
 var collectDistance: number; //distance in m on how close to enable collect-property
 var mapView: any;
+var collectedMarkers = [];
 //var _currentPosition: any;
 
 registerElement("MapView", () => require("nativescript-google-maps-sdk").MapView);
@@ -121,10 +122,10 @@ export class MapPageComponent implements OnInit {
     function collectMarker(mark) {
       collectDistance = 50;
       if(getDistanceTo(mark) < collectDistance) {
-        //hauskoille kehuille joku lista josta josta vetää aina randomilla yhden?
         alert("Venture point collected. Nice job!");
-        console.log("Collected marker: " + mark.title);
+        collectedMarkers.push(mark);
         mapView.removeMarker(mark);
+        console.log("You have " + collectedMarkers.length + " collected markers.")
       } else {
         console.log("\nMarker too far away, move closer.");
       }
@@ -219,7 +220,7 @@ function getDistanceTo(obj) {
   let distance = null;
 
   if(isIOS) {
-    console.log("Running on ios.")
+    //console.log("Running on ios.")
     distance = geolocation.distance(JSON.parse(objPos)._ios, JSON.parse(currentPos)._ios);
   } else if(isAndroid) {
     console.log("Running on android.");
