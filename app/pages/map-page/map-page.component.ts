@@ -90,8 +90,8 @@ export class MapPageComponent implements OnInit {
 
     var marker = new mapsModule.Marker();
     marker.position = mapsModule.Position.positionFromLatLng(lat, lng);
-    marker.title = "Mattilanniemi";
-    marker.snippet = "University Campus";
+    marker.title = "Wenture point";
+    marker.snippet = "";
     marker.draggable = true;
     marker.userData = {index: 1};
     mapView.addMarker(marker);
@@ -110,7 +110,7 @@ export class MapPageComponent implements OnInit {
     let currentPos = JSON.stringify(currentPosition);
     let distance = getDistanceTo(event.marker);
 
-    event.marker.snippet = "University Campus \nDistance: " + distance.toFixed(0) + " m";
+    event.marker.snippet = "Distance: " + distance.toFixed(0) + " m";
 
     console.log("\n\tMarkerSelect: " + event.marker.title
                   + "\n\tMarker position: " + markerPos
