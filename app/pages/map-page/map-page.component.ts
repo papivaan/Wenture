@@ -5,6 +5,7 @@ import * as geolocation from "nativescript-geolocation";
 import { Color } from "color";
 
 var mapsModule = require("nativescript-google-maps-sdk");
+var dialogsModule = require("ui/dialogs");
 
 var watchId: any;
 var currentPosition: Location;
@@ -122,7 +123,9 @@ export class MapPageComponent implements OnInit {
     function collectMarker(mark) {
       collectDistance = 50;
       if(getDistanceTo(mark) < collectDistance) {
-        alert("Venture point collected. Nice job!");
+        let amount = howManyCollected();
+        collect(amount);
+        //alert("Venture point collected. \nCollected: " + amount);
         collectedMarkers.push(mark);
         mapView.removeMarker(mark);
         console.log("You have " + collectedMarkers.length + " collected markers.")
@@ -231,16 +234,15 @@ function getDistanceTo(obj) {
   }
     return distance;
 }
-/*
-// TODO: toimimaan
-function collectMarker(mark) {
-  collectDistance = 50;
 
-  if(getDistanceTo(mark) < collectDistance) {
-    console.log("Collected marker: " + mark.title);
-    mapView.removeMarker(mark);
-  } else {
-    console.log("\nMarker too far away, move closer.");
-  }
+function howManyCollected() {
+  return collectedMarkers.length + 1;
 }
-*/
+
+//handles the collection and returns message
+function collect(amount) {
+  dialogsModule.alert({
+    message: "Wenture point collected! \nYou have: " + amount,
+    okButtonText: "OK"
+  });
+}
