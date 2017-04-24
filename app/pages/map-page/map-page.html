@@ -1,5 +1,6 @@
-<GridLayout>
-  <MapView  latitude="62.2308912"
+<GridLayout rows="*, auto">
+  <MapView  row="0"
+            latitude="62.2308912"
             longitude="25.7343853"
             zoom="14.93"
             bearing="1"
@@ -14,4 +15,5 @@
    					(cameraChanged)="onCameraChanged($event)"
             (shapeSelect)="onShapeSelect($event)">
   </MapView>
+  <Label row="1" text="Hiano alapalkki" backgroundColor="red"></Label>
 </GridLayout>
