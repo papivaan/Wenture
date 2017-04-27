@@ -3,9 +3,15 @@ import { isAndroid, isIOS } from "platform";
 import {registerElement} from "nativescript-angular/element-registry";
 import * as geolocation from "nativescript-geolocation";
 import { Color } from "color";
+//import { Image } from "ui/image";
+import { ImageSource } from "image-source";
 
 var mapsModule = require("nativescript-google-maps-sdk");
 var dialogsModule = require("ui/dialogs");
+var Image = require("ui/image").Image;
+var imageSource = require("image-source");
+
+
 
 var watchId: any;
 var currentPosition: Location;
@@ -65,6 +71,9 @@ export class MapPageComponent implements OnInit {
     marker.position = mapsModule.Position.positionFromLatLng(62.2308912, 25.7343853);
     marker.title = "Mattilanniemi";
     marker.snippet = "University Campus";
+    var icon = new Image();
+    icon.imageSource = imageSource.fromResource('icon');
+    marker.icon = icon;
     marker.userData = {index: 1};
     mapView.addMarker(marker);
 /*
@@ -93,6 +102,11 @@ export class MapPageComponent implements OnInit {
     marker.position = mapsModule.Position.positionFromLatLng(lat, lng);
     marker.title = "Wenture point";
     marker.snippet = "";
+    //Androidilla toimii. Iosille pitää katsoa miten resource toimii. PC:llä ei pystytä testaamaan
+    //Ikonia joutuu hiemna muokkaamaan(pienemmäksi ja lisätään pieni osoitin alalaitaan)
+    var icon = new Image();
+    icon.imageSource = imageSource.fromResource('icon');
+    marker.icon = icon;
     marker.draggable = true;
     marker.userData = {index: 1};
     mapView.addMarker(marker);
@@ -227,7 +241,7 @@ function getDistanceTo(obj) {
     distance = geolocation.distance(JSON.parse(objPos)._ios, JSON.parse(currentPos)._ios);
   } else if(isAndroid) {
     console.log("Running on android.");
-    distance = geolocation.distance(JSON.parse(objPos)._android, JSON.parse(currentPos)._android);
+    distance = 3;//geolocation.distance(JSON.parse(objPos)._android, JSON.parse(currentPos)._android);
   } else {
     distance = "error";
     console.log("Could not find distance.");

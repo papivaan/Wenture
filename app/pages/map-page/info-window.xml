@@ -1,0 +1,5 @@
+<StackLayout orientation="vertical" >
+    <Image src="C:\Users\kuhno\Documents\joelin kuvat" stretch="none"  height="50" cssClass="infoWindowImage" />
+    <Label text="Current Location" cssClass="title"  />
+    <Label text="aamuja" cssClass="infoWindowCoordinates"  />
+</StackLayout>'

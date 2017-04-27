@@ -72,46 +72,18 @@
         <dex dex="C:\Users\kuhno\Documents\koodia\angular\Wenture\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\com.google.android.gms-play-services-base-10.2.0_057993fa215e042bf3bbba51b14403ee7ebbdef8.jar" />
     </item>
     <item
-        jar="C:\Users\kuhno\Documents\koodia\angular\Wenture\platforms\android\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.3.0\jars\classes.jar"
-        jumboMode="false"
-        revision="25.0.2"
-        sha1="d6a04527c17597019dad82777c5094a3d60d1c33">
-        <dex dex="C:\Users\kuhno\Documents\koodia\angular\Wenture\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\com.android.support-support-vector-drawable-25.3.0_82336c7924c346f593df1a34ac9338c93e0eed45.jar" />
-    </item>
-    <item
-        jar="C:\Users\kuhno\Documents\koodia\angular\Wenture\platforms\android\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.3.0\jars\classes.jar"
-        jumboMode="false"
-        revision="25.0.2"
-        sha1="425c7b17887e5c3f8cbdf67ba171bc246f29b42c">
-        <dex dex="C:\Users\kuhno\Documents\koodia\angular\Wenture\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\com.android.support-support-media-compat-25.3.0_f21595783bed86e132ce7e93b7fb1ac8f89a5ca2.jar" />
-    </item>
-    <item
-        jar="C:\Users\kuhno\Documents\koodia\angular\Wenture\platforms\android\build\intermediates\exploded-aar\Wenture\runtime\unspecified\jars\libs\binding-generator.jar"
-        jumboMode="false"
-        revision="25.0.2"
-        sha1="d82f3ca98719f09b65db6aeaf450ad3bafc46e81">
-        <dex dex="C:\Users\kuhno\Documents\koodia\angular\Wenture\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\binding-generator_594cd3937bafd63d3524cd09af667acff884e1df.jar" />
-    </item>
-    <item
-        jar="C:\Users\kuhno\Documents\koodia\angular\Wenture\platforms\android\build\intermediates\exploded-aar\Wenture\runtime\unspecified\jars\classes.jar"
-        jumboMode="false"
-        revision="25.0.2"
-        sha1="632bf39700c28ba66c117628dab343126ef89551">
-        <dex dex="C:\Users\kuhno\Documents\koodia\angular\Wenture\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\Wenture-runtime-unspecified_d875540f19db80b4ab781a675f9c4ed647b66e4a.jar" />
-    </item>
-    <item
-        jar="C:\Users\kuhno\Documents\koodia\angular\Wenture\platforms\android\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.3.0\jars\classes.jar"
-        jumboMode="false"
-        revision="25.0.2"
-        sha1="70f23cb87278f89aa51e6f57e8f0fd5266572d95">
-        <dex dex="C:\Users\kuhno\Documents\koodia\angular\Wenture\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\com.android.support-appcompat-v7-25.3.0_bd53d8422e3963f27c8cb9e2e0b7f0ccb09cb73f.jar" />
-    </item>
-    <item
         jar="C:\Users\kuhno\Documents\koodia\angular\Wenture\platforms\android\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.3.0\jars\classes.jar"
         jumboMode="false"
         revision="25.0.2"
         sha1="5cc5ef8347a6bafa14556cbd35230aa9b3431bb0">
         <dex dex="C:\Users\kuhno\Documents\koodia\angular\Wenture\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\com.android.support-support-core-ui-25.3.0_3e2cb6b1c07d72f91fd5f88720feb32cc6310d03.jar" />
+    </item>
+    <item
+        jar="C:\Users\kuhno\Documents\koodia\angular\Wenture\platforms\android\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="25.0.2"
+        sha1="d6a04527c17597019dad82777c5094a3d60d1c33">
+        <dex dex="C:\Users\kuhno\Documents\koodia\angular\Wenture\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\com.android.support-support-vector-drawable-25.3.0_82336c7924c346f593df1a34ac9338c93e0eed45.jar" />
     </item>
     <item
         jar="C:\Users\kuhno\Documents\koodia\angular\Wenture\platforms\android\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\10.2.0\jars\classes.jar"
@@ -135,11 +107,39 @@
         <dex dex="C:\Users\kuhno\Documents\koodia\angular\Wenture\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\com.android.support-animated-vector-drawable-25.3.0_df687def784245963435a630dd6bdd676d7212f4.jar" />
     </item>
     <item
+        jar="C:\Users\kuhno\Documents\koodia\angular\Wenture\platforms\android\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="25.0.2"
+        sha1="425c7b17887e5c3f8cbdf67ba171bc246f29b42c">
+        <dex dex="C:\Users\kuhno\Documents\koodia\angular\Wenture\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\com.android.support-support-media-compat-25.3.0_f21595783bed86e132ce7e93b7fb1ac8f89a5ca2.jar" />
+    </item>
+    <item
         jar="C:\Users\kuhno\Documents\koodia\angular\Wenture\platforms\android\build\intermediates\exploded-aar\widgets-release\jars\classes.jar"
         jumboMode="false"
         revision="25.0.2"
         sha1="8a73b09319cc3945912970487ced4c7724acc97d">
         <dex dex="C:\Users\kuhno\Documents\koodia\angular\Wenture\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\intermediates-exploded-aar-widgets-release_c9b3fcd334ee1d305221b35223359a614ae30023.jar" />
+    </item>
+    <item
+        jar="C:\Users\kuhno\Documents\koodia\angular\Wenture\platforms\android\build\intermediates\exploded-aar\Wenture\runtime\unspecified\jars\libs\binding-generator.jar"
+        jumboMode="false"
+        revision="25.0.2"
+        sha1="d82f3ca98719f09b65db6aeaf450ad3bafc46e81">
+        <dex dex="C:\Users\kuhno\Documents\koodia\angular\Wenture\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\binding-generator_594cd3937bafd63d3524cd09af667acff884e1df.jar" />
+    </item>
+    <item
+        jar="C:\Users\kuhno\Documents\koodia\angular\Wenture\platforms\android\build\intermediates\exploded-aar\Wenture\runtime\unspecified\jars\classes.jar"
+        jumboMode="false"
+        revision="25.0.2"
+        sha1="632bf39700c28ba66c117628dab343126ef89551">
+        <dex dex="C:\Users\kuhno\Documents\koodia\angular\Wenture\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\Wenture-runtime-unspecified_d875540f19db80b4ab781a675f9c4ed647b66e4a.jar" />
+    </item>
+    <item
+        jar="C:\Users\kuhno\Documents\koodia\angular\Wenture\platforms\android\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="25.0.2"
+        sha1="70f23cb87278f89aa51e6f57e8f0fd5266572d95">
+        <dex dex="C:\Users\kuhno\Documents\koodia\angular\Wenture\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\com.android.support-appcompat-v7-25.3.0_bd53d8422e3963f27c8cb9e2e0b7f0ccb09cb73f.jar" />
     </item>
 
 </items>

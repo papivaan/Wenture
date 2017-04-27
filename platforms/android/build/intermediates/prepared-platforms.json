@@ -7,6 +7,7 @@
     "@angular/platform-browser": true,
     "@angular/platform-browser-dynamic": true,
     "@angular/router": true,
+    "email-validator": true,
     "nativescript-angular": true,
     "nativescript-intl": true,
     "parse5": true,
@@ -20,6 +21,5 @@
     "nativescript-google-maps-sdk": true,
     "nativescript-theme-core": true,
     "tns-core-modules": true,
-    "tns-core-modules-widgets": true,
-    "email-validator": true
+    "tns-core-modules-widgets": true
 }
