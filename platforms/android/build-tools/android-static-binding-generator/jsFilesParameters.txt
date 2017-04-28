@@ -7,6 +7,8 @@ C:\Users\kuhno\Documents\koodia\angular\Wenture\platforms\android\src\main\asset
 C:\Users\kuhno\Documents\koodia\angular\Wenture\platforms\android\src\main\assets\app\shared\config.js
 C:\Users\kuhno\Documents\koodia\angular\Wenture\platforms\android\src\main\assets\app\shared\user\user.js
 C:\Users\kuhno\Documents\koodia\angular\Wenture\platforms\android\src\main\assets\app\shared\user\user.service.js
+C:\Users\kuhno\Documents\koodia\angular\Wenture\platforms\android\src\main\assets\app\shared\wenturepoint\wenturepoint.js
+C:\Users\kuhno\Documents\koodia\angular\Wenture\platforms\android\src\main\assets\app\shared\wenturepoint\wenturepoint.service.js
 C:\Users\kuhno\Documents\koodia\angular\Wenture\platforms\android\src\main\assets\app\tns_modules\nativescript-angular\animation-driver.js
 C:\Users\kuhno\Documents\koodia\angular\Wenture\platforms\android\src\main\assets\app\tns_modules\nativescript-angular\animation-player.js
 C:\Users\kuhno\Documents\koodia\angular\Wenture\platforms\android\src\main\assets\app\tns_modules\nativescript-angular\collection-facade.js
@@ -68,6 +70,8 @@ C:\Users\kuhno\Documents\koodia\angular\Wenture\platforms\android\src\main\asset
 C:\Users\kuhno\Documents\koodia\angular\Wenture\platforms\android\src\main\assets\app\tns_modules\nativescript-intl\index.js
 C:\Users\kuhno\Documents\koodia\angular\Wenture\platforms\android\src\main\assets\app\tns_modules\nativescript-intl\nativescript-intl-common.js
 C:\Users\kuhno\Documents\koodia\angular\Wenture\platforms\android\src\main\assets\app\tns_modules\nativescript-intl\nativescript-intl.js
+C:\Users\kuhno\Documents\koodia\angular\Wenture\platforms\android\src\main\assets\app\tns_modules\nativescript-sidedrawer\nativescript-sidedrawer.common.js
+C:\Users\kuhno\Documents\koodia\angular\Wenture\platforms\android\src\main\assets\app\tns_modules\nativescript-sidedrawer\nativescript-sidedrawer.js
 C:\Users\kuhno\Documents\koodia\angular\Wenture\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\bundle-entry-points.js
 C:\Users\kuhno\Documents\koodia\angular\Wenture\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\application\application-common.js
 C:\Users\kuhno\Documents\koodia\angular\Wenture\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\application\application.js

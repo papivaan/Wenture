@@ -19,6 +19,7 @@
     "url": true,
     "nativescript-geolocation": true,
     "nativescript-google-maps-sdk": true,
+    "nativescript-sidedrawer": true,
     "nativescript-theme-core": true,
     "tns-core-modules": true,
     "tns-core-modules-widgets": true

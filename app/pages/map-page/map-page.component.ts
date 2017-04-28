@@ -2,13 +2,10 @@ import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
 import { isAndroid, isIOS } from "platform";
 import {registerElement} from "nativescript-angular/element-registry";
 import * as geolocation from "nativescript-geolocation";
-import { Router } from "@angular/router";
-import { Page } from "ui/page";
 import { Color } from "color";
 //import { Image } from "ui/image";
 import { ImageSource } from "image-source";
-import { WenturePoint } from "../../shared/wenturepoint/wenturepoint";
-import { WenturePointService } from "../../shared/wenturepoint/wenturepoint.service";
+import { TnsSideDrawer } from 'nativescript-sidedrawer'
 
 var mapsModule = require("nativescript-google-maps-sdk");
 var dialogsModule = require("ui/dialogs");
@@ -28,7 +25,6 @@ registerElement("MapView", () => require("nativescript-google-maps-sdk").MapView
 
 @Component({
   selector: "map-page",
-  providers: [WenturePointService],
   templateUrl: "pages/map-page/map-page.html",
   styleUrls: ["pages/map-page/map-page-common.css", "pages/map-page/map-page.css"]
 })
@@ -54,14 +50,12 @@ export class MapPageComponent implements OnInit {
   altitude: number;
   _currentPosition: any;
 
-  constructor(private router: Router, private wenturePointService: WenturePointService, private page: Page) {
-
-  }
   ngOnInit() {
     // TODO: Loader
     //this.startWatch();
   }
-
+  //i stores the index value of menu
+  i: number;
   //Map events
   onMapReady = (event) => {
     console.log("Map Ready");
@@ -84,6 +78,38 @@ export class MapPageComponent implements OnInit {
     marker.icon = icon;
     marker.userData = {index: 1};
     mapView.addMarker(marker);
+
+    //menuitem iconit puuttuu
+    TnsSideDrawer.build({
+    templates: [{
+        title: 'Wenturepoints',
+        //androidIcon: 'ic_home_white_24dp',
+        //iosIcon: 'ic_home_white',
+    }, {
+        title: 'Routes',
+        //androidIcon: 'ic_gavel_white_24dp',
+        //iosIcon: 'ic_gavel_white',
+    }, {
+        title: 'My Wentures',
+        //androidIcon: 'ic_account_balance_white_24dp',
+        //iosIcon: 'ic_account_balance_white',
+    }, {
+        title: 'Settings',
+      //  androidIcon: 'ic_build_white_24dp',
+      //  iosIcon: 'ic_build_white',
+    }, {
+        title: 'Log out',
+      //  androidIcon: 'ic_account_circle_white_24dp',
+      //  iosIcon: 'ic_account_circle_white',
+    }],
+    title: 'Wenture',
+    subtitle: 'your urban adventure!',
+    listener: (index) => {
+        this.i = index
+    },
+    context: this,
+});
+
 /*
     var circle = new mapsModule.Circle();
     circle.center = mapsModule.Position.positionFromLatLng(62.23, 25.73);
@@ -95,6 +121,8 @@ export class MapPageComponent implements OnInit {
     mapView.addCircle(circle);
 */
   };
+
+
 
   onCoordinateLongPress = (event) => {
     console.log("LongPress");
@@ -120,12 +148,17 @@ export class MapPageComponent implements OnInit {
     mapView.addMarker(marker);
   };
 
+  TnsSideDrawerOptionsListener = (index) => {
+    console.log(index)
+  };
+
   onMarkerSelect = (event) => {
 
     interface PositionObject {
       "latitude": string,
       "longitude": string
     }
+
 
     var mapView = event.object;
 
@@ -174,7 +207,6 @@ export class MapPageComponent implements OnInit {
 
   onCameraChanged = (event) => {
     console.log("CameraChange");
-    console.log("Tässä tulee lista: " + this.wenturePointService.getPoints());
   };
 
   onShapeSelect = (event) => {
