@@ -2,6 +2,8 @@ import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
 import { isAndroid, isIOS } from "platform";
 import {registerElement} from "nativescript-angular/element-registry";
 import * as geolocation from "nativescript-geolocation";
+import { Router } from "@angular/router";
+import { Page } from "ui/page";
 import { Color } from "color";
 //import { Image } from "ui/image";
 import { ImageSource } from "image-source";
@@ -26,6 +28,7 @@ registerElement("MapView", () => require("nativescript-google-maps-sdk").MapView
 
 @Component({
   selector: "map-page",
+  providers: [WenturePointService],
   templateUrl: "pages/map-page/map-page.html",
   styleUrls: ["pages/map-page/map-page-common.css", "pages/map-page/map-page.css"]
 })
@@ -51,6 +54,9 @@ export class MapPageComponent implements OnInit {
   altitude: number;
   _currentPosition: any;
 
+  constructor(private router: Router, private wenturePointService: WenturePointService, private page: Page) {
+
+  }
   ngOnInit() {
     // TODO: Loader
     //this.startWatch();
@@ -168,6 +174,7 @@ export class MapPageComponent implements OnInit {
 
   onCameraChanged = (event) => {
     console.log("CameraChange");
+    console.log("Tässä tulee lista: " + this.wenturePointService.getPoints());
   };
 
   onShapeSelect = (event) => {
