@@ -5,6 +5,8 @@ import * as geolocation from "nativescript-geolocation";
 import { Color } from "color";
 //import { Image } from "ui/image";
 import { ImageSource } from "image-source";
+import { WenturePoint } from "../../shared/wenturepoint/wenturepoint";
+import { WenturePointService } from "../../shared/wenturepoint/wenturepoint.service";
 
 var mapsModule = require("nativescript-google-maps-sdk");
 var dialogsModule = require("ui/dialogs");

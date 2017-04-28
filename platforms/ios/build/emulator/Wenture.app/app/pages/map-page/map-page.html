@@ -1,5 +1,6 @@
-<GridLayout>
-  <MapView  latitude="62.2308912"
+<GridLayout rows="*, auto">
+  <MapView  row="0"
+            latitude="62.2308912"
             longitude="25.7343853"
             zoom="14.93"
             bearing="1"
@@ -11,6 +12,10 @@
             (markerBeginDragging)="onMarkerBeginDragging($event)"
    					(markerEndDragging)="onMarkerEndDragging($event)"
             (markerDrag)="onMarkerDrag($event)"
-   					(cameraChanged)="onCameraChanged($event)">
+   					(cameraChanged)="onCameraChanged($event)"
+            (shapeSelect)="onShapeSelect($event)">
   </MapView>
+  <!--TODO: alapalkille ehkä oma layout, textfieldit ja buttonit jne. Contentin hakeminen map-page.componentilta-->
+  <Label id="bottomBar"row="1" text="Hiano alapalkki" border-width="2" border-color="black" backgroundColor="white" height="50"></Label>
 </GridLayout>
+ 
