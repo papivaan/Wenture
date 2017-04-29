@@ -207,7 +207,10 @@ export class MapPageComponent implements OnInit {
 
   onCameraChanged = (event) => {
     console.log("CameraChange");
-    console.log("WenturePoints: " + this.wenturePointService.getPoints());
+    console.log("Wenture Points:");
+    for (var i = 0; i < this.wenturePointService.getPoints().length; i++) {
+      console.log("\t" + JSON.stringify(this.wenturePointService.getPoints().getItem(i)));
+    }
   };
 
   onShapeSelect = (event) => {

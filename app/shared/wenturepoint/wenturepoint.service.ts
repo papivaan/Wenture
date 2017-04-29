@@ -18,7 +18,16 @@ export class WenturePointService extends Observable {
 
   populate() {
     this.points.push(
-      new WenturePoint("Mattilanniemi", 62.24, 25.75)
+      new WenturePoint("Dumpin toimisto", 62.232615, 25.737668)
+    );
+    this.points.push(
+      new WenturePoint("Kompassi", 62.242640, 25.747362)
+    );
+    this.points.push(
+      new WenturePoint("Escape", 62.243915, 25.750180)
+    );
+    this.points.push(
+      new WenturePoint("Yritystehdas", 62.247596, 25.741710)
     );
   }
 
