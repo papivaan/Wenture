@@ -87,7 +87,8 @@ export class MapPageComponent implements OnInit {
     TnsSideDrawer.toggle();
   }
 
-  bottomButtonTapped() {
+  collectButtonTapped() {
+    // TODO: Tähän se keräystoiminto
     console.log("Mänit sitte painaa nappulaa :O");
   }
 
@@ -127,8 +128,6 @@ export class MapPageComponent implements OnInit {
     this.addWenturePoints(mapView);
 
   };
-
-
 
   onCoordinateLongPress = (event) => {
     console.log("LongPress");
@@ -314,24 +313,3 @@ function collect(amount) {
     okButtonText: "OK"
   });
 }
-/*
-function addWenturePoints(mapView) {
-  for (var i = 0; i < this.wenturePointService.getPoints().length; i++) {
-    var wPoint = this.wenturePointService.getPoints().getItem(i);
-    var marker = new mapsModule.Marker();
-
-    marker.position = mapsModule.Position.positionFromLatLng(wPoint.lat, wPoint.lng);
-    marker.title = wPoint.title;
-    marker.snippet = "";
-    //Androidilla toimii. Iosille pitää katsoa miten resource toimii. PC:llä ei pystytä testaamaan
-    //Ikonia joutuu hiemna muokkaamaan(pienemmäksi ja lisätään pieni osoitin alalaitaan)
-    var icon = new Image();
-    icon.imageSource = imageSource.fromResource('icon');
-    marker.icon = icon;
-    marker.draggable = true;
-    marker.userData = {index: 1};
-    mapView.addMarker(marker);
-
-  }
-}
-*/
