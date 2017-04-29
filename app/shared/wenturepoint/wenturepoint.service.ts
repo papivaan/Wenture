@@ -1,19 +1,26 @@
-import observableArrayModule = require("data/observable-array");
+import { Observable, EventData } from "data/observable";
+import { ObservableArray } from "data/observable-array";
 import { WenturePoint } from "../../shared/wenturepoint/wenturepoint";
 
+export class WenturePointService extends Observable {
+  points: ObservableArray<string>;
 
+  constructor () {
+    super();
 
-export class WenturePointService {
-  list: Array<number> = [1, 2, 666];
-
-  constructor () {}
+    this.points = new ObservableArray<string>([
+      'Mattilanniemi',
+      'Kompassi',
+      'Escape'
+    ]);
+  }
 
   setPoints() {
-    this.list.push(1);
+    this.points.push("Kukkuu");
   }
 
   getPoints() {
-    return this.list;
+    return this.points;
   }
 
 }

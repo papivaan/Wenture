@@ -1,4 +1,4 @@
-<GridLayout rows="*, auto">
+<GridLayout rows="*, auto, auto">
   <MapView  row="0"
             latitude="62.2308912"
             longitude="25.7343853"
@@ -16,6 +16,8 @@
             (shapeSelect)="onShapeSelect($event)">
   </MapView>
   <!--TODO: alapalkille ehkä oma layout, textfieldit ja buttonit jne. Contentin hakeminen map-page.componentilta-->
-  <Label id="bottomBar"row="1" text="Hiano alapalkki" border-width="2" border-color="black" backgroundColor="white" height="50"></Label>
+  <Label id="bottomBar" row="1" text="Hiano alapalkki" border-width="2" border-color="black" backgroundColor="white" height="50"></Label>
+
+  <!-- TODO: Poista tämä, tää on vaan menun testiä varten-->
+  <Button row="2" text="Sidedrawer" (tap)="toggleSideDrawer()"></Button>
 </GridLayout>
- 

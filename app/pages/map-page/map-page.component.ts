@@ -2,17 +2,19 @@ import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
 import { isAndroid, isIOS } from "platform";
 import {registerElement} from "nativescript-angular/element-registry";
 import * as geolocation from "nativescript-geolocation";
+import { Router } from "@angular/router";
+import { Page } from "ui/page";
 import { Color } from "color";
 //import { Image } from "ui/image";
 import { ImageSource } from "image-source";
-import { TnsSideDrawer } from 'nativescript-sidedrawer'
+import { WenturePoint } from "../../shared/wenturepoint/wenturepoint";
+import { WenturePointService } from "../../shared/wenturepoint/wenturepoint.service";
+import { TnsSideDrawer } from 'nativescript-sidedrawer';
 
 var mapsModule = require("nativescript-google-maps-sdk");
 var dialogsModule = require("ui/dialogs");
 var Image = require("ui/image").Image;
 var imageSource = require("image-source");
-
-
 
 var watchId: any;
 var currentPosition: Location;
@@ -25,22 +27,11 @@ registerElement("MapView", () => require("nativescript-google-maps-sdk").MapView
 
 @Component({
   selector: "map-page",
+  providers: [WenturePointService],
   templateUrl: "pages/map-page/map-page.html",
   styleUrls: ["pages/map-page/map-page-common.css", "pages/map-page/map-page.css"]
 })
 
-/*export function public startWatch() {
-    var watchId = geolocation.watchLocation(
-    function (loc) {
-        if (loc) {
-            console.log("Received location: " + loc);
-        }
-    },
-    function(e){
-        console.log("Error: " + e.message);
-    },
-    {desiredAccuracy: 3, updateDistance: 10, minimumUpdateTime : 1000 * 20}); // Should update every 20 seconds according to Googe documentation. Not verified.
-}*/
 
 export class MapPageComponent implements OnInit {
   @ViewChild("MapView") mapView: ElementRef;
@@ -49,13 +40,52 @@ export class MapPageComponent implements OnInit {
   longitude: number;
   altitude: number;
   _currentPosition: any;
+  //i stores the index value of menu
+  i: number = 0;
+
+  constructor(private router: Router, private wenturePointService: WenturePointService, private page: Page) {
+
+  }
 
   ngOnInit() {
-    // TODO: Loader
-    //this.startWatch();
+    // TODO: Loader?
+    // TODO: menuitem iconit puuttuu
+    TnsSideDrawer.build({
+      templates: [{
+          title: 'Wenturepoints',
+          //androidIcon: 'ic_home_white_24dp',
+          //iosIcon: 'ic_home_white',
+      }, {
+          title: 'Routes',
+          //androidIcon: 'ic_gavel_white_24dp',
+          //iosIcon: 'ic_gavel_white',
+      }, {
+          title: 'My Wentures',
+          //androidIcon: 'ic_account_balance_white_24dp',
+          //iosIcon: 'ic_account_balance_white',
+      }, {
+          title: 'Settings',
+        //  androidIcon: 'ic_build_white_24dp',
+        //  iosIcon: 'ic_build_white',
+      }, {
+          title: 'Log out',
+        //  androidIcon: 'ic_account_circle_white_24dp',
+        //  iosIcon: 'ic_account_circle_white',
+      }],
+      title: 'Wenture',
+      subtitle: 'your urban adventure!',
+      listener: (index) => {
+          this.i = index
+      },
+      context: this,
+    });
+
   }
-  //i stores the index value of menu
-  i: number;
+
+  toggleSideDrawer() {
+    TnsSideDrawer.toggle();
+  }
+
   //Map events
   onMapReady = (event) => {
     console.log("Map Ready");
@@ -79,36 +109,6 @@ export class MapPageComponent implements OnInit {
     marker.userData = {index: 1};
     mapView.addMarker(marker);
 
-    //menuitem iconit puuttuu
-    TnsSideDrawer.build({
-    templates: [{
-        title: 'Wenturepoints',
-        //androidIcon: 'ic_home_white_24dp',
-        //iosIcon: 'ic_home_white',
-    }, {
-        title: 'Routes',
-        //androidIcon: 'ic_gavel_white_24dp',
-        //iosIcon: 'ic_gavel_white',
-    }, {
-        title: 'My Wentures',
-        //androidIcon: 'ic_account_balance_white_24dp',
-        //iosIcon: 'ic_account_balance_white',
-    }, {
-        title: 'Settings',
-      //  androidIcon: 'ic_build_white_24dp',
-      //  iosIcon: 'ic_build_white',
-    }, {
-        title: 'Log out',
-      //  androidIcon: 'ic_account_circle_white_24dp',
-      //  iosIcon: 'ic_account_circle_white',
-    }],
-    title: 'Wenture',
-    subtitle: 'your urban adventure!',
-    listener: (index) => {
-        this.i = index
-    },
-    context: this,
-});
 
 /*
     var circle = new mapsModule.Circle();
@@ -207,6 +207,7 @@ export class MapPageComponent implements OnInit {
 
   onCameraChanged = (event) => {
     console.log("CameraChange");
+    console.log("WenturePoints: " + this.wenturePointService.getPoints());
   };
 
   onShapeSelect = (event) => {
