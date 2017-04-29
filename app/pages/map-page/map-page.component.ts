@@ -18,6 +18,7 @@ var imageSource = require("image-source");
 
 var watchId: any;
 var currentPosition: Location;
+var currentPosCircle: any;
 var collectDistance: number; //distance in m on how close to enable collect-property
 var mapView: any;
 var collectedMarkers = [];
@@ -84,6 +85,10 @@ export class MapPageComponent implements OnInit {
 
   toggleSideDrawer() {
     TnsSideDrawer.toggle();
+  }
+
+  bottomButtonTapped() {
+    console.log("Mänit sitte painaa nappulaa :O");
   }
 
   //Map events
@@ -232,6 +237,15 @@ export function startWatch(event) {
   }
 
   var mapView = event.object;
+  currentPosCircle = new mapsModule.Circle();
+  currentPosCircle.center = mapsModule.Position.positionFromLatLng(0, 0);
+  currentPosCircle.visible = true;
+  currentPosCircle.radius = 20;
+  currentPosCircle.fillColor = new Color('#6c9df0');
+  currentPosCircle.strokeColor = new Color('#396abd');
+  currentPosCircle.strokewidth = 2;
+  currentPosCircle.clickable = true;
+  mapView.addCircle(currentPosCircle);
 
   watchId = geolocation.watchLocation(
   function (loc) {
@@ -248,18 +262,10 @@ export function startWatch(event) {
                         + "\n\tDirection: " + obj.direction
                         + "\n\nCurrentPos: " + JSON.stringify(currentPosition));
 
-          var circle = new mapsModule.Circle();
-          circle.center = mapsModule.Position.positionFromLatLng(this.latitude, this.longitude);
-          circle.visible = true;
-          circle.radius = 20;
-          circle.fillColor = new Color('#6c9df0'); //#99ff8800
-          circle.strokeColor = new Color('#396abd'); //#99ff0000
-          circle.strokeWidth = 2;
-          circle.clickable = true;
-          mapView.addCircle(circle);
+          currentPosCircle.center = mapsModule.Position.positionFromLatLng(this.latitude, this.longitude);
+
           mapView.latitude = this.latitude;
           mapView.longitude = this.longitude;
-
       }
   },
   function(e){
