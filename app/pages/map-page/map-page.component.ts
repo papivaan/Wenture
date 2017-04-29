@@ -91,6 +91,26 @@ export class MapPageComponent implements OnInit {
     console.log("Mänit sitte painaa nappulaa :O");
   }
 
+  addWenturePoints(mapView) {
+    for (var i = 0; i < this.wenturePointService.getPoints().length; i++) {
+      var wPoint = this.wenturePointService.getPoints().getItem(i);
+      var marker = new mapsModule.Marker();
+
+      marker.position = mapsModule.Position.positionFromLatLng(wPoint.lat, wPoint.lng);
+      marker.title = wPoint.title;
+      marker.snippet = "";
+      //Androidilla toimii. Iosille pitää katsoa miten resource toimii. PC:llä ei pystytä testaamaan
+      //Ikonia joutuu hiemna muokkaamaan(pienemmäksi ja lisätään pieni osoitin alalaitaan)
+      var icon = new Image();
+      icon.imageSource = imageSource.fromResource('icon');
+      marker.icon = icon;
+      marker.draggable = true;
+      marker.userData = {index: 1};
+      mapView.addMarker(marker);
+
+    }
+  }
+
   //Map events
   onMapReady = (event) => {
     console.log("Map Ready");
@@ -104,27 +124,8 @@ export class MapPageComponent implements OnInit {
     var mapView = event.object;
     var gMap = mapView.gMap;
 
-    var marker = new mapsModule.Marker();
-    marker.position = mapsModule.Position.positionFromLatLng(62.2308912, 25.7343853);
-    marker.title = "Mattilanniemi";
-    marker.snippet = "University Campus";
-    var icon = new Image();
-    icon.imageSource = imageSource.fromResource('icon');
-    marker.icon = icon;
-    marker.userData = {index: 1};
-    mapView.addMarker(marker);
+    this.addWenturePoints(mapView);
 
-
-/*
-    var circle = new mapsModule.Circle();
-    circle.center = mapsModule.Position.positionFromLatLng(62.23, 25.73);
-    circle.visible = true;
-    circle.radius = 50;
-    circle.fillColor = new Color('#99ff8800');
-    circle.strokeColor = new Color('#99ff0000');
-    circle.strokeWidth = 2;
-    mapView.addCircle(circle);
-*/
   };
 
 
@@ -139,20 +140,23 @@ export class MapPageComponent implements OnInit {
     console.log("Tapped location: \n\tLatitude: " + event.position.latitude +
                     "\n\tLongitude: " + event.position.longitude);
 
+/*  Tätä voi käyttää testailuun, jos haluaa lisätä markereita.
     var marker = new mapsModule.Marker();
     marker.position = mapsModule.Position.positionFromLatLng(lat, lng);
     marker.title = "Wenture point";
     marker.snippet = "";
     //Androidilla toimii. Iosille pitää katsoa miten resource toimii. PC:llä ei pystytä testaamaan
-    //Ikonia joutuu hiemna muokkaamaan(pienemmäksi ja lisätään pieni osoitin alalaitaan)
+    //Ikonia joutuu hiemna muokkaamaan pienemmäksi ja lisätään pieni osoitin alalaitaan)
     var icon = new Image();
     icon.imageSource = imageSource.fromResource('icon');
     marker.icon = icon;
     marker.draggable = true;
     marker.userData = {index: 1};
     mapView.addMarker(marker);
+  */
   };
 
+  // TODO: Tämän voisi siirtää johonkin fiksumpaan paikkaan.
   TnsSideDrawerOptionsListener = (index) => {
     console.log(index)
   };
@@ -163,7 +167,6 @@ export class MapPageComponent implements OnInit {
       "latitude": string,
       "longitude": string
     }
-
 
     var mapView = event.object;
 
@@ -311,3 +314,24 @@ function collect(amount) {
     okButtonText: "OK"
   });
 }
+/*
+function addWenturePoints(mapView) {
+  for (var i = 0; i < this.wenturePointService.getPoints().length; i++) {
+    var wPoint = this.wenturePointService.getPoints().getItem(i);
+    var marker = new mapsModule.Marker();
+
+    marker.position = mapsModule.Position.positionFromLatLng(wPoint.lat, wPoint.lng);
+    marker.title = wPoint.title;
+    marker.snippet = "";
+    //Androidilla toimii. Iosille pitää katsoa miten resource toimii. PC:llä ei pystytä testaamaan
+    //Ikonia joutuu hiemna muokkaamaan(pienemmäksi ja lisätään pieni osoitin alalaitaan)
+    var icon = new Image();
+    icon.imageSource = imageSource.fromResource('icon');
+    marker.icon = icon;
+    marker.draggable = true;
+    marker.userData = {index: 1};
+    mapView.addMarker(marker);
+
+  }
+}
+*/
