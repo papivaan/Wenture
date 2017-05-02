@@ -16,9 +16,9 @@
             (shapeSelect)="onShapeSelect($event)">
   </MapView>
   <!--TODO: alapalkille ehkä oma layout, textfieldit ja buttonit jne. Contentin hakeminen map-page.componentilta-->
-  <GridLayout row="1" cols="*, *, auto">
+  <GridLayout row="1" columns="*, *, auto">
     <Label col="0" text="Hiano alapalkki"></Label>
-    <TextView col="1" text="Ruma alapalkki"></TextView>
+    <Label col="1" text="Ruma alapalkki"></Label>
     <Button col="2" id="collectButton" text="Collect" (tap)="collectButtonTapped()"></Button>
   </GridLayout>
   <!-- TODO: Poista tämä, tää on vaan menun testiä varten-->

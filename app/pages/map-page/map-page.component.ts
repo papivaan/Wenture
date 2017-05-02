@@ -89,7 +89,7 @@ export class MapPageComponent implements OnInit {
 
   collectButtonTapped() {
     // TODO: Tähän se keräystoiminto
-    console.log("Mänit sitte painaa nappulaa :O");
+    alert("Not yet implemented.");
   }
 
   addWenturePoints(mapView) {
