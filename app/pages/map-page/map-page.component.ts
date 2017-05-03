@@ -22,7 +22,6 @@ var currentPosCircle: any;
 var collectDistance: number; //distance in m on how close to enable collect-property
 var mapView: any;
 var collectedMarkers = [];
-//var _currentPosition: any;
 
 registerElement("MapView", () => require("nativescript-google-maps-sdk").MapView);
 
@@ -40,7 +39,8 @@ export class MapPageComponent implements OnInit {
   latitude: number;
   longitude: number;
   altitude: number;
-  _currentPosition: any;
+  wenturePointTitle: string;
+  wenturePointInfo: string;
   //i stores the index value of menu
   i: number = 0;
 
@@ -172,6 +172,16 @@ export class MapPageComponent implements OnInit {
     let markerPos = JSON.stringify(event.marker.position);
     let currentPos = JSON.stringify(currentPosition);
     let distance = getDistanceTo(event.marker);
+
+    // Change the content of the bottom bar text
+    this.wenturePointTitle = event.marker.title;
+
+    for (var i = 0; i < this.wenturePointService.getPoints().length; i++) {
+      if (event.marker.title === this.wenturePointService.getPoints().getItem(i).title) {
+        this.wenturePointInfo = this.wenturePointService.getPoints().getItem(i).info;
+        console.log("\t" + this.wenturePointService.getPoints().getItem(i).info);
+      }
+    }
 
     event.marker.snippet = "Distance: " + distance.toFixed(0) + " m";
 

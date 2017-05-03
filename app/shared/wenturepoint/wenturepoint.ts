@@ -7,7 +7,7 @@ export class WenturePoint {
   // Not sure if the image works like this
   //image: Image;
 
-  constructor(public title: string, public lat: number, public lng: number) {
+  constructor(public title: string, public lat: number, public lng: number, public info: string) {
     this.id = nextId++;
   }
 }

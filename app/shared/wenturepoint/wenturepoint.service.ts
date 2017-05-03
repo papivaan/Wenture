@@ -18,16 +18,16 @@ export class WenturePointService extends Observable {
 
   populate() {
     this.points.push(
-      new WenturePoint("Dumpin toimisto", 62.232615, 25.737668)
+      new WenturePoint("Dumpin toimisto", 62.232615, 25.737668, "Loistava paikka dumppareille piipahtaa pikkaselle kahville!")
     );
     this.points.push(
-      new WenturePoint("Kompassi", 62.242640, 25.747362)
+      new WenturePoint("Kompassi", 62.242640, 25.747362, "Kohtaamispaikka keskellä kaupunkia. Jyväskylän keskipiste.")
     );
     this.points.push(
-      new WenturePoint("Escape", 62.243915, 25.750180)
+      new WenturePoint("Escape", 62.243915, 25.750180, "Yökerhon eliittiä.")
     );
     this.points.push(
-      new WenturePoint("Yritystehdas", 62.247596, 25.741710)
+      new WenturePoint("Yritystehdas", 62.247596, 25.741710, "Täällä rakennettaan yrittäjiä!")
     );
   }
 
