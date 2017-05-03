@@ -50,7 +50,7 @@ export class MapPageComponent implements OnInit {
 
   ngOnInit() {
     // TODO: Loader?
-    // TODO: menuitem iconit puuttuu
+    // TODO: menuitem iconit puuttuu, actionbarin mahd piilottaminen(?)
     TnsSideDrawer.build({
       templates: [{
           title: 'Wenturepoints',
@@ -88,7 +88,7 @@ export class MapPageComponent implements OnInit {
   }
 
   collectButtonTapped() {
-    // TODO: Tähän se keräystoiminto
+    // TODO: Tähän se keräystoiminto, if distance jtn, niin tuolta toi collect()
     alert("Not yet implemented.");
   }
 

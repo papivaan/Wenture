@@ -9,11 +9,15 @@
   margin-right: 5;
 }
 TextField {
-  color: white;
+  color: #CB1D00;
 }
 .wp-title {
   font-weight: bold;
+  font-family: Verdana;
 }
 .wp-info {
-
+  font-size: 12px;
+}
+.bottom {
+  background-color: #D3D3D3;
 }

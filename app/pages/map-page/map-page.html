@@ -1,4 +1,6 @@
 <ActionBar title="Wenture" class="action-bar">
+  <!--Siirsin tämän hieman tymästi tänne-->
+  <ActionItem text="Menu" ios.position="right" (tap)="toggleSideDrawer()"></ActionItem>
   <StackLayout  orientation="horizontal"
                 ios:horizontalAlignment="center"
                 android:horizontalAlignment="left">
@@ -24,11 +26,9 @@
             (shapeSelect)="onShapeSelect($event)">
   </MapView>
   <!--TODO: alapalkille ehkä oma layout, textfieldit ja buttonit jne. Contentin hakeminen map-page.componentilta-->
-  <GridLayout row="1" rows="auto, *" columns="*, auto">
+  <GridLayout class="bottom"row="1" rows="auto, *" columns="*, auto">
     <Label class="wp-title" row="0" col="0" text="{{ wenturePointTitle }}"></Label>
     <Label class="wp-info" row="1" col="0" text="{{ wenturePointInfo }}"></Label>
     <Button row="0" col="1" id="collectButton" text="Collect" (tap)="collectButtonTapped()"></Button>
   </GridLayout>
-  <!-- TODO: Poista tämä, tää on vaan menun testiä varten-->
-  <Button row="2" text="Sidedrawer" (tap)="toggleSideDrawer()"></Button>
 </GridLayout>
