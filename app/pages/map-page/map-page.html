@@ -24,10 +24,10 @@
             (shapeSelect)="onShapeSelect($event)">
   </MapView>
   <!--TODO: alapalkille ehkä oma layout, textfieldit ja buttonit jne. Contentin hakeminen map-page.componentilta-->
-  <GridLayout row="1" columns="auto, *, auto">
-    <Label col="0" text="{{ wenturePointTitle }}"></Label>
-    <Label col="1" text="{{ wenturePointInfo }}"></Label>
-    <Button col="2" id="collectButton" text="Collect" (tap)="collectButtonTapped()"></Button>
+  <GridLayout row="1" rows="auto, *" columns="*, auto">
+    <Label class="wp-title" row="0" col="0" text="{{ wenturePointTitle }}"></Label>
+    <Label class="wp-info" row="1" col="0" text="{{ wenturePointInfo }}"></Label>
+    <Button row="0" col="1" id="collectButton" text="Collect" (tap)="collectButtonTapped()"></Button>
   </GridLayout>
   <!-- TODO: Poista tämä, tää on vaan menun testiä varten-->
   <Button row="2" text="Sidedrawer" (tap)="toggleSideDrawer()"></Button>
