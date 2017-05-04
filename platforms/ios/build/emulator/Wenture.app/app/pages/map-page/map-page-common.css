@@ -14,6 +14,7 @@ TextField {
 .wp-title {
   font-weight: bold;
   margin-left: 5px;
+  margin-right: 20px;
   font-family: Tahoma;
 }
 .wp-info {
@@ -23,15 +24,18 @@ TextField {
 }
 .bottom {
   padding: 5px;
-  background-color: #ede9ce;
+  background-color: #ededed;
   border-color: #303030;
   border-width: 2px;
   border-style: groove;
 }
 #collectButton {
   padding: 10px;
-  color: white;
-  background-color: rgba(48, 48, 48, 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
   border-width: 1px;
   border-color: #303030;
+  float: right;
+}
+.action-bar {
+  background-color: #64706c;
 }

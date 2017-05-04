@@ -7,18 +7,18 @@ var WenturePointService = (function (_super) {
     function WenturePointService() {
         var _this = _super.call(this) || this;
         _this.points = new observable_array_1.ObservableArray([]);
+        _this.populate();
         return _this;
     }
     WenturePointService.prototype.getPoints = function () {
         return this.points;
     };
     WenturePointService.prototype.populate = function () {
-        this.points.push(new wenturepoint_1.WenturePoint("Dumpin toimisto", 62.232615, 25.737668, "Loistava paikka dumppareille piipahtaa pikkaselle kahville!"));
-        this.points.push(new wenturepoint_1.WenturePoint("Kompassi", 62.242640, 25.747362, "Kohtaamispaikka keskellä kaupunkia. Jyväskylän keskipiste."));
-        this.points.push(new wenturepoint_1.WenturePoint("Escape", 62.243915, 25.750180, "Yökerhon eliittiä."));
-        this.points.push(new wenturepoint_1.WenturePoint("Yritystehdas", 62.247596, 25.741710, "Täällä rakennettaan yrittäjiä!"));
+        this.points.push(new wenturepoint_1.WenturePoint("Dumpin toimisto", 62.232615, 25.737668, "Loistava paikka dumppareille piipahtaa pikkaselle kahville!", 0));
+        this.points.push(new wenturepoint_1.WenturePoint("Kompassi", 62.242640, 25.747362, "Kohtaamispaikka keskellä kaupunkia. Jyväskylän keskipiste.", 1));
+        this.points.push(new wenturepoint_1.WenturePoint("Escape", 62.243915, 25.750180, "Yökerhon eliittiä.", 0));
+        this.points.push(new wenturepoint_1.WenturePoint("Yritystehdas", 62.247596, 25.741710, "Täällä rakennettaan yrittäjiä!", 1));
     };
     return WenturePointService;
 }(observable_1.Observable));
 exports.WenturePointService = WenturePointService;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoid2VudHVyZXBvaW50LnNlcnZpY2UuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJ3ZW50dXJlcG9pbnQuc2VydmljZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQUEsOENBQXdEO0FBQ3hELDBEQUF3RDtBQUN4RCx1RUFBc0U7QUFFdEU7SUFBeUMsdUNBQVU7SUFHakQ7UUFBQSxZQUNFLGlCQUFPLFNBR1I7UUFEQyxLQUFJLENBQUMsTUFBTSxHQUFHLElBQUksa0NBQWUsQ0FBZSxFQUFHLENBQUMsQ0FBQzs7SUFDdkQsQ0FBQztJQUVELHVDQUFTLEdBQVQ7UUFDRSxNQUFNLENBQUMsSUFBSSxDQUFDLE1BQU0sQ0FBQztJQUNyQixDQUFDO0lBRU0sc0NBQVEsR0FBZjtRQUNFLElBQUksQ0FBQyxNQUFNLENBQUMsSUFBSSxDQUNkLElBQUksMkJBQVksQ0FBQyxpQkFBaUIsRUFBRSxTQUFTLEVBQUUsU0FBUyxFQUFFLDZEQUE2RCxDQUFDLENBQ3pILENBQUM7UUFDRixJQUFJLENBQUMsTUFBTSxDQUFDLElBQUksQ0FDZCxJQUFJLDJCQUFZLENBQUMsVUFBVSxFQUFFLFNBQVMsRUFBRSxTQUFTLEVBQUUsNERBQTRELENBQUMsQ0FDakgsQ0FBQztRQUNGLElBQUksQ0FBQyxNQUFNLENBQUMsSUFBSSxDQUNkLElBQUksMkJBQVksQ0FBQyxRQUFRLEVBQUUsU0FBUyxFQUFFLFNBQVMsRUFBRSxvQkFBb0IsQ0FBQyxDQUN2RSxDQUFDO1FBQ0YsSUFBSSxDQUFDLE1BQU0sQ0FBQyxJQUFJLENBQ2QsSUFBSSwyQkFBWSxDQUFDLGNBQWMsRUFBRSxTQUFTLEVBQUUsU0FBUyxFQUFFLGdDQUFnQyxDQUFDLENBQ3pGLENBQUM7SUFDSixDQUFDO0lBRUgsMEJBQUM7QUFBRCxDQUFDLEFBNUJELENBQXlDLHVCQUFVLEdBNEJsRDtBQTVCWSxrREFBbUIiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBPYnNlcnZhYmxlLCBFdmVudERhdGEgfSBmcm9tIFwiZGF0YS9vYnNlcnZhYmxlXCI7XHJcbmltcG9ydCB7IE9ic2VydmFibGVBcnJheSB9IGZyb20gXCJkYXRhL29ic2VydmFibGUtYXJyYXlcIjtcclxuaW1wb3J0IHsgV2VudHVyZVBvaW50IH0gZnJvbSBcIi4uLy4uL3NoYXJlZC93ZW50dXJlcG9pbnQvd2VudHVyZXBvaW50XCI7XHJcblxyXG5leHBvcnQgY2xhc3MgV2VudHVyZVBvaW50U2VydmljZSBleHRlbmRzIE9ic2VydmFibGUge1xyXG4gIHBvaW50czogT2JzZXJ2YWJsZUFycmF5PFdlbnR1cmVQb2ludD47XHJcblxyXG4gIGNvbnN0cnVjdG9yICgpIHtcclxuICAgIHN1cGVyKCk7XHJcblxyXG4gICAgdGhpcy5wb2ludHMgPSBuZXcgT2JzZXJ2YWJsZUFycmF5PFdlbnR1cmVQb2ludD4oWyBdKTtcclxuICB9XHJcblxyXG4gIGdldFBvaW50cygpIHtcclxuICAgIHJldHVybiB0aGlzLnBvaW50cztcclxuICB9XHJcblxyXG4gIHB1YmxpYyBwb3B1bGF0ZSgpIHtcclxuICAgIHRoaXMucG9pbnRzLnB1c2goXHJcbiAgICAgIG5ldyBXZW50dXJlUG9pbnQoXCJEdW1waW4gdG9pbWlzdG9cIiwgNjIuMjMyNjE1LCAyNS43Mzc2NjgsIFwiTG9pc3RhdmEgcGFpa2thIGR1bXBwYXJlaWxsZSBwaWlwYWh0YWEgcGlra2FzZWxsZSBrYWh2aWxsZSFcIilcclxuICAgICk7XHJcbiAgICB0aGlzLnBvaW50cy5wdXNoKFxyXG4gICAgICBuZXcgV2VudHVyZVBvaW50KFwiS29tcGFzc2lcIiwgNjIuMjQyNjQwLCAyNS43NDczNjIsIFwiS29odGFhbWlzcGFpa2thIGtlc2tlbGzDpCBrYXVwdW5raWEuIEp5dsOkc2t5bMOkbiBrZXNraXBpc3RlLlwiKVxyXG4gICAgKTtcclxuICAgIHRoaXMucG9pbnRzLnB1c2goXHJcbiAgICAgIG5ldyBXZW50dXJlUG9pbnQoXCJFc2NhcGVcIiwgNjIuMjQzOTE1LCAyNS43NTAxODAsIFwiWcO2a2VyaG9uIGVsaWl0dGnDpC5cIilcclxuICAgICk7XHJcbiAgICB0aGlzLnBvaW50cy5wdXNoKFxyXG4gICAgICBuZXcgV2VudHVyZVBvaW50KFwiWXJpdHlzdGVoZGFzXCIsIDYyLjI0NzU5NiwgMjUuNzQxNzEwLCBcIlTDpMOkbGzDpCByYWtlbm5ldHRhYW4geXJpdHTDpGppw6QhXCIpXHJcbiAgICApO1xyXG4gIH1cclxuICBcclxufVxyXG4iXX0=
