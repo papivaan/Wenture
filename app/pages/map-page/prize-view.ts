@@ -26,24 +26,24 @@ export class PrizeViewComponent implements OnInit {
 
   ngOnInit() {
     this.page.backgroundImage = "res://loginbg";
+  }
 
+  public setTextViews() {
+    this.wenturePointTitle = this.marker.title;
     for (var i = 0; i < this.wenturePointService.getPoints().length; i++) {
       console.log("Title: " + this.wenturePointService.getPoints().getItem(i).title + ", OfferId: " + this.wenturePointService.getPoints().getItem(i).prizeId);
-      for (var j = 0; j < this.prizeService.getPrizes().length; j++) {
-        console.log("Prize: " + this.prizeService.getPrizes().getItem(j).name);
-        if (this.wenturePointService.getPoints().getItem(i).prizeId === this.prizeService.getPrizes().getItem(j).id) {
-          this.prizeName = this.prizeService.getPrizes().getItem(j).name;
-          this.prizeOffer = this.prizeService.getPrizes().getItem(j).offer;
-          this.prizeValid = this.prizeService.getPrizes().getItem(j).validUntil;
-          return;
+      if (this.marker.title === this.wenturePointService.getPoints().getItem(i).title) {
+        for (var j = 0; j < this.prizeService.getPrizes().length; j++) {
+          console.log("Prize: " + this.prizeService.getPrizes().getItem(j).name);
+          if (this.wenturePointService.getPoints().getItem(i).prizeId === this.prizeService.getPrizes().getItem(j).id) {
+            this.prizeName = this.prizeService.getPrizes().getItem(j).name;
+            this.prizeOffer = this.prizeService.getPrizes().getItem(j).offer;
+            this.prizeValid = this.prizeService.getPrizes().getItem(j).validUntil;
+            return;
+          }
         }
       }
     }
-
-  }
-
-  setTextViews() {
-    this.wenturePointTitle = this.marker.title;
   }
 
   public submit() {
