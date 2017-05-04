@@ -62,7 +62,7 @@ export class MapPageComponent implements OnInit {
   }
 
   constructor(private router: Router, private wenturePointService: WenturePointService, private page: Page, private _modalService: ModalDialogService, private vcRef: ViewContainerRef) {
-
+    this.wenturePointService.populate();
   }
 
   ngOnInit() {
@@ -97,7 +97,6 @@ export class MapPageComponent implements OnInit {
       },
       context: this,
     });
-
   }
 
   toggleSideDrawer() {
@@ -110,14 +109,13 @@ export class MapPageComponent implements OnInit {
     let that = this;
     let options: ModalDialogOptions = {
         viewContainerRef: this.vcRef,
-        context: "Context",
+        context: mark,
         fullscreen: true
     };
     // >> returning-result
     this._modalService.showModal(PrizeViewComponent, options)
         .then((/* */) => {
             console.log(mark.title);
-            // TODO: Tässä sitten asetetaan sihen prize-viewiin markerin nimi
         });
     // << returning-result
   }
@@ -384,7 +382,6 @@ function howManyCollected() {
 
 //handles the collection and returns message
 function collect(amount, mark) {
-  //createModelView();
   dialogsModule.alert({
     message: "Wenture point " + mark.title + " collected! \nYou have: " + amount,
     okButtonText: "OK"
