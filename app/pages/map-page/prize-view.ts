@@ -7,6 +7,7 @@ import { Label } from "ui/label";
 @Component({
     moduleId: module.id,
     templateUrl: "./prize-view.html",
+    styleUrls: "./prize-view.css"
 })
 export class PrizeViewComponent implements OnInit {
   wenturePointTitle: string;

@@ -1,11 +1,7 @@
 {
-<<<<<<< HEAD
-	"time": "Thu May 04 2017 18:09:27 GMT+0300 (EEST)",
-=======
-	"time": "Thu May 04 2017 18:05:15 GMT+0300 (EEST)",
->>>>>>> 04413c637e578faa56e426281227dbf70e5123e5
+	"time": "Thu May 04 2017 18:27:57 GMT+0300 (EEST)",
 	"bundle": false,
 	"release": false,
 	"changesRequireBuild": false,
-	"changesRequireBuildTime": "Thu May 04 2017 17:21:37 GMT+0300 (EEST)"
+	"changesRequireBuildTime": "Thu May 04 2017 18:21:12 GMT+0300 (EEST)"
 }
