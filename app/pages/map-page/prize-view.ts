@@ -7,6 +7,7 @@ import { Label } from "ui/label";
 @Component({
     moduleId: module.id,
     templateUrl: "./prize-view.html",
+    styleUrls: ["./prize-view-common.css", "./prize-view.css"]
 })
 export class PrizeViewComponent implements OnInit {
   wenturePointTitle: string;
@@ -16,6 +17,7 @@ export class PrizeViewComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.page.backgroundImage = "res://loginbg";
     this.wenturePointTitle = "Hiphei mäyrät!";
     console.log("ngOnInit");
   }
