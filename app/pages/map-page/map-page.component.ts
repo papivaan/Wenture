@@ -257,16 +257,10 @@ export class MapPageComponent implements OnInit {
       this.isCloseEnoughToCollect = true;
     } else this.isCloseEnoughToCollect = false;
 
-    let collectButton = <Button>this.collectButton.nativeElement;
-    let collectButtonColor = new Color(this.isCloseEnoughToCollect ? "#CB1D00" : "#484848");
-    collectButton.backgroundColor = collectButtonColor;
-
-
     console.log("\n\tMarkerSelect: " + event.marker.title
                   + "\n\tMarker position: " + markerPos
                   + "\n\tCurrent position: " + currentPos
                   + "\n\tDistance to marker: " + distance.toFixed(2) + "m");
-
 
     selectedMarker = event.marker;
 
