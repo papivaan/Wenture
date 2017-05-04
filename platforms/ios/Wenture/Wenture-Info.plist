@@ -6,6 +6,8 @@
     <string>Location data is used to tell the user's location</string>
     <key>NSLocationAlwaysUsageDescription</key>
     <string>Need location always.</string>
+    <key>UIViewControllerBasedStatusBarAppearance</key>
+    <false/>
     <key>CFBundleDevelopmentRegion</key>
     <string>en</string>
     <key>CFBundleDisplayName</key>
@@ -47,8 +49,6 @@
       <string>UIInterfaceOrientationLandscapeLeft</string>
       <string>UIInterfaceOrientationLandscapeRight</string>
     </array>
-    <key>UIViewControllerBasedStatusBarAppearance</key>
-    <false/>
     <key>CFBundleIdentifier</key>
     <string>org.nativescript.Wenture</string>
   </dict>

@@ -18,3 +18,18 @@ ActionBar {
   background-color: black;
   color: white;
 }
+.action-image {
+    width: 40;
+    height: 40;
+    vertical-align: center;
+    margin-right: 10;
+}
+.action-label {
+    color: white;
+    font-size: 24;
+    font-weight: bold;
+    vertical-align: center;
+}
+.action-bar{
+
+}

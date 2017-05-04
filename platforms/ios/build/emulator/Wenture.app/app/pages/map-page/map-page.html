@@ -1,12 +1,23 @@
+<ActionBar title="Wenture" class="action-bar">
+  <!--Siirsin tämän hieman tymästi tänne-->
+  <ActionItem text="Menu" ios.position="right" (tap)="toggleSideDrawer()"></ActionItem>
+  <StackLayout  orientation="horizontal"
+                ios:horizontalAlignment="center"
+                android:horizontalAlignment="left">
+    <Image src="res://icon" class="action-image"></Image>
+    <Label text="Wenture"  class="action-label"></Label>
+  </StackLayout>
+</ActionBar>
 <GridLayout rows="*, auto, auto">
   <MapView  row="0"
             latitude="62.2308912"
             longitude="25.7343853"
             zoom="14.93"
             bearing="1"
-            tilt="50"
+            tilt="0"
             padding="0, 0, 0, 0"
             (mapReady)="onMapReady($event)"
+            (coordinateTapped)="onCoordinateTapped($event)"
             (coordinateLongPress)="onCoordinateLongPress($event)"
             (markerSelect)="onMarkerSelect($event)"
             (markerBeginDragging)="onMarkerBeginDragging($event)"
@@ -16,6 +27,11 @@
             (shapeSelect)="onShapeSelect($event)">
   </MapView>
   <!--TODO: alapalkille ehkä oma layout, textfieldit ja buttonit jne. Contentin hakeminen map-page.componentilta-->
-  <Label id="bottomBar" row="1" text="Hiano alapalkki" border-width="2" border-color="black" backgroundColor="white" height="50"></Label>
-  <Button row="2" [text]="Sidedrawer" (tap)="toggleSideDrawer()"></Button>
+
+  <GridLayout class="bottom"row="1" rows="auto, *" columns="*, auto" visibility="{{ markerIsSelected ? 'visible' : 'collapse' }}">
+
+    <Label class="wp-title" row="0" col="0" text="{{ wenturePointTitle }}"></Label>
+    <TextView class="wp-info" row="1" col="0" col-span="*" row-span="*" text="{{ wenturePointInfo }}" editable="false"></TextView>
+    <Button row="0" col="1" id="collectButton" text="Collect" (tap)="collectButtonTapped()"></Button>
+  </GridLayout>
 </GridLayout>

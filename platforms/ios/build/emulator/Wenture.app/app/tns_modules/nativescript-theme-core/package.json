@@ -10,7 +10,7 @@
         "spec": ">=1.0.2 <1.1.0",
         "type": "range"
       },
-      "/Users/renne/Documents/code/Wenture"
+      "/Users/paavovaananen/NativeScript/Wenture"
     ]
   ],
   "_from": "nativescript-theme-core@>=1.0.2 <1.1.0",
@@ -44,7 +44,7 @@
   "_shasum": "2d77dd6f1a1095d2a4968426c5bb33d8f825d7cd",
   "_shrinkwrap": null,
   "_spec": "nativescript-theme-core@~1.0.2",
-  "_where": "/Users/renne/Documents/code/Wenture",
+  "_where": "/Users/paavovaananen/NativeScript/Wenture",
   "author": {
     "name": "Telerik",
     "email": "support@telerik.com"
