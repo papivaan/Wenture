@@ -24,6 +24,7 @@ var currentPosCircle: any;
 var collectDistance: number; //distance in m on how close to enable collect-property
 var mapView: any;
 var collectedMarkers = [];
+var selectedMarker;
 
 registerElement("MapView", () => require("nativescript-google-maps-sdk").MapView);
 
@@ -119,7 +120,26 @@ export class MapPageComponent implements OnInit {
 
   collectButtonTapped() {
     // TODO: Tähän se keräystoiminto, if distance jtn, niin tuolta toi collect()
-    alert("Not yet implemented.");
+    // This might be stupid, but works for now :)
+    //TODO: adding collected marker to a list etc. b4 removing
+
+      collectDistance = 50;
+      if(getDistanceTo(selectedMarker) < collectDistance) {
+        let amount = howManyCollected();
+        collect(amount, selectedMarker );
+        //alert("Venture point collected. \nCollected: " + amount);
+        collectedMarkers.push(selectedMarker);
+        mapView.removeMarker(selectedMarker);
+        //
+        console.log("You have " + collectedMarkers.length + " collected markers.")
+      } else {
+        console.log("\nMarker too far away, move closer.");
+      }
+
+
+
+    console.log("HIJKKJH" + selectedMarker.title);
+
   }
 
   addWenturePoints(mapView) {
@@ -152,7 +172,7 @@ export class MapPageComponent implements OnInit {
         geolocation.enableLocationRequest();
     } else console.log("Alles in Ordnung");
 
-    var mapView = event.object;
+    mapView = event.object;
     var gMap = mapView.gMap;
 
     this.addWenturePoints(mapView);
@@ -160,7 +180,7 @@ export class MapPageComponent implements OnInit {
   };
 
   onCoordinateTapped = (event) => {
-    var mapView = event.object;
+    mapView = event.object;
     this.wenturePointTitle = "";
     this.wenturePointInfo = "";
     console.log("Coordinate tapped.");
@@ -232,23 +252,10 @@ export class MapPageComponent implements OnInit {
                   + "\n\tCurrent position: " + currentPos
                   + "\n\tDistance to marker: " + distance.toFixed(2) + "m");
 
-    // This might be stupid, but works for now :)
-    //TODO: adding collected marker to a list etc. b4 removing
-    function collectMarker(mark) {
-      collectDistance = 50;
-      if(getDistanceTo(mark) < collectDistance) {
-        let amount = howManyCollected();
-        collect(amount );
-        //alert("Venture point collected. \nCollected: " + amount);
-        collectedMarkers.push(mark);
-        mapView.removeMarker(mark);
-        console.log("You have " + collectedMarkers.length + " collected markers.")
-      } else {
-        console.log("\nMarker too far away, move closer.");
-      }
-    }
 
-    collectMarker(event.marker);
+    selectedMarker = event.marker;
+
+
 
   };
 
@@ -359,9 +366,9 @@ function howManyCollected() {
 }
 
 //handles the collection and returns message
-function collect(amount) {
+function collect(amount, mark) {
   dialogsModule.alert({
-    message: "Wenture point collected! \nYou have: " + amount,
+    message: "Wenture point " + mark.title + " collected! \nYou have: " + amount,
     okButtonText: "OK"
   });
 }
