@@ -26,3 +26,11 @@ TextView {
   font-size: 32;
   color: #303030;
 }
+.prize-container {
+  border-color: #000000;
+  border-width: 2px;
+  background-color: transparent;
+}
+#claimButton {
+  margin-bottom: 10px;
+}
