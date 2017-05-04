@@ -50,15 +50,13 @@ export class MapPageComponent implements OnInit {
   markerIsSelected: boolean;
   isCloseEnoughToCollect: boolean;
   //i stores the index value of menu
-  private _i: number = 0
+  private _i: number = 0;
 	get i(): number {
-		return this._i
+		return this._i;
 	}
   //tähän kaikki mitä halutaan tapahtuvan menusta
 	set i(i: number) {
-		this._i = i
-    console.log(this.i);
-
+		this._i = i;
   }
 
   constructor(private router: Router, private wenturePointService: WenturePointService, private page: Page, private _modalService: ModalDialogService, private vcRef: ViewContainerRef) {
@@ -99,6 +97,10 @@ export class MapPageComponent implements OnInit {
     });
   }
 
+  TnsSideDrawerOptionsListener = (index) => {
+    console.log(index)
+  };
+
   toggleSideDrawer() {
     TnsSideDrawer.toggle();
 
@@ -138,16 +140,10 @@ export class MapPageComponent implements OnInit {
         console.log("\nMarker too far away, move closer.");
       }
 
-    console.log(selectedMarker.title);
-
   }
 
   collect(amount, mark) {
     this.createModelView(mark);
-    /*dialogsModule.alert({
-      message: "Wenture point " + mark.title + " collected! \nYou have: " + amount,
-      okButtonText: "OK"
-    });*/
   }
 
   addWenturePoints(mapView) {
@@ -166,19 +162,17 @@ export class MapPageComponent implements OnInit {
       marker.draggable = true;
       marker.userData = {index: 1};
       mapView.addMarker(marker);
-
     }
   }
 
   //Map events
   onMapReady = (event) => {
-    console.log("Map Ready");
     startWatch(event);
 
     // Check if location services are enabled
     if (!geolocation.isEnabled()) {
         geolocation.enableLocationRequest();
-    } else console.log("Alles in Ordnung");
+    } else console.log("Location services enabled.");
 
     mapView = event.object;
     var gMap = mapView.gMap;
@@ -191,39 +185,13 @@ export class MapPageComponent implements OnInit {
     mapView = event.object;
     this.wenturePointTitle = "";
     this.wenturePointInfo = "";
-    console.log("Coordinate tapped.");
     this.markerIsSelected = false;
   };
 
   onCoordinateLongPress = (event) => {
-    console.log("LongPress");
-
     var mapView = event.object;
     var lat = event.position.latitude;
     var lng = event.position.longitude;
-
-    console.log("Tapped location: \n\tLatitude: " + event.position.latitude +
-                    "\n\tLongitude: " + event.position.longitude);
-
-/*  Tätä voi käyttää testailuun, jos haluaa lisätä markereita.
-    var marker = new mapsModule.Marker();
-    marker.position = mapsModule.Position.positionFromLatLng(lat, lng);
-    marker.title = "Wenture point";
-    marker.snippet = "";
-    //Androidilla toimii. Iosille pitää katsoa miten resource toimii. PC:llä ei pystytä testaamaan
-    //Ikonia joutuu hiemna muokkaamaan pienemmäksi ja lisätään pieni osoitin alalaitaan)
-    var icon = new Image();
-    icon.imageSource = imageSource.fromResource('icon');
-    marker.icon = icon;
-    marker.draggable = true;
-    marker.userData = {index: 1};
-    mapView.addMarker(marker);
-  */
-  };
-
-  // TODO: Tämän voisi siirtää johonkin fiksumpaan paikkaan.
-  TnsSideDrawerOptionsListener = (index) => {
-    console.log(index)
   };
 
   onMarkerSelect = (event) => {
@@ -248,7 +216,6 @@ export class MapPageComponent implements OnInit {
     for (var i = 0; i < this.wenturePointService.getPoints().length; i++) {
       if (event.marker.title === this.wenturePointService.getPoints().getItem(i).title) {
         this.wenturePointInfo = this.wenturePointService.getPoints().getItem(i).info;
-        console.log("\t" + this.wenturePointService.getPoints().getItem(i).info);
       }
     }
 
@@ -257,14 +224,7 @@ export class MapPageComponent implements OnInit {
       this.isCloseEnoughToCollect = true;
     } else this.isCloseEnoughToCollect = false;
 
-    console.log("\n\tMarkerSelect: " + event.marker.title
-                  + "\n\tMarker position: " + markerPos
-                  + "\n\tCurrent position: " + currentPos
-                  + "\n\tDistance to marker: " + distance.toFixed(2) + "m");
-
     selectedMarker = event.marker;
-
-
 
   };
 
@@ -281,15 +241,11 @@ export class MapPageComponent implements OnInit {
   };
 
   onCameraChanged = (event) => {
-    console.log("CameraChange");
-    console.log("Wenture Points:");
-    for (var i = 0; i < this.wenturePointService.getPoints().length; i++) {
-      console.log("\t" + JSON.stringify(this.wenturePointService.getPoints().getItem(i)));
-    }
+    //
   };
 
   onShapeSelect = (event) => {
-    console.log("Your current position is: " + JSON.stringify(currentPosition));
+    console.log("Shape selected.");
   };
 }
 
@@ -324,13 +280,7 @@ export function startWatch(event) {
           this.latitude = obj.latitude;
           this.longitude = obj.longitude;
           this.altitude = obj.altitude;
-          /*var*/currentPosition = mapsModule.Position.positionFromLatLng(obj.latitude, obj.longitude);
-          console.log(new Date() + "\nReceived location:\n\tLatitude: " + obj.latitude
-                        + "\n\tLongitude: " + obj.longitude
-                        + "\n\tAltitude: " + obj.altitude
-                        + "\n\tTimestamp: " + obj.timestamp
-                        + "\n\tDirection: " + obj.direction
-                        + "\n\nCurrentPos: " + JSON.stringify(currentPosition));
+          currentPosition = mapsModule.Position.positionFromLatLng(obj.latitude, obj.longitude);
 
           currentPosCircle.center = mapsModule.Position.positionFromLatLng(this.latitude, this.longitude);
 
