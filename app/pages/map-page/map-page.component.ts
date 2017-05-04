@@ -57,6 +57,19 @@ export class MapPageComponent implements OnInit {
   //tähän kaikki mitä halutaan tapahtuvan menusta
 	set i(i: number) {
 		this._i = i;
+    this.menuListener(i);
+
+  }
+
+  menuListener(i) {
+    console.log(i);
+    if(i == 1) {
+      alert("Not in use");
+    };
+
+    if(i == 4) {
+      alert("Logging out");
+    };
   }
 
   constructor(private router: Router, private wenturePointService: WenturePointService, private page: Page, private _modalService: ModalDialogService, private vcRef: ViewContainerRef) {
@@ -319,6 +332,7 @@ function getDistanceTo(obj) {
   }
     return distance;
 }
+
 
 function howManyCollected() {
   return collectedMarkers.length + 1;
