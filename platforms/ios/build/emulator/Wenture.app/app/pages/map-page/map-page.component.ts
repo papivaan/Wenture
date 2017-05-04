@@ -45,6 +45,7 @@ export class MapPageComponent implements OnInit {
   wenturePointTitle: string;
   wenturePointInfo: string;
   markerIsSelected: boolean;
+  isCloseEnoughToCollect: boolean;
   //i stores the index value of menu
   i: number = 0;
 
@@ -91,7 +92,7 @@ export class MapPageComponent implements OnInit {
     TnsSideDrawer.toggle();
   }
 
-  createModelView() {
+  createModelView(mark) {
     let that = this;
     let options: ModalDialogOptions = {
         viewContainerRef: this.vcRef,
@@ -101,19 +102,8 @@ export class MapPageComponent implements OnInit {
     // >> returning-result
     this._modalService.showModal(PrizeViewComponent, options)
         .then((/* */) => {
-            console.log("Kukkuu");
-            // >> (hide)
-            /*
-            if (args === "start") {
-                this.startDate = dateresult;
-            } else if (args === "end") {
-                this.endDate = dateresult;
-            } else if (args === "findTheDay") {
-                this.date = dateresult;
-                this.weekday = this.weekdays[this.date.getDay()];
-            }
-            */
-            // << (hide)
+            console.log(mark.title);
+            // TODO: Tässä sitten asetetaan sihen prize-viewiin markerin nimi
         });
     // << returning-result
   }
@@ -126,7 +116,7 @@ export class MapPageComponent implements OnInit {
       collectDistance = 50;
       if(getDistanceTo(selectedMarker) < collectDistance) {
         let amount = howManyCollected();
-        collect(amount, selectedMarker );
+        this.collect(amount, selectedMarker);
         //alert("Venture point collected. \nCollected: " + amount);
         collectedMarkers.push(selectedMarker);
         mapView.removeMarker(selectedMarker);
@@ -136,10 +126,16 @@ export class MapPageComponent implements OnInit {
         console.log("\nMarker too far away, move closer.");
       }
 
+    console.log(selectedMarker.title);
 
+  }
 
-    console.log("HIJKKJH" + selectedMarker.title);
-
+  collect(amount, mark) {
+    this.createModelView(mark);
+    /*dialogsModule.alert({
+      message: "Wenture point " + mark.title + " collected! \nYou have: " + amount,
+      okButtonText: "OK"
+    });*/
   }
 
   addWenturePoints(mapView) {
@@ -211,7 +207,6 @@ export class MapPageComponent implements OnInit {
     marker.userData = {index: 1};
     mapView.addMarker(marker);
   */
-    this.createModelView();
   };
 
   // TODO: Tämän voisi siirtää johonkin fiksumpaan paikkaan.
@@ -246,6 +241,9 @@ export class MapPageComponent implements OnInit {
     }
 
     event.marker.snippet = "Distance: " + distance.toFixed(0) + " m";
+    if (distance < 50) {
+      this.isCloseEnoughToCollect = true;
+    } else this.isCloseEnoughToCollect = false;
 
     console.log("\n\tMarkerSelect: " + event.marker.title
                   + "\n\tMarker position: " + markerPos
@@ -367,6 +365,7 @@ function howManyCollected() {
 
 //handles the collection and returns message
 function collect(amount, mark) {
+  //createModelView();
   dialogsModule.alert({
     message: "Wenture point " + mark.title + " collected! \nYou have: " + amount,
     okButtonText: "OK"

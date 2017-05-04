@@ -1,5 +1,5 @@
 .add-bar {
-  background-color: #303030;
+  background-color: #D3D3D3;
   padding: 5 10;
 }
 .add-bar Image {
@@ -23,7 +23,7 @@ TextField {
 }
 .bottom {
   padding: 5px;
-  background-color: #D3D3D3;
+  background-color: #ede9ce;
   border-color: #303030;
   border-width: 2px;
   border-style: groove;

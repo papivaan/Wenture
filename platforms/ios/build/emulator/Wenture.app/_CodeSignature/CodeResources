@@ -86,7 +86,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		bNMJb0g3EelAf+6wK9hYVsfXI9w=
+		4lCPqOFgC04WCEcQAEEYJ+vtapc=
 		</data>
 		<key>Frameworks/NativeScript.framework/Info.plist</key>
 		<data>
@@ -873,7 +873,7 @@
 		</data>
 		<key>LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		MqndBpt2Sk4HEGNT6w3JEjG9iIk=
+		qqslcapucPAEydAEK+ECRYoEvWY=
 		</data>
 		<key>LaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -881,7 +881,7 @@
 		</data>
 		<key>LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		Pp+ZtomxCXa3C3KLL10uex8E7ko=
+		FXjNqqcuFPDWWnYOYEHlc77qq/s=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -953,15 +953,15 @@
 		</data>
 		<key>app/pages/map-page/map-page-common.css</key>
 		<data>
-		aC/LGq7VCXl7TrXzZc1yM01MxpE=
+		Mdm0shtZIzCIe6LeVgXrWE0fmdw=
 		</data>
 		<key>app/pages/map-page/map-page.component.js</key>
 		<data>
-		XcYp6+iUNeHYQIQDj2fRrVaCeM0=
+		XXDSMhh/VeGlYY7LbEfPyaXPdzA=
 		</data>
 		<key>app/pages/map-page/map-page.component.ts</key>
 		<data>
-		JpzjtrM5sb03nMeq1fnUPsiDK2g=
+		8yP1Z4Gisit4ruIPnN4Yvpf1uOE=
 		</data>
 		<key>app/pages/map-page/map-page.css</key>
 		<data>
@@ -969,19 +969,27 @@
 		</data>
 		<key>app/pages/map-page/map-page.html</key>
 		<data>
-		ffKM1eZFXSJZh3AbX994fnlLyl8=
+		ONNaLW7nhDV0H7OSjUM37u2kONw=
+		</data>
+		<key>app/pages/map-page/prize-view-common.css</key>
+		<data>
+		1swPUq9z8ZWOfXuH70tn2YzjLnI=
+		</data>
+		<key>app/pages/map-page/prize-view.css</key>
+		<data>
+		Y24DEL1AHKmuexhvd1j0at/X++c=
 		</data>
 		<key>app/pages/map-page/prize-view.html</key>
 		<data>
-		wjqqDAL/YayVWOvmgpWeGxnvAq0=
+		jO5hnxrLMY3xW1+gvIziSsih6iY=
 		</data>
 		<key>app/pages/map-page/prize-view.js</key>
 		<data>
-		q0Z4DYWL0t3QqZL/xWuFuWqa4tk=
+		OsXv1HH6WgHr9OkN22qH9rgI5xc=
 		</data>
 		<key>app/pages/map-page/prize-view.ts</key>
 		<data>
-		6RoWCOnHMZJKo5hCndCOC2eHBLo=
+		ObDLftcuNsbX9uWlFMDGgFIux6s=
 		</data>
 		<key>app/platform.css</key>
 		<data>
@@ -16391,11 +16399,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			bNMJb0g3EelAf+6wK9hYVsfXI9w=
+			4lCPqOFgC04WCEcQAEEYJ+vtapc=
 			</data>
 			<key>hash2</key>
 			<data>
-			vZI7/ugPlrd5E3nh+yY9HnLLyUdKTneZgQvF/5eeJEQ=
+			q7GMqSt2xISua1vos0R0GOi3P+l/SCscZOYNuLPT6v4=
 			</data>
 		</dict>
 		<key>Frameworks/NativeScript.framework/Info.plist</key>
@@ -18039,11 +18047,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			MqndBpt2Sk4HEGNT6w3JEjG9iIk=
+			qqslcapucPAEydAEK+ECRYoEvWY=
 			</data>
 			<key>hash2</key>
 			<data>
-			BPkJq2Zy0vFwurflV9LzyRFr1GpX8w4Ybfp2X1nzz94=
+			8FV9iBgSVe7GeEHJlIWj5dgt0buleaZsuZyKiSwvgZ8=
 			</data>
 		</dict>
 		<key>LaunchScreen.storyboardc/Info.plist</key>
@@ -18061,11 +18069,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Pp+ZtomxCXa3C3KLL10uex8E7ko=
+			FXjNqqcuFPDWWnYOYEHlc77qq/s=
 			</data>
 			<key>hash2</key>
 			<data>
-			AC5anTLjMfXs+UuO4qblJ4Y76YPenXmE+UC0KIi7maM=
+			3nwJT+B5xCnnLbEN1CFymHr6dqsiFxf63yk+SRY4wxw=
 			</data>
 		</dict>
 		<key>app/app.component.js</key>
@@ -18248,33 +18256,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			aC/LGq7VCXl7TrXzZc1yM01MxpE=
+			Mdm0shtZIzCIe6LeVgXrWE0fmdw=
 			</data>
 			<key>hash2</key>
 			<data>
-			5bzuPWhMkuajFyQzrkH9Mc0Q2OnsSphhpOz5EC0Ltcs=
+			UYZjFhIECk3V2CDqtffvmDT6TyUMQWSTB1mvOxX7XSE=
 			</data>
 		</dict>
 		<key>app/pages/map-page/map-page.component.js</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			XcYp6+iUNeHYQIQDj2fRrVaCeM0=
+			XXDSMhh/VeGlYY7LbEfPyaXPdzA=
 			</data>
 			<key>hash2</key>
 			<data>
-			bPjRBFwvCS/GkH8oXUJtBmhLoKwEOgjDsRswva9jWMA=
+			2i8oRP1bxRlHw1RChEfSA0nhxSS3RaC/okVh0zZx4dE=
 			</data>
 		</dict>
 		<key>app/pages/map-page/map-page.component.ts</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			JpzjtrM5sb03nMeq1fnUPsiDK2g=
+			8yP1Z4Gisit4ruIPnN4Yvpf1uOE=
 			</data>
 			<key>hash2</key>
 			<data>
-			F28uz1SBVAAfVzZrwyFpgYi9NO/FoWbZCqKBLlrcoOY=
+			tbPL1Oh72K9BYoFrupEiV1jcN4fHjHPRxiwTBBttjwQ=
 			</data>
 		</dict>
 		<key>app/pages/map-page/map-page.css</key>
@@ -18292,44 +18300,66 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ffKM1eZFXSJZh3AbX994fnlLyl8=
+			ONNaLW7nhDV0H7OSjUM37u2kONw=
 			</data>
 			<key>hash2</key>
 			<data>
-			mqe5uKYBmOoi/QejThuKLzszl/WM/RNpDm54NMXB59g=
+			UPuKgIjCOBv91RH9X1AVzqHCGbRdvXHzeLKlRIIxzp8=
+			</data>
+		</dict>
+		<key>app/pages/map-page/prize-view-common.css</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			1swPUq9z8ZWOfXuH70tn2YzjLnI=
+			</data>
+			<key>hash2</key>
+			<data>
+			GGqBIrOUfrPTj+HYONmqQPpPDO/8lXgtUCM+SHyIlhc=
+			</data>
+		</dict>
+		<key>app/pages/map-page/prize-view.css</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Y24DEL1AHKmuexhvd1j0at/X++c=
+			</data>
+			<key>hash2</key>
+			<data>
+			UXXSlfbPxFZ8yE8uto++AEhNvE5i4aHpwmIKyE8akAs=
 			</data>
 		</dict>
 		<key>app/pages/map-page/prize-view.html</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			wjqqDAL/YayVWOvmgpWeGxnvAq0=
+			jO5hnxrLMY3xW1+gvIziSsih6iY=
 			</data>
 			<key>hash2</key>
 			<data>
-			QKxqbJeQRuTgp1c2REF5hUKpxSZcOcJuioNxGuTw++Y=
+			xSjQpEwWy3O2HbWXdBscRQLHy2Oh96lqLhCXyxvFIhI=
 			</data>
 		</dict>
 		<key>app/pages/map-page/prize-view.js</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			q0Z4DYWL0t3QqZL/xWuFuWqa4tk=
+			OsXv1HH6WgHr9OkN22qH9rgI5xc=
 			</data>
 			<key>hash2</key>
 			<data>
-			2NDFqQsQaTWcwu+HI9crJ23JBZlTc4KeMyYzh7tg9UY=
+			pntQJPcPYxxKQ/SV5r2nuRf2Q58YdVkqVlEmB/w9el8=
 			</data>
 		</dict>
 		<key>app/pages/map-page/prize-view.ts</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			6RoWCOnHMZJKo5hCndCOC2eHBLo=
+			ObDLftcuNsbX9uWlFMDGgFIux6s=
 			</data>
 			<key>hash2</key>
 			<data>
-			FpCY1cBuNeKjmHPMi7n6HO9C+ExYip9pXZGpHr6ivGw=
+			r3YpTe4MmZFiliQcz68XA7fK9rToUp3tehx84nfbwfg=
 			</data>
 		</dict>
 		<key>app/platform.css</key>
