@@ -208,7 +208,7 @@ export class MapPageComponent implements OnInit {
       collectDistance = 50;
       if(getDistanceTo(mark) < collectDistance) {
         let amount = howManyCollected();
-        collect(amount);
+        collect(amount );
         //alert("Venture point collected. \nCollected: " + amount);
         collectedMarkers.push(mark);
         mapView.removeMarker(mark);
@@ -316,7 +316,7 @@ function getDistanceTo(obj) {
     distance = geolocation.distance(JSON.parse(objPos)._ios, JSON.parse(currentPos)._ios);
   } else if(isAndroid) {
     console.log("Running on android.");
-    distance = 300;//geolocation.distance(JSON.parse(objPos)._android, JSON.parse(currentPos)._android);
+    distance = 3;//geolocation.distance(JSON.parse(objPos)._android, JSON.parse(currentPos)._android);
   } else {
     distance = "error";
     console.log("Could not find distance.");
