@@ -10,7 +10,7 @@
         "spec": "2.4.3",
         "type": "version"
       },
-      "/Users/renne/Documents/code/Wenture"
+      "/Users/paavovaananen/NativeScript/Wenture"
     ]
   ],
   "_from": "@angular/common@2.4.3",
@@ -45,7 +45,7 @@
   "_shasum": "78d96bd2f8a1a105f635cd25e362ba5704b47f56",
   "_shrinkwrap": null,
   "_spec": "@angular/common@2.4.3",
-  "_where": "/Users/renne/Documents/code/Wenture",
+  "_where": "/Users/paavovaananen/NativeScript/Wenture",
   "author": {
     "name": "angular"
   },

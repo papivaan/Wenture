@@ -1,6 +1,7 @@
-import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
+import { Component, ElementRef, OnInit, ViewChild, ViewContainerRef } from "@angular/core";
 import { isAndroid, isIOS } from "platform";
 import {registerElement} from "nativescript-angular/element-registry";
+import { ModalDialogService, ModalDialogOptions } from "nativescript-angular/modal-dialog";
 import * as geolocation from "nativescript-geolocation";
 import { Router } from "@angular/router";
 import { Page } from "ui/page";
@@ -10,9 +11,7 @@ import { ImageSource } from "image-source";
 import { WenturePoint } from "../../shared/wenturepoint/wenturepoint";
 import { WenturePointService } from "../../shared/wenturepoint/wenturepoint.service";
 import { TnsSideDrawer } from 'nativescript-sidedrawer';
-
-// Get reference to the Status Bar plugin module
-import statusBar = require("nativescript-status-bar");
+import { PrizeViewComponent } from "./prize-view";
 
 var mapsModule = require("nativescript-google-maps-sdk");
 var dialogsModule = require("ui/dialogs");
@@ -21,16 +20,17 @@ var imageSource = require("image-source");
 
 var watchId: any;
 var currentPosition: Location;
+var currentPosCircle: any;
 var collectDistance: number; //distance in m on how close to enable collect-property
 var mapView: any;
 var collectedMarkers = [];
-//var _currentPosition: any;
+var selectedMarker;
 
 registerElement("MapView", () => require("nativescript-google-maps-sdk").MapView);
 
 @Component({
   selector: "map-page",
-  providers: [WenturePointService],
+  providers: [WenturePointService, ModalDialogService],
   templateUrl: "pages/map-page/map-page.html",
   styleUrls: ["pages/map-page/map-page-common.css", "pages/map-page/map-page.css"]
 })
@@ -42,17 +42,19 @@ export class MapPageComponent implements OnInit {
   latitude: number;
   longitude: number;
   altitude: number;
-  _currentPosition: any;
+  wenturePointTitle: string;
+  wenturePointInfo: string;
+  markerIsSelected: boolean;
   //i stores the index value of menu
   i: number = 0;
 
-  constructor(private router: Router, private wenturePointService: WenturePointService, private page: Page) {
+  constructor(private router: Router, private wenturePointService: WenturePointService, private page: Page, private _modalService: ModalDialogService, private vcRef: ViewContainerRef) {
 
   }
 
   ngOnInit() {
     // TODO: Loader?
-    // TODO: menuitem iconit puuttuu
+    // TODO: menuitem iconit puuttuu, actionbarin mahd piilottaminen(?)
     TnsSideDrawer.build({
       templates: [{
           title: 'Wenturepoints',
@@ -83,12 +85,81 @@ export class MapPageComponent implements OnInit {
       context: this,
     });
 
-    // Show status bar... statusBar.hide() to hide
-    statusBar.show();
   }
 
   toggleSideDrawer() {
     TnsSideDrawer.toggle();
+  }
+
+  createModelView() {
+    let that = this;
+    let options: ModalDialogOptions = {
+        viewContainerRef: this.vcRef,
+        context: "Context",
+        fullscreen: true
+    };
+    // >> returning-result
+    this._modalService.showModal(PrizeViewComponent, options)
+        .then((/* */) => {
+            console.log("Kukkuu");
+            // >> (hide)
+            /*
+            if (args === "start") {
+                this.startDate = dateresult;
+            } else if (args === "end") {
+                this.endDate = dateresult;
+            } else if (args === "findTheDay") {
+                this.date = dateresult;
+                this.weekday = this.weekdays[this.date.getDay()];
+            }
+            */
+            // << (hide)
+        });
+    // << returning-result
+  }
+
+  collectButtonTapped() {
+    // TODO: Tähän se keräystoiminto, if distance jtn, niin tuolta toi collect()
+    // This might be stupid, but works for now :)
+    //TODO: adding collected marker to a list etc. b4 removing
+
+      collectDistance = 50;
+      if(getDistanceTo(selectedMarker) < collectDistance) {
+        let amount = howManyCollected();
+        collect(amount, selectedMarker );
+        //alert("Venture point collected. \nCollected: " + amount);
+        collectedMarkers.push(selectedMarker);
+        mapView.removeMarker(selectedMarker);
+        //
+        console.log("You have " + collectedMarkers.length + " collected markers.")
+      } else {
+        console.log("\nMarker too far away, move closer.");
+      }
+
+
+
+    console.log("HIJKKJH" + selectedMarker.title);
+
+  }
+
+  addWenturePoints(mapView) {
+    for (var i = 0; i < this.wenturePointService.getPoints().length; i++) {
+      var wPoint = this.wenturePointService.getPoints().getItem(i);
+      var marker = new mapsModule.Marker();
+
+      marker.position = mapsModule.Position.positionFromLatLng(wPoint.lat, wPoint.lng);
+      marker.title = wPoint.title;
+      marker.snippet = "";
+      //Androidilla toimii. Iosille pitää katsoa miten resource toimii. PC:llä ei pystytä testaamaan
+      //Ikonia joutuu hiemna muokkaamaan(pienemmäksi ja lisätään pieni osoitin alalaitaan)
+      var icon = new Image();
+      icon.imageSource = imageSource.fromResource('icon');
+      marker.icon = icon;
+      marker.draggable = true;
+      marker.userData = {index: 1};
+      mapView.addMarker(marker);
+
+    }
   }
 
   //Map events
@@ -101,33 +172,20 @@ export class MapPageComponent implements OnInit {
         geolocation.enableLocationRequest();
     } else console.log("Alles in Ordnung");
 
-    var mapView = event.object;
+    mapView = event.object;
     var gMap = mapView.gMap;
 
-    var marker = new mapsModule.Marker();
-    marker.position = mapsModule.Position.positionFromLatLng(62.2308912, 25.7343853);
-    marker.title = "Mattilanniemi";
-    marker.snippet = "University Campus";
-    var icon = new Image();
-    icon.imageSource = imageSource.fromResource('icon');
-    marker.icon = icon;
-    marker.userData = {index: 1};
-    mapView.addMarker(marker);
+    this.addWenturePoints(mapView);
 
-
-/*
-    var circle = new mapsModule.Circle();
-    circle.center = mapsModule.Position.positionFromLatLng(62.23, 25.73);
-    circle.visible = true;
-    circle.radius = 50;
-    circle.fillColor = new Color('#99ff8800');
-    circle.strokeColor = new Color('#99ff0000');
-    circle.strokeWidth = 2;
-    mapView.addCircle(circle);
-*/
   };
 
-
+  onCoordinateTapped = (event) => {
+    mapView = event.object;
+    this.wenturePointTitle = "";
+    this.wenturePointInfo = "";
+    console.log("Coordinate tapped.");
+    this.markerIsSelected = false;
+  };
 
   onCoordinateLongPress = (event) => {
     console.log("LongPress");
@@ -139,20 +197,24 @@ export class MapPageComponent implements OnInit {
     console.log("Tapped location: \n\tLatitude: " + event.position.latitude +
                     "\n\tLongitude: " + event.position.longitude);
 
+/*  Tätä voi käyttää testailuun, jos haluaa lisätä markereita.
     var marker = new mapsModule.Marker();
     marker.position = mapsModule.Position.positionFromLatLng(lat, lng);
     marker.title = "Wenture point";
     marker.snippet = "";
     //Androidilla toimii. Iosille pitää katsoa miten resource toimii. PC:llä ei pystytä testaamaan
-    //Ikonia joutuu hiemna muokkaamaan(pienemmäksi ja lisätään pieni osoitin alalaitaan)
+    //Ikonia joutuu hiemna muokkaamaan pienemmäksi ja lisätään pieni osoitin alalaitaan)
     var icon = new Image();
     icon.imageSource = imageSource.fromResource('icon');
     marker.icon = icon;
     marker.draggable = true;
     marker.userData = {index: 1};
     mapView.addMarker(marker);
+  */
+    this.createModelView();
   };
 
+  // TODO: Tämän voisi siirtää johonkin fiksumpaan paikkaan.
   TnsSideDrawerOptionsListener = (index) => {
     console.log(index)
   };
@@ -164,12 +226,24 @@ export class MapPageComponent implements OnInit {
       "longitude": string
     }
 
-
     var mapView = event.object;
 
     let markerPos = JSON.stringify(event.marker.position);
     let currentPos = JSON.stringify(currentPosition);
     let distance = getDistanceTo(event.marker);
+
+    // Make bottom bar visible
+    this.markerIsSelected = true;
+
+    // Change the content of the bottom bar text
+    this.wenturePointTitle = event.marker.title;
+
+    for (var i = 0; i < this.wenturePointService.getPoints().length; i++) {
+      if (event.marker.title === this.wenturePointService.getPoints().getItem(i).title) {
+        this.wenturePointInfo = this.wenturePointService.getPoints().getItem(i).info;
+        console.log("\t" + this.wenturePointService.getPoints().getItem(i).info);
+      }
+    }
 
     event.marker.snippet = "Distance: " + distance.toFixed(0) + " m";
 
@@ -178,23 +252,10 @@ export class MapPageComponent implements OnInit {
                   + "\n\tCurrent position: " + currentPos
                   + "\n\tDistance to marker: " + distance.toFixed(2) + "m");
 
-    // This might be stupid, but works for now :)
-    //TODO: adding collected marker to a list etc. b4 removing
-    function collectMarker(mark) {
-      collectDistance = 50;
-      if(getDistanceTo(mark) < collectDistance) {
-        let amount = howManyCollected();
-        collect(amount);
-        //alert("Venture point collected. \nCollected: " + amount);
-        collectedMarkers.push(mark);
-        mapView.removeMarker(mark);
-        console.log("You have " + collectedMarkers.length + " collected markers.")
-      } else {
-        console.log("\nMarker too far away, move closer.");
-      }
-    }
 
-    collectMarker(event.marker);
+    selectedMarker = event.marker;
+
+
 
   };
 
@@ -212,6 +273,10 @@ export class MapPageComponent implements OnInit {
 
   onCameraChanged = (event) => {
     console.log("CameraChange");
+    console.log("Wenture Points:");
+    for (var i = 0; i < this.wenturePointService.getPoints().length; i++) {
+      console.log("\t" + JSON.stringify(this.wenturePointService.getPoints().getItem(i)));
+    }
   };
 
   onShapeSelect = (event) => {
@@ -233,6 +298,15 @@ export function startWatch(event) {
   }
 
   var mapView = event.object;
+  currentPosCircle = new mapsModule.Circle();
+  currentPosCircle.center = mapsModule.Position.positionFromLatLng(0, 0);
+  currentPosCircle.visible = true;
+  currentPosCircle.radius = 20;
+  currentPosCircle.fillColor = new Color('#6c9df0');
+  currentPosCircle.strokeColor = new Color('#396abd');
+  currentPosCircle.strokewidth = 2;
+  currentPosCircle.clickable = true;
+  mapView.addCircle(currentPosCircle);
 
   watchId = geolocation.watchLocation(
   function (loc) {
@@ -249,18 +323,10 @@ export function startWatch(event) {
                         + "\n\tDirection: " + obj.direction
                         + "\n\nCurrentPos: " + JSON.stringify(currentPosition));
 
-          var circle = new mapsModule.Circle();
-          circle.center = mapsModule.Position.positionFromLatLng(this.latitude, this.longitude);
-          circle.visible = true;
-          circle.radius = 20;
-          circle.fillColor = new Color('#6c9df0'); //#99ff8800
-          circle.strokeColor = new Color('#396abd'); //#99ff0000
-          circle.strokeWidth = 2;
-          circle.clickable = true;
-          mapView.addCircle(circle);
+          currentPosCircle.center = mapsModule.Position.positionFromLatLng(this.latitude, this.longitude);
+
           mapView.latitude = this.latitude;
           mapView.longitude = this.longitude;
-
       }
   },
   function(e){
@@ -300,9 +366,9 @@ function howManyCollected() {
 }
 
 //handles the collection and returns message
-function collect(amount) {
+function collect(amount, mark) {
   dialogsModule.alert({
-    message: "Wenture point collected! \nYou have: " + amount,
+    message: "Wenture point " + mark.title + " collected! \nYou have: " + amount,
     okButtonText: "OK"
   });
 }

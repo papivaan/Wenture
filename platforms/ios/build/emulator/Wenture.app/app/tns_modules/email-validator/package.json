@@ -10,7 +10,7 @@
         "spec": "latest",
         "type": "tag"
       },
-      "/Users/renne/Documents/code/Wenture"
+      "/Users/paavovaananen/NativeScript/Wenture"
     ]
   ],
   "_from": "email-validator@latest",
@@ -45,7 +45,7 @@
   "_shasum": "4621ca32fc741eb833ac98d5fb55670b7e056c95",
   "_shrinkwrap": null,
   "_spec": "email-validator",
-  "_where": "/Users/renne/Documents/code/Wenture",
+  "_where": "/Users/paavovaananen/NativeScript/Wenture",
   "author": {
     "name": "Robert Schultz",
     "email": "robert@cosmicrealms.com"
