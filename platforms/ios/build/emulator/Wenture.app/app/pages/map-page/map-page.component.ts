@@ -45,6 +45,7 @@ export class MapPageComponent implements OnInit {
   wenturePointTitle: string;
   wenturePointInfo: string;
   markerIsSelected: boolean;
+  isCloseEnoughToCollect: boolean;
   //i stores the index value of menu
   i: number = 0;
 
@@ -240,6 +241,9 @@ export class MapPageComponent implements OnInit {
     }
 
     event.marker.snippet = "Distance: " + distance.toFixed(0) + " m";
+    if (distance < 50) {
+      this.isCloseEnoughToCollect = true;
+    } else this.isCloseEnoughToCollect = false;
 
     console.log("\n\tMarkerSelect: " + event.marker.title
                   + "\n\tMarker position: " + markerPos
