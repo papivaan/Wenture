@@ -1,4 +1,7 @@
-<StackLayout class="prize-collection" sdkExampleTitle sdkToggleNavButton>
-    <Label class="markerTitle" text="{{ wenturePointTitle }}"></Label>
-    <Button id="okButton" text="Great!" (tap)="submit()"></Button>
+
+<StackLayout class="modal-view-style" sdkExampleTitle sdkToggleNavButton>
+    <TextView class="text" col-span="*" row-span="*" text="You have collected WenturePoint:"></TextView>
+    <Label id="markerTitle" class="point-title" text="{{ wenturePointTitle }}"></Label>
+    <Button text="Great!" (tap)="submit()"></Button>
+
 </StackLayout>
