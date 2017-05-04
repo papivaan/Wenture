@@ -34,7 +34,7 @@ TextField {
   background-color: rgba(255, 255, 255, 0.5);
   border-width: 1px;
   border-color: #303030;
-  float: right;
+  border-radius: 5px;
 }
 .action-bar {
   background-color: #64706c;

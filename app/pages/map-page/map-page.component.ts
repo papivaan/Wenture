@@ -12,6 +12,7 @@ import { ImageSource } from "image-source";
 import { WenturePoint } from "../../shared/wenturepoint/wenturepoint";
 import { WenturePointService } from "../../shared/wenturepoint/wenturepoint.service";
 import { TnsSideDrawer } from 'nativescript-sidedrawer';
+import { TnsSideDrawerOptionsListener } from 'nativescript-sidedrawer';
 import { PrizeViewComponent } from "./prize-view";
 
 var mapsModule = require("nativescript-google-maps-sdk");
@@ -49,10 +50,19 @@ export class MapPageComponent implements OnInit {
   markerIsSelected: boolean;
   isCloseEnoughToCollect: boolean;
   //i stores the index value of menu
-  i: number = 0;
+  private _i: number = 0
+	get i(): number {
+		return this._i
+	}
+  //tähän kaikki mitä halutaan tapahtuvan menusta
+	set i(i: number) {
+		this._i = i
+    console.log(this.i);
+
+  }
 
   constructor(private router: Router, private wenturePointService: WenturePointService, private page: Page, private _modalService: ModalDialogService, private vcRef: ViewContainerRef) {
-
+    this.wenturePointService.populate();
   }
 
   ngOnInit() {
@@ -87,12 +97,13 @@ export class MapPageComponent implements OnInit {
       },
       context: this,
     });
-
   }
 
   toggleSideDrawer() {
     TnsSideDrawer.toggle();
+
   }
+
 
   createModelView(mark) {
     let that = this;
@@ -246,16 +257,10 @@ export class MapPageComponent implements OnInit {
       this.isCloseEnoughToCollect = true;
     } else this.isCloseEnoughToCollect = false;
 
-    let collectButton = <Button>this.collectButton.nativeElement;
-    let collectButtonColor = new Color(this.isCloseEnoughToCollect ? "#CB1D00" : "#484848");
-    collectButton.backgroundColor = collectButtonColor;
-
-
     console.log("\n\tMarkerSelect: " + event.marker.title
                   + "\n\tMarker position: " + markerPos
                   + "\n\tCurrent position: " + currentPos
                   + "\n\tDistance to marker: " + distance.toFixed(2) + "m");
-
 
     selectedMarker = event.marker;
 
@@ -371,7 +376,6 @@ function howManyCollected() {
 
 //handles the collection and returns message
 function collect(amount, mark) {
-  //createModelView();
   dialogsModule.alert({
     message: "Wenture point " + mark.title + " collected! \nYou have: " + amount,
     okButtonText: "OK"
