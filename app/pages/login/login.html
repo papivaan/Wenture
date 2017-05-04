@@ -1,4 +1,4 @@
-<StackLayout #container>
+<StackLayout #container class="container">
   <Image src="res://icon" width="100" height="100" stretch="aspectFill" horizontalAlignment="center"></Image>
   <TextField #email hint="Email address" keyboardType="email" [(ngModel)]="user.email" autocorrect="false" autocapitalizationType="none"></TextField>
   <TextField #password hint="Password" secure="true" [(ngModel)]="user.password"></TextField>
