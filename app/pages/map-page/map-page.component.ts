@@ -129,6 +129,13 @@ export class MapPageComponent implements OnInit {
 
   };
 
+  onCoordinateTapped = (event) => {
+    var mapView = event.object;
+    this.wenturePointTitle = "";
+    this.wenturePointInfo = "";
+    console.log("Coordinate tapped.");
+  };
+
   onCoordinateLongPress = (event) => {
     console.log("LongPress");
 
