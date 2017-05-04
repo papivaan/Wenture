@@ -1,5 +1,7 @@
 ActionBar {
     background-color:  #b55d2f;
-    color: black;
-
+    color: white;
+}
+.wp-info {
+    margin-bottom: 33px;
 }
