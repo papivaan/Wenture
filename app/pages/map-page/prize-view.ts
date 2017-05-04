@@ -15,7 +15,9 @@ import { WenturePointService } from "../../shared/wenturepoint/wenturepoint.serv
 export class PrizeViewComponent implements OnInit {
   wenturePointTitle: string;
   marker: any;
-  infoText: string = "";
+  prizeName: string = "";
+  prizeOffer: string = "";
+  prizeValid: string = "";
 
   constructor(private params: ModalDialogParams, private page: Page, private prizeService: PrizeService, private wenturePointService: WenturePointService) {
       this.marker = params.context;
@@ -26,11 +28,18 @@ export class PrizeViewComponent implements OnInit {
     this.page.backgroundImage = "res://loginbg";
 
     for (var i = 0; i < this.wenturePointService.getPoints().length; i++) {
-      console.log("Tähän pitäisi tulla jotain: " + i);
-      console.log("Title: " + this.wenturePointService.getPoints().getItem(i).title);
+      console.log("Title: " + this.wenturePointService.getPoints().getItem(i).title + ", OfferId: " + this.wenturePointService.getPoints().getItem(i).prizeId);
+      for (var j = 0; j < this.prizeService.getPrizes().length; j++) {
+        console.log("Prize: " + this.prizeService.getPrizes().getItem(j).name);
+        if (this.wenturePointService.getPoints().getItem(i).prizeId === this.prizeService.getPrizes().getItem(j).id) {
+          this.prizeName = this.prizeService.getPrizes().getItem(j).name;
+          this.prizeOffer = this.prizeService.getPrizes().getItem(j).offer;
+          this.prizeValid = this.prizeService.getPrizes().getItem(j).validUntil;
+          return;
+        }
+      }
     }
 
-    this.infoText = "Moi Paavo";
   }
 
   setTextViews() {

@@ -2,7 +2,9 @@
 <StackLayout class="modal-view-style" sdkExampleTitle sdkToggleNavButton>
     <TextView class="text" col-span="*" row-span="*" text="You have collected WenturePoint:"></TextView>
     <Label id="markerTitle" class="point-title" text="{{ wenturePointTitle }}"></Label>
-    <TextView class="text" col-span="*" row-span="*" text="{{ infoText }}"></TextView>
+    <TextView class="text" col-span="*" row-span="*" text="{{ prizeName }}"></TextView>
+    <TextView class="text" col-span="*" row-span="*" text="{{ prizeOffer }}"></TextView>
+    <TextView class="text" col-span="*" row-span="*" text="{{ prizeValid }}"></TextView>
     <Button text="Claim Prize!" (tap)="submit()"></Button>
 
 </StackLayout>
