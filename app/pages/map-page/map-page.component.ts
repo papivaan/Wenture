@@ -52,7 +52,7 @@ export class MapPageComponent implements OnInit {
   i: number = 0;
 
   constructor(private router: Router, private wenturePointService: WenturePointService, private page: Page, private _modalService: ModalDialogService, private vcRef: ViewContainerRef) {
-
+    this.wenturePointService.populate();
   }
 
   ngOnInit() {
@@ -87,7 +87,6 @@ export class MapPageComponent implements OnInit {
       },
       context: this,
     });
-
   }
 
   toggleSideDrawer() {
@@ -371,7 +370,6 @@ function howManyCollected() {
 
 //handles the collection and returns message
 function collect(amount, mark) {
-  //createModelView();
   dialogsModule.alert({
     message: "Wenture point " + mark.title + " collected! \nYou have: " + amount,
     okButtonText: "OK"

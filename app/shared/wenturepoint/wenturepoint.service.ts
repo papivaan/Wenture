@@ -9,14 +9,13 @@ export class WenturePointService extends Observable {
     super();
 
     this.points = new ObservableArray<WenturePoint>([ ]);
-    this.populate();
   }
 
   getPoints() {
     return this.points;
   }
 
-  populate() {
+  public populate() {
     this.points.push(
       new WenturePoint("Dumpin toimisto", 62.232615, 25.737668, "Loistava paikka dumppareille piipahtaa pikkaselle kahville!")
     );
@@ -30,5 +29,5 @@ export class WenturePointService extends Observable {
       new WenturePoint("Yritystehdas", 62.247596, 25.741710, "Täällä rakennettaan yrittäjiä!")
     );
   }
-
+  
 }
