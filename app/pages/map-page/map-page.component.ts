@@ -98,14 +98,13 @@ export class MapPageComponent implements OnInit {
     let that = this;
     let options: ModalDialogOptions = {
         viewContainerRef: this.vcRef,
-        context: "Context",
+        context: mark,
         fullscreen: true
     };
     // >> returning-result
     this._modalService.showModal(PrizeViewComponent, options)
         .then((/* */) => {
             console.log(mark.title);
-            // TODO: Tässä sitten asetetaan sihen prize-viewiin markerin nimi
         });
     // << returning-result
   }

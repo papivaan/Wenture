@@ -1,4 +1,5 @@
 <StackLayout class="modal-view-style" sdkExampleTitle sdkToggleNavButton>
-    <Label id="markerTitle" text="{{ wenturePointTitle }}"></Label>
+    <TextView class="text" col-span="*" row-span="*" text="You have collected WenturePoint:"></TextView>
+    <Label id="markerTitle" class="point-title" text="{{ wenturePointTitle }}"></Label>
     <Button text="Great!" (tap)="submit()"></Button>
 </StackLayout>
