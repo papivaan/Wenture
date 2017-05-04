@@ -54,21 +54,21 @@ export class MapPageComponent implements OnInit {
 	get i(): number {
 		return this._i;
 	}
-  //tähän kaikki mitä halutaan tapahtuvan menusta
+  //i saadaan menun sisäänrakennetusta kuuntelijasta
 	set i(i: number) {
 		this._i = i;
     this.menuListener(i);
 
   }
-
+// tähän menun toiminnallisuus
   menuListener(i) {
     console.log(i);
     if(i == 1) {
-      alert("Not in use");
+      alert("Routes are yet to come");
     };
 
     if(i == 4) {
-      alert("Logging out");
+        this.router.navigate(["/"]);
     };
   }
 
