@@ -116,7 +116,6 @@ export class MapPageComponent implements OnInit {
 
   toggleSideDrawer() {
     TnsSideDrawer.toggle();
-
   }
 
 
@@ -130,7 +129,7 @@ export class MapPageComponent implements OnInit {
     // >> returning-result
     this._modalService.showModal(PrizeViewComponent, options)
         .then((/* */) => {
-            console.log(mark.title);
+            this.markerIsSelected = false;
         });
     // << returning-result
   }
