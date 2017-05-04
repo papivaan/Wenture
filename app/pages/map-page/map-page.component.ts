@@ -5,6 +5,7 @@ import { ModalDialogService, ModalDialogOptions } from "nativescript-angular/mod
 import * as geolocation from "nativescript-geolocation";
 import { Router } from "@angular/router";
 import { Page } from "ui/page";
+import { Button } from "ui/button";
 import { Color } from "color";
 //import { Image } from "ui/image";
 import { ImageSource } from "image-source";
@@ -38,6 +39,7 @@ registerElement("MapView", () => require("nativescript-google-maps-sdk").MapView
 
 export class MapPageComponent implements OnInit {
   @ViewChild("MapView") mapView: ElementRef;
+  @ViewChild("collectButton") collectButton: ElementRef;
 
   latitude: number;
   longitude: number;
@@ -244,6 +246,11 @@ export class MapPageComponent implements OnInit {
     if (distance < 50) {
       this.isCloseEnoughToCollect = true;
     } else this.isCloseEnoughToCollect = false;
+
+    let collectButton = <Button>this.collectButton.nativeElement;
+    let collectButtonColor = new Color(this.isCloseEnoughToCollect ? "#CB1D00" : "#484848");
+    collectButton.backgroundColor = collectButtonColor;
+
 
     console.log("\n\tMarkerSelect: " + event.marker.title
                   + "\n\tMarker position: " + markerPos
