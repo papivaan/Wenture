@@ -1,6 +1,7 @@
-import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
+import { Component, ElementRef, OnInit, ViewChild, ViewContainerRef } from "@angular/core";
 import { isAndroid, isIOS } from "platform";
 import {registerElement} from "nativescript-angular/element-registry";
+import { ModalDialogService, ModalDialogOptions } from "nativescript-angular/modal-dialog";
 import * as geolocation from "nativescript-geolocation";
 import { Router } from "@angular/router";
 import { Page } from "ui/page";
@@ -10,6 +11,7 @@ import { ImageSource } from "image-source";
 import { WenturePoint } from "../../shared/wenturepoint/wenturepoint";
 import { WenturePointService } from "../../shared/wenturepoint/wenturepoint.service";
 import { TnsSideDrawer } from 'nativescript-sidedrawer';
+import { PrizeViewComponent } from "./prize-view";
 
 var mapsModule = require("nativescript-google-maps-sdk");
 var dialogsModule = require("ui/dialogs");
@@ -28,7 +30,7 @@ registerElement("MapView", () => require("nativescript-google-maps-sdk").MapView
 
 @Component({
   selector: "map-page",
-  providers: [WenturePointService],
+  providers: [WenturePointService, ModalDialogService],
   templateUrl: "pages/map-page/map-page.html",
   styleUrls: ["pages/map-page/map-page-common.css", "pages/map-page/map-page.css"]
 })
@@ -46,7 +48,7 @@ export class MapPageComponent implements OnInit {
   //i stores the index value of menu
   i: number = 0;
 
-  constructor(private router: Router, private wenturePointService: WenturePointService, private page: Page) {
+  constructor(private router: Router, private wenturePointService: WenturePointService, private page: Page, private _modalService: ModalDialogService, private vcRef: ViewContainerRef) {
 
   }
 
@@ -87,6 +89,33 @@ export class MapPageComponent implements OnInit {
 
   toggleSideDrawer() {
     TnsSideDrawer.toggle();
+  }
+
+  createModelView() {
+    let that = this;
+    let options: ModalDialogOptions = {
+        viewContainerRef: this.vcRef,
+        context: "Context",
+        fullscreen: true
+    };
+    // >> returning-result
+    this._modalService.showModal(PrizeViewComponent, options)
+        .then((/* */) => {
+            console.log("Kukkuu");
+            // >> (hide)
+            /*
+            if (args === "start") {
+                this.startDate = dateresult;
+            } else if (args === "end") {
+                this.endDate = dateresult;
+            } else if (args === "findTheDay") {
+                this.date = dateresult;
+                this.weekday = this.weekdays[this.date.getDay()];
+            }
+            */
+            // << (hide)
+        });
+    // << returning-result
   }
 
   collectButtonTapped() {
@@ -182,6 +211,7 @@ export class MapPageComponent implements OnInit {
     marker.userData = {index: 1};
     mapView.addMarker(marker);
   */
+    this.createModelView();
   };
 
   // TODO: Tämän voisi siirtää johonkin fiksumpaan paikkaan.
