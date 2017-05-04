@@ -12,6 +12,7 @@ import { ImageSource } from "image-source";
 import { WenturePoint } from "../../shared/wenturepoint/wenturepoint";
 import { WenturePointService } from "../../shared/wenturepoint/wenturepoint.service";
 import { TnsSideDrawer } from 'nativescript-sidedrawer';
+import { TnsSideDrawerOptionsListener } from 'nativescript-sidedrawer';
 import { PrizeViewComponent } from "./prize-view";
 
 var mapsModule = require("nativescript-google-maps-sdk");
@@ -49,7 +50,16 @@ export class MapPageComponent implements OnInit {
   markerIsSelected: boolean;
   isCloseEnoughToCollect: boolean;
   //i stores the index value of menu
-  i: number = 0;
+  private _i: number = 0
+	get i(): number {
+		return this._i
+	}
+  //tähän kaikki mitä halutaan tapahtuvan menusta
+	set i(i: number) {
+		this._i = i
+    console.log(this.i);
+
+  }
 
   constructor(private router: Router, private wenturePointService: WenturePointService, private page: Page, private _modalService: ModalDialogService, private vcRef: ViewContainerRef) {
 
@@ -92,7 +102,9 @@ export class MapPageComponent implements OnInit {
 
   toggleSideDrawer() {
     TnsSideDrawer.toggle();
+
   }
+
 
   createModelView(mark) {
     let that = this;
