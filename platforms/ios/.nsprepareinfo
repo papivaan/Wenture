@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
 	"time": "Thu May 04 2017 18:27:57 GMT+0300 (EEST)",
+=======
+	"time": "Thu May 04 2017 18:40:47 GMT+0300 (EEST)",
+>>>>>>> 304d720bf17f65d6e295cebfa46969ea46f94dde
 	"bundle": false,
 	"release": false,
 	"changesRequireBuild": false,
