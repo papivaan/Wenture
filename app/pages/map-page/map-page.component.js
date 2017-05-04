@@ -102,7 +102,7 @@ var MapPageComponent = (function () {
         get: function () {
             return this._i;
         },
-        //tähän kaikki mitä halutaan tapahtuvan menusta
+        //i saadaan menun sisäänrakennetusta kuuntelijasta
         set: function (i) {
             this._i = i;
             this.menuListener(i);
@@ -110,14 +110,15 @@ var MapPageComponent = (function () {
         enumerable: true,
         configurable: true
     });
+    // tähän menun toiminnallisuus
     MapPageComponent.prototype.menuListener = function (i) {
         console.log(i);
         if (i == 1) {
-            alert("Not in use");
+            alert("Routes are yet to come");
         }
         ;
         if (i == 4) {
-            alert("Logging out");
+            this.router.navigate(["/"]);
         }
         ;
     };
