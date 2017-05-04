@@ -1,5 +1,5 @@
 .add-bar {
-  background-color: #CB1D00;
+  background-color: #303030;
   padding: 5 10;
 }
 .add-bar Image {
@@ -13,11 +13,25 @@ TextField {
 }
 .wp-title {
   font-weight: bold;
-  font-family: Verdana;
+  margin-left: 5px;
+  font-family: Tahoma;
 }
 .wp-info {
-  font-size: 12px;
+  vertical-align: stretch;
+  background-size: contain;
+  font-family: Tahoma;
 }
 .bottom {
+  padding: 5px;
   background-color: #D3D3D3;
+  border-color: #303030;
+  border-width: 2px;
+  border-style: groove;
+}
+#collectButton {
+  padding: 10px;
+  color: white;
+  background-color: rgba(48, 48, 48, 0.5);
+  border-width: 1px;
+  border-color: #303030;
 }
