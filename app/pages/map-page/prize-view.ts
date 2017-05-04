@@ -11,14 +11,15 @@ import { Label } from "ui/label";
 })
 export class PrizeViewComponent implements OnInit {
   wenturePointTitle: string;
+  marker: any;
 
   constructor(private params: ModalDialogParams, private page: Page) {
-      console.log("ModalViewComponent constructed");
+      this.marker = params.context;
   }
 
   ngOnInit() {
     this.page.backgroundImage = "res://loginbg";
-    this.wenturePointTitle = "Hiphei mäyrät!";
+    this.wenturePointTitle = this.marker.title;
     console.log("ngOnInit");
   }
 

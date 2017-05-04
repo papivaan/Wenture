@@ -3,10 +3,7 @@ StackLayout {
   margin-right: 30;
   padding-bottom: 15;
   background-color: rgba(235, 235, 235, 0.75);
-}
-Label {
-  color: white;
-  font-size: 32;
+  text-align: center;
 }
 Button {
   background-color: #CB1D00;
@@ -17,4 +14,15 @@ Button, Label {
   margin-left: 16;
   margin-right: 16;
   margin-bottom: 10;
+}
+TextView {
+  background-color: rgba(235,235,235,0);
+}
+.text {
+  font-size: 24;
+  color: #404040;
+}
+.point-title {
+  font-size: 32;
+  color: #303030;
 }
