@@ -1,6 +1,7 @@
 import { Component, OnInit, NgModule } from "@angular/core";
 import { ModalDialogParams } from "nativescript-angular/modal-dialog";
 import { Page } from "ui/page";
+import { Label } from "ui/label";
 
 // >> passing-parameters
 @Component({
@@ -8,16 +9,19 @@ import { Page } from "ui/page";
     templateUrl: "./prize-view.html",
 })
 export class PrizeViewComponent implements OnInit {
+  wenturePointTitle: string;
 
-    constructor(private params: ModalDialogParams, private page: Page) {
-        console.log("ModalViewComponent constructed");
-    }
+  constructor(private params: ModalDialogParams, private page: Page) {
+      console.log("ModalViewComponent constructed");
+  }
 
-    ngOnInit() {
-        console.log("ngOnInit");
-    }
+  ngOnInit() {
+    this.wenturePointTitle = "Hiphei mäyrät!";
+    console.log("ngOnInit");
+  }
 
-    public submit() {
-        this.params.closeCallback("Callback param");
-    }
+  public submit() {
+    let label: Label = <Label>this.page.getViewById<Label>("markerTitle");
+    this.params.closeCallback(label);
+  }
 }
