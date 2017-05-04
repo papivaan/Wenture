@@ -41,6 +41,7 @@ export class MapPageComponent implements OnInit {
   altitude: number;
   wenturePointTitle: string;
   wenturePointInfo: string;
+  markerIsSelected: boolean;
   //i stores the index value of menu
   i: number = 0;
 
@@ -134,6 +135,7 @@ export class MapPageComponent implements OnInit {
     this.wenturePointTitle = "";
     this.wenturePointInfo = "";
     console.log("Coordinate tapped.");
+    this.markerIsSelected = false;
   };
 
   onCoordinateLongPress = (event) => {
@@ -179,6 +181,9 @@ export class MapPageComponent implements OnInit {
     let markerPos = JSON.stringify(event.marker.position);
     let currentPos = JSON.stringify(currentPosition);
     let distance = getDistanceTo(event.marker);
+
+    // Make bottom bar visible
+    this.markerIsSelected = true;
 
     // Change the content of the bottom bar text
     this.wenturePointTitle = event.marker.title;
