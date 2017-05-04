@@ -101,7 +101,7 @@ export class MapPageComponent implements OnInit {
     // >> returning-result
     this._modalService.showModal(PrizeViewComponent, options)
         .then((/* */) => {
-            console.log("Kukkuu");
+            console.log(mark.title);
             // TODO: Tässä sitten asetetaan sihen prize-viewiin markerin nimi
         });
     // << returning-result
