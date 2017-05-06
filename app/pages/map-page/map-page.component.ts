@@ -3,6 +3,7 @@ import { isAndroid, isIOS } from "platform";
 import {registerElement} from "nativescript-angular/element-registry";
 import { ModalDialogService, ModalDialogOptions } from "nativescript-angular/modal-dialog";
 import * as geolocation from "nativescript-geolocation";
+import { TNSFontIconService } from 'nativescript-ngx-fonticon';
 import { Router } from "@angular/router";
 import { Page } from "ui/page";
 import { Button } from "ui/button";
@@ -72,7 +73,7 @@ export class MapPageComponent implements OnInit {
     };
   }
 
-  constructor(private router: Router, private wenturePointService: WenturePointService, private page: Page, private _modalService: ModalDialogService, private vcRef: ViewContainerRef) {
+  constructor(private router: Router, private fonticon: TNSFontIconService, private wenturePointService: WenturePointService, private page: Page, private _modalService: ModalDialogService, private vcRef: ViewContainerRef) {
     this.wenturePointService.populate();
   }
 

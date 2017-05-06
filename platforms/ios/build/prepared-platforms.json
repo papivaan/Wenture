@@ -19,6 +19,8 @@
     "url": true,
     "nativescript-geolocation": true,
     "nativescript-google-maps-sdk": true,
+    "nativescript-ngx-fonticon": true,
+    "tslib": true,
     "nativescript-sidedrawer": true,
     "nativescript-status-bar": true,
     "nativescript-theme-core": true,

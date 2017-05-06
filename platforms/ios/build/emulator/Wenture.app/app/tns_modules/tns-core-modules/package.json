@@ -10,7 +10,7 @@
         "spec": "2.5.0",
         "type": "version"
       },
-      "/Users/paavovaananen/NativeScript/Wenture"
+      "/Users/renne/Documents/code/Wenture"
     ]
   ],
   "_from": "tns-core-modules@2.5.0",
@@ -44,7 +44,7 @@
   "_shasum": "25ebfa410a67fd34c86da8526633b071a0d756f7",
   "_shrinkwrap": null,
   "_spec": "tns-core-modules@2.5.0",
-  "_where": "/Users/paavovaananen/NativeScript/Wenture",
+  "_where": "/Users/renne/Documents/code/Wenture",
   "dependencies": {
     "tns-core-modules-widgets": "2.5.0"
   },
