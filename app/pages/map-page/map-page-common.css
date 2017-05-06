@@ -1,11 +1,12 @@
 .fa {
   font-family: FontAwesome, fontawesome-webfont;
-  font-size: 28;
+  font-size: 24;
+  font-weight: normal;
 }
 .menu-icon {
   vertical-align: center;
-  padding-left: 15;
-  padding-right: 15;
+  margin-left: 5;
+  margin-right: 15;
 }
 .add-bar {
   background-color: #D3D3D3;
