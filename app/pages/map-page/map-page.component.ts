@@ -3,6 +3,7 @@ import { isAndroid, isIOS } from "platform";
 import {registerElement} from "nativescript-angular/element-registry";
 import { ModalDialogService, ModalDialogOptions } from "nativescript-angular/modal-dialog";
 import * as geolocation from "nativescript-geolocation";
+import { TNSFontIconService } from 'nativescript-ngx-fonticon';
 import { Router } from "@angular/router";
 import { Page } from "ui/page";
 import { Button } from "ui/button";
@@ -49,30 +50,31 @@ export class MapPageComponent implements OnInit {
   wenturePointInfo: string;
   markerIsSelected: boolean;
   isCloseEnoughToCollect: boolean;
+  isSidedrawerVisible: boolean = false;
   //i stores the index value of menu
   private _i: number = 0;
 	get i(): number {
 		return this._i;
 	}
-  //tähän kaikki mitä halutaan tapahtuvan menusta
+  //i saadaan menun sisäänrakennetusta kuuntelijasta
 	set i(i: number) {
 		this._i = i;
     this.menuListener(i);
 
   }
-
+// tähän menun toiminnallisuus
   menuListener(i) {
     console.log(i);
     if(i == 1) {
-      alert("Not in use");
+      alert("Routes are yet to come");
     };
 
     if(i == 4) {
-      alert("Logging out");
+        this.router.navigate(["/"]);
     };
   }
 
-  constructor(private router: Router, private wenturePointService: WenturePointService, private page: Page, private _modalService: ModalDialogService, private vcRef: ViewContainerRef) {
+  constructor(private router: Router, private fonticon: TNSFontIconService, private wenturePointService: WenturePointService, private page: Page, private _modalService: ModalDialogService, private vcRef: ViewContainerRef) {
     this.wenturePointService.populate();
   }
 
@@ -101,6 +103,10 @@ export class MapPageComponent implements OnInit {
         //  androidIcon: 'ic_account_circle_white_24dp',
         //  iosIcon: 'ic_account_circle_white',
       }],
+      textColor: new Color("white"), // color of all text including title, subtitle, and items
+	    headerBackgroundColor: new Color("#383838"),
+      backgroundColor: new Color("#282828"), // background color under the header
+      logoImage: imageSource.fromResource('icon'),
       title: 'Wenture',
       subtitle: 'your urban adventure!',
       listener: (index) => {
@@ -116,7 +122,6 @@ export class MapPageComponent implements OnInit {
 
   toggleSideDrawer() {
     TnsSideDrawer.toggle();
-
   }
 
 
@@ -130,7 +135,7 @@ export class MapPageComponent implements OnInit {
     // >> returning-result
     this._modalService.showModal(PrizeViewComponent, options)
         .then((/* */) => {
-            console.log(mark.title);
+            this.markerIsSelected = false;
         });
     // << returning-result
   }

@@ -1,3 +1,6 @@
 StackLayout {
   height: 370;
 }
+Button, Label {
+  margin-bottom: -20;
+}
