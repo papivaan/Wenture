@@ -50,6 +50,7 @@ export class MapPageComponent implements OnInit {
   wenturePointInfo: string;
   markerIsSelected: boolean;
   isCloseEnoughToCollect: boolean;
+  isSidedrawerVisible: boolean = false;
   //i stores the index value of menu
   private _i: number = 0;
 	get i(): number {
@@ -102,6 +103,10 @@ export class MapPageComponent implements OnInit {
         //  androidIcon: 'ic_account_circle_white_24dp',
         //  iosIcon: 'ic_account_circle_white',
       }],
+      textColor: new Color("white"), // color of all text including title, subtitle, and items
+	    headerBackgroundColor: new Color("#383838"),
+      backgroundColor: new Color("#282828"), // background color under the header
+      logoImage: imageSource.fromResource('icon'),
       title: 'Wenture',
       subtitle: 'your urban adventure!',
       listener: (index) => {
