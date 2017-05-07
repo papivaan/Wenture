@@ -1,13 +1,14 @@
 <ActionBar title="Wenture" class="action-bar">
-  <!--Siirsin tämän hieman tymästi tänne-->
-  <ActionItem text="Menu" ios.position="right" (tap)="toggleSideDrawer()"></ActionItem>
+  <NavigationButton visibility="collapsed"></NavigationButton>
   <StackLayout  orientation="horizontal"
                 ios:horizontalAlignment="center"
                 android:horizontalAlignment="left">
+    <Label [text]="'fa-bars' | fonticon" class="fa menu-icon" (tap)="toggleSideDrawer()"></Label>
     <Image src="res://icon" class="action-image"></Image>
     <Label text="Wenture"  class="action-label"></Label>
   </StackLayout>
 </ActionBar>
+
 <GridLayout rows="*, auto, auto">
   <MapView  row="0"
             latitude="62.2308912"

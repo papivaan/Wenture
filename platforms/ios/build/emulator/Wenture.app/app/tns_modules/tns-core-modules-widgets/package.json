@@ -10,7 +10,7 @@
         "spec": "2.5.0",
         "type": "version"
       },
-      "/Users/paavovaananen/NativeScript/Wenture/node_modules/tns-core-modules"
+      "/Users/renne/Documents/code/Wenture/node_modules/tns-core-modules"
     ]
   ],
   "_from": "tns-core-modules-widgets@2.5.0",
@@ -44,7 +44,7 @@
   "_shasum": "ff8cca002cc7a222cf0bc21cfcb93f29432f26ef",
   "_shrinkwrap": null,
   "_spec": "tns-core-modules-widgets@2.5.0",
-  "_where": "/Users/paavovaananen/NativeScript/Wenture/node_modules/tns-core-modules",
+  "_where": "/Users/renne/Documents/code/Wenture/node_modules/tns-core-modules",
   "author": {
     "name": "NativeScript team"
   },

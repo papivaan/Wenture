@@ -10,7 +10,7 @@
         "spec": ">=0.0.8 <0.1.0",
         "type": "range"
       },
-      "/Users/paavovaananen/NativeScript/Wenture/node_modules/nativescript-angular"
+      "/Users/renne/Documents/code/Wenture/node_modules/nativescript-angular"
     ]
   ],
   "_from": "nativescript-intl@>=0.0.8 <0.1.0",
@@ -44,7 +44,7 @@
   "_shasum": "2a310f07f627344f75db547177db18298d430b0e",
   "_shrinkwrap": null,
   "_spec": "nativescript-intl@~0.0.8",
-  "_where": "/Users/paavovaananen/NativeScript/Wenture/node_modules/nativescript-angular",
+  "_where": "/Users/renne/Documents/code/Wenture/node_modules/nativescript-angular",
   "author": {
     "name": "Nedyalko Nikolov",
     "email": "nedyalko.nikolov@telerik.com"

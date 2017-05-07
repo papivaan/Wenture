@@ -1,3 +1,6 @@
+.fa {
+  font-family: FontAwesome, fontawesome-webfont;
+}
 .add-bar {
   background-color: #D3D3D3;
   padding: 5 10;
@@ -34,7 +37,7 @@ TextField {
   background-color: rgba(255, 255, 255, 0.5);
   border-width: 1px;
   border-color: #303030;
-  float: right;
+  border-radius: 5px;
 }
 .action-bar {
   background-color: #64706c;

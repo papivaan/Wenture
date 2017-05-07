@@ -10,7 +10,7 @@
         "spec": "1.4.0",
         "type": "version"
       },
-      "/Users/paavovaananen/NativeScript/Wenture"
+      "/Users/renne/Documents/code/Wenture"
     ]
   ],
   "_from": "nativescript-angular@1.4.0",
@@ -44,7 +44,7 @@
   "_shasum": "6ae1afff48cc7165ffebdbd98cb135e5b53eaa92",
   "_shrinkwrap": null,
   "_spec": "nativescript-angular@1.4.0",
-  "_where": "/Users/paavovaananen/NativeScript/Wenture",
+  "_where": "/Users/renne/Documents/code/Wenture",
   "bin": {
     "update-app-ng-deps": "./bin/update-app-ng-deps"
   },
