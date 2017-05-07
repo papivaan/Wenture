@@ -64,6 +64,7 @@ export class MapPageComponent implements OnInit {
   }
 // tähän menun toiminnallisuus
   menuListener(i) {
+    this.page.actionBarHidden = false;
     console.log(i);
     if(i == 1) {
       alert("Routes are yet to come");
@@ -122,6 +123,7 @@ export class MapPageComponent implements OnInit {
 
   toggleSideDrawer() {
     TnsSideDrawer.toggle();
+    this.page.actionBarHidden = true;
   }
 
 
@@ -204,6 +206,7 @@ export class MapPageComponent implements OnInit {
     this.wenturePointTitle = "";
     this.wenturePointInfo = "";
     this.markerIsSelected = false;
+    this.page.actionBarHidden = false;
   };
 
   onCoordinateLongPress = (event) => {
