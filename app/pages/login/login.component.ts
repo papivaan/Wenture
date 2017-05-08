@@ -73,7 +73,7 @@ export class LoginComponent implements OnInit {
     let container = <View>this.container.nativeElement;
     container.animate({
       // TODO: Change the signup background color to something more appealing
-      backgroundColor: this.isLoggingIn ? new Color("white") : new Color("#8B4513"),
+      backgroundColor: this.isLoggingIn ? new Color("rgba(235, 235, 235, 0.75)") : new Color("rgba(0, 0, 0, 0.75)"),
       duration: 200
     });
   }
