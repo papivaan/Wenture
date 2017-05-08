@@ -1,7 +1,7 @@
 <StackLayout #container class="container">
   <Image src="res://icon" width="100" height="100" stretch="aspectFill" horizontalAlignment="center"></Image>
-  <TextField #email hint="Email address" keyboardType="email" [(ngModel)]="user.email" autocorrect="false" autocapitalizationType="none"></TextField>
-  <TextField #password hint="Password" secure="true" [(ngModel)]="user.password"></TextField>
+  <TextField #email class="loginText" hint="Email address" keyboardType="email" [(ngModel)]="user.email" autocorrect="false" autocapitalizationType="none"></TextField>
+  <TextField #password class="loginText" hint="Password" secure="true" [(ngModel)]="user.password"></TextField>
 
   <Button [text]="isLoggingIn ? 'Log in' : 'Sign up'" class="submit-button" (tap)="submit()"></Button>
   <Button [text]="isLoggingIn ? 'Sign up' : 'Back to login'" (tap)="toggleDisplay()"></Button>

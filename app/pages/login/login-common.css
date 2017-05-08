@@ -18,5 +18,6 @@ Button, TextField {
   color: white;
   margin-top: 20;
 }
-.container {
+.loginText {
+  background-color: rgba(250, 250, 250, 0.7);
 }
