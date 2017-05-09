@@ -16,6 +16,10 @@ export class WenturePointService extends Observable {
     return this.points;
   }
 
+  getPointsString() {
+    return this.points.toString();
+  }
+
   public populate() {
     this.points.push(
       new WenturePoint("Dumpin toimisto", 62.232615, 25.737668, "Loistava paikka dumppareille piipahtaa pikkaselle kahville!", 0)

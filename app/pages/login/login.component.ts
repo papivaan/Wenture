@@ -45,6 +45,7 @@ export class LoginComponent implements OnInit {
   login() {
     if (this.user.email === "jalkanen@jaakko.fi" && this.user.password === "pasipekka") {
       this.router.navigate(["/map-page"]);
+      global.loggedUser = this.user;
     } else alert("Unfortunately we could not find your account.");
     /* This section is for everlive.
     this.userService.login(this.user)

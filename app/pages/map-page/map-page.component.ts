@@ -12,6 +12,8 @@ import { Color } from "color";
 import { ImageSource } from "image-source";
 import { WenturePoint } from "../../shared/wenturepoint/wenturepoint";
 import { WenturePointService } from "../../shared/wenturepoint/wenturepoint.service";
+import { Prize } from "../../shared/prize/prize";
+import { PrizeService } from "../../shared/prize/prize.service";
 import { TnsSideDrawer } from 'nativescript-sidedrawer';
 import { TnsSideDrawerOptionsListener } from 'nativescript-sidedrawer';
 import { PrizeViewComponent } from "./prize-view";
@@ -33,7 +35,7 @@ registerElement("MapView", () => require("nativescript-google-maps-sdk").MapView
 
 @Component({
   selector: "map-page",
-  providers: [WenturePointService, ModalDialogService],
+  providers: [WenturePointService, PrizeService, ModalDialogService],
   templateUrl: "pages/map-page/map-page.html",
   styleUrls: ["pages/map-page/map-page-common.css", "pages/map-page/map-page.css"]
 })
@@ -62,7 +64,7 @@ export class MapPageComponent implements OnInit {
     this.menuListener(i);
 
   }
-// tähän menun toiminnallisuus
+  // TODO: tähän menun toiminnallisuus
   menuListener(i) {
     this.page.actionBarHidden = false;
     console.log(i);
@@ -72,10 +74,12 @@ export class MapPageComponent implements OnInit {
 
     if(i == 4) {
         this.router.navigate(["/"]);
+        global.loggedUser = null;
     };
   }
 
-  constructor(private router: Router, private fonticon: TNSFontIconService, private wenturePointService: WenturePointService, private page: Page, private _modalService: ModalDialogService, private vcRef: ViewContainerRef) {
+  constructor(private router: Router, private fonticon: TNSFontIconService, private wenturePointService: WenturePointService, private prizeService: PrizeService, private page: Page, private _modalService: ModalDialogService, private vcRef: ViewContainerRef) {
+    this.prizeService.populate();
     this.wenturePointService.populate();
   }
 
@@ -137,7 +141,12 @@ export class MapPageComponent implements OnInit {
     // >> returning-result
     this._modalService.showModal(PrizeViewComponent, options)
         .then((/* */) => {
+            // TODO: Add prize to user's profile
+            let tempUser = global.loggedUser;
+            tempUser.prizes.push(6);
+            global.loggedUser = tempUser;
             this.markerIsSelected = false;
+            console.log("User: " + global.loggedUser.email + "\nPassword: " + global.loggedUser.password + "\nPrizes: " + global.loggedUser.prizes);
         });
     // << returning-result
   }
