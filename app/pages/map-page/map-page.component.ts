@@ -140,12 +140,13 @@ export class MapPageComponent implements OnInit {
     };
     // >> returning-result
     this._modalService.showModal(PrizeViewComponent, options)
-        .then((/* */) => {
+        .then((prizeId) => {
             // TODO: Add prize to user's profile
             let tempUser = global.loggedUser;
-            tempUser.prizes.push(6);
+            tempUser.prizes.push(prizeId);
             global.loggedUser = tempUser;
             this.markerIsSelected = false;
+            console.log(prizeId);
             console.log("User: " + global.loggedUser.email + "\nPassword: " + global.loggedUser.password + "\nPrizes: " + global.loggedUser.prizes);
         });
     // << returning-result

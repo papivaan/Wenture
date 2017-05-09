@@ -9,6 +9,7 @@ export class PrizeService extends Observable {
       super();
 
       this.prizes = new ObservableArray<Prize>([ ]);
+      this.populate();
     }
 
     getPrizes() {

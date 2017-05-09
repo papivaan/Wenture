@@ -4,6 +4,7 @@ import { Page } from "ui/page";
 import { Label } from "ui/label";
 import { PrizeService } from "../../shared/prize/prize.service";
 import { WenturePointService } from "../../shared/wenturepoint/wenturepoint.service";
+import {forEach} from "@angular/router/src/utils/collection";
 
 // >> passing-parameters
 @Component({
@@ -18,6 +19,7 @@ export class PrizeViewComponent implements OnInit {
   prizeName: string = "";
   prizeOffer: string = "";
   prizeValid: string = "";
+  prizeId: number = null;
 
   constructor(private params: ModalDialogParams, private page: Page, private prizeService: PrizeService, private wenturePointService: WenturePointService) {
       this.marker = params.context;
@@ -29,25 +31,29 @@ export class PrizeViewComponent implements OnInit {
   }
 
   public setTextViews() {
-    this.wenturePointTitle = this.marker.title;
-    for (var i = 0; i < this.wenturePointService.getPoints().length; i++) {
-      console.log("Title: " + this.wenturePointService.getPoints().getItem(i).title + ", OfferId: " + this.wenturePointService.getPoints().getItem(i).prizeId);
-      if (this.marker.title === this.wenturePointService.getPoints().getItem(i).title) {
-        for (var j = 0; j < this.prizeService.getPrizes().length; j++) {
-          console.log("Prize: " + this.prizeService.getPrizes().getItem(j).name);
-          if (this.wenturePointService.getPoints().getItem(i).prizeId === this.prizeService.getPrizes().getItem(j).id) {
-            this.prizeName = this.prizeService.getPrizes().getItem(j).name;
-            this.prizeOffer = this.prizeService.getPrizes().getItem(j).offer;
-            this.prizeValid = this.prizeService.getPrizes().getItem(j).validUntil;
-            return;
+        this.wenturePointTitle = this.marker.title;
+
+        for (var i = 0; i < this.wenturePointService.getPoints().length; i++) {
+          console.log("Title: " + this.wenturePointService.getPoints().getItem(i).title + ", OfferId: " + this.wenturePointService.getPoints().getItem(i).prizeId);
+          if (this.marker.title === this.wenturePointService.getPoints().getItem(i).title) {
+            for (var j = 0; j < this.prizeService.getPrizes().length; j++) {
+              console.log("Prize: " + this.prizeService.getPrizes().getItem(j).name);
+              if (this.wenturePointService.getPoints().getItem(i).prizeId === this.prizeService.getPrizes().getItem(j).id) {
+                  this.prizeId = this.prizeService.getPrizes().getItem(j).id;
+                  this.prizeId = 666;
+                  this.prizeName = this.prizeService.getPrizes().getItem(j).name;
+                  this.prizeOffer = this.prizeService.getPrizes().getItem(j).offer;
+                  this.prizeValid = this.prizeService.getPrizes().getItem(j).validUntil;
+                  return;
+              }
+            }
           }
         }
-      }
-    }
+
   }
 
   public submit() {
-    let label: Label = <Label>this.page.getViewById<Label>("markerTitle");
-    this.params.closeCallback(label);
+    console.log("Prize ID: " + this.prizeId);
+    this.params.closeCallback(this.prizeId);
   }
 }
