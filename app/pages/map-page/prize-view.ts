@@ -21,7 +21,7 @@ export class PrizeViewComponent implements OnInit {
   prizeValid: string = "";
   prizeId: number = null;
 
-  constructor(private params: ModalDialogParams, private page: Page, private prizeService: PrizeService, private wenturePointService: WenturePointService) {
+  constructor(private params: ModalDialogParams, private page: Page) {
       this.marker = params.context;
       this.setTextViews();
   }
@@ -33,17 +33,16 @@ export class PrizeViewComponent implements OnInit {
   public setTextViews() {
         this.wenturePointTitle = this.marker.title;
 
-        for (var i = 0; i < this.wenturePointService.getPoints().length; i++) {
-          console.log("Title: " + this.wenturePointService.getPoints().getItem(i).title + ", OfferId: " + this.wenturePointService.getPoints().getItem(i).prizeId);
-          if (this.marker.title === this.wenturePointService.getPoints().getItem(i).title) {
-            for (var j = 0; j < this.prizeService.getPrizes().length; j++) {
-              console.log("Prize: " + this.prizeService.getPrizes().getItem(j).name);
-              if (this.wenturePointService.getPoints().getItem(i).prizeId === this.prizeService.getPrizes().getItem(j).id) {
-                  this.prizeId = this.prizeService.getPrizes().getItem(j).id;
-                  this.prizeId = 666;
-                  this.prizeName = this.prizeService.getPrizes().getItem(j).name;
-                  this.prizeOffer = this.prizeService.getPrizes().getItem(j).offer;
-                  this.prizeValid = this.prizeService.getPrizes().getItem(j).validUntil;
+        for (var i = 0; i < global.wenturePointService.getPoints().length; i++) {
+          console.log("Title: " + global.wenturePointService.getPoints().getItem(i).title + ", OfferId: " + global.wenturePointService.getPoints().getItem(i).prizeId);
+          if (this.marker.title === global.wenturePointService.getPoints().getItem(i).title) {
+            for (var j = 0; j < global.prizeService.getPrizes().length; j++) {
+              console.log("Prize: " + global.prizeService.getPrizes().getItem(j).name);
+              if (global.wenturePointService.getPoints().getItem(i).prizeId === global.prizeService.getPrizes().getItem(j).id) {
+                  this.prizeId = global.prizeService.getPrizes().getItem(j).id;
+                  this.prizeName = global.prizeService.getPrizes().getItem(j).name;
+                  this.prizeOffer = global.prizeService.getPrizes().getItem(j).offer;
+                  this.prizeValid = global.prizeService.getPrizes().getItem(j).validUntil;
                   return;
               }
             }
