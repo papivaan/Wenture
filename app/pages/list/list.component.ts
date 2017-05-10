@@ -10,9 +10,8 @@ import { Page } from "ui/page";
   styleUrls: ["pages/list/list-common.css", "pages/list/list.css"]
 })
 export class ListComponent implements OnInit {
-  //prizeList: Array<Object> = [];
 
-  constructor(/*private prizeService: PrizeService, */private page: Page) {}
+  constructor(private page: Page) {}
 
   ngOnInit() {
     //this.prizeList.push({ name: "Prize1" });

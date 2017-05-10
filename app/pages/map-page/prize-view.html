@@ -4,7 +4,7 @@
     <Label id="markerTitle" class="point-title" text="{{ wenturePointTitle }}"></Label>
     <TextView class="text" col-span="*" row-span="*" text="{{ prizeName }}" editable="false"></TextView>
     <TextView class="text" col-span="*" row-span="*" text="{{ prizeOffer }}" editable="false"></TextView>
-    <TextView class="text" col-span="*" row-span="*" text="{{ prizeValid }}" editable="false"></TextView>
+    <TextView class="text" col-span="*" row-span="*" text="Valid until {{ prizeValid }}" editable="false"></TextView>
     <Button text="Claim Prize!" (tap)="submit()"></Button>
 
 </StackLayout>
