@@ -191,7 +191,7 @@ export class MapPageComponent implements OnInit {
       //Androidilla toimii. Iosille pitää katsoa miten resource toimii. PC:llä ei pystytä testaamaan
       //Ikonia joutuu hiemna muokkaamaan(pienemmäksi ja lisätään pieni osoitin alalaitaan)
       var icon = new Image();
-      icon.imageSource = imageSource.fromResource('icon');
+      icon.imageSource = imageSource.fromResource('hat-marker');
       marker.icon = icon;
       marker.draggable = true;
       marker.userData = {index: 1};
