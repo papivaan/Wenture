@@ -70,12 +70,16 @@ export class MapPageComponent implements OnInit {
     console.log(i);
     if(i == 1) {
       alert("Routes are yet to come");
-    };
+    }
+
+    if(i == 2) {
+        this.router.navigate(["/prize-list"]);
+    }
 
     if(i == 4) {
         this.router.navigate(["/"]);
         global.loggedUser = null;
-    };
+    }
   }
 
   constructor(private router: Router, private fonticon: TNSFontIconService, private page: Page, private _modalService: ModalDialogService, private vcRef: ViewContainerRef) {
@@ -96,7 +100,7 @@ export class MapPageComponent implements OnInit {
           //androidIcon: 'ic_gavel_white_24dp',
           //iosIcon: 'ic_gavel_white',
       }, {
-          title: 'My Wentures',
+          title: 'My Prizes',
           //androidIcon: 'ic_account_balance_white_24dp',
           //iosIcon: 'ic_account_balance_white',
       }, {
@@ -141,7 +145,7 @@ export class MapPageComponent implements OnInit {
     // >> returning-result
     this._modalService.showModal(PrizeViewComponent, options)
         .then((prizeId) => {
-            // TODO: Add prize to user's profile
+            // TODO: Remove that god damn marker
             let tempUser = global.loggedUser;
             tempUser.prizes.push(prizeId);
             global.loggedUser = tempUser;
