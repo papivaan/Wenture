@@ -40,7 +40,6 @@ export class PrizeViewComponent implements OnInit {
               console.log("Prize: " + global.prizeService.getPrizes().getItem(j).name);
               if (global.wenturePointService.getPoints().getItem(i).prizeId === global.prizeService.getPrizes().getItem(j).id) {
                   this.prizeId = global.prizeService.getPrizes().getItem(j).id;
-                  this.prizeId = 666;
                   this.prizeName = global.prizeService.getPrizes().getItem(j).name;
                   this.prizeOffer = global.prizeService.getPrizes().getItem(j).offer;
                   this.prizeValid = global.prizeService.getPrizes().getItem(j).validUntil;
