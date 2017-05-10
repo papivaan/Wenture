@@ -78,9 +78,9 @@ export class MapPageComponent implements OnInit {
     };
   }
 
-  constructor(private router: Router, private fonticon: TNSFontIconService, private wenturePointService: WenturePointService, private prizeService: PrizeService, private page: Page, private _modalService: ModalDialogService, private vcRef: ViewContainerRef) {
-    this.prizeService.populate();
-    this.wenturePointService.populate();
+  constructor(private router: Router, private fonticon: TNSFontIconService, private page: Page, private _modalService: ModalDialogService, private vcRef: ViewContainerRef) {
+    global.prizeService.populate();
+    global.wenturePointService.populate();
   }
 
   ngOnInit() {
@@ -177,8 +177,8 @@ export class MapPageComponent implements OnInit {
   }
 
   addWenturePoints(mapView) {
-    for (var i = 0; i < this.wenturePointService.getPoints().length; i++) {
-      var wPoint = this.wenturePointService.getPoints().getItem(i);
+    for (var i = 0; i < global.wenturePointService.getPoints().length; i++) {
+      var wPoint = global.wenturePointService.getPoints().getItem(i);
       var marker = new mapsModule.Marker();
 
       marker.position = mapsModule.Position.positionFromLatLng(wPoint.lat, wPoint.lng);
@@ -244,9 +244,9 @@ export class MapPageComponent implements OnInit {
     // Change the content of the bottom bar text
     this.wenturePointTitle = event.marker.title;
 
-    for (var i = 0; i < this.wenturePointService.getPoints().length; i++) {
-      if (event.marker.title === this.wenturePointService.getPoints().getItem(i).title) {
-        this.wenturePointInfo = this.wenturePointService.getPoints().getItem(i).info;
+    for (var i = 0; i < global.wenturePointService.getPoints().length; i++) {
+      if (event.marker.title === global.wenturePointService.getPoints().getItem(i).title) {
+        this.wenturePointInfo = global.wenturePointService.getPoints().getItem(i).info;
       }
     }
 
