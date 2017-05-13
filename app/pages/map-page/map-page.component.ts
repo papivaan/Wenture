@@ -31,6 +31,10 @@ var mapView: any;
 var collectedMarkers = [];
 var selectedMarker;
 
+//lat and long for android distance workaround
+var androidLat;
+var androidLon;
+
 registerElement("MapView", () => require("nativescript-google-maps-sdk").MapView);
 
 @Component({
@@ -191,7 +195,7 @@ export class MapPageComponent implements OnInit {
       //Androidilla toimii. Iosille pitää katsoa miten resource toimii. PC:llä ei pystytä testaamaan
       //Ikonia joutuu hiemna muokkaamaan(pienemmäksi ja lisätään pieni osoitin alalaitaan)
       var icon = new Image();
-      icon.imageSource = imageSource.fromResource('hat-marker');
+      icon.imageSource = imageSource.fromResource('hat_marker');
       marker.icon = icon;
       marker.draggable = true;
       marker.userData = {index: 1};
@@ -315,6 +319,11 @@ export function startWatch(event) {
           this.latitude = obj.latitude;
           this.longitude = obj.longitude;
           this.altitude = obj.altitude;
+
+          //lat and long for android distance workaround
+          androidLat = obj.latitude;
+          androidLon = obj.longitude;
+
           currentPosition = mapsModule.Position.positionFromLatLng(obj.latitude, obj.longitude);
 
           currentPosCircle.center = mapsModule.Position.positionFromLatLng(this.latitude, this.longitude);
@@ -347,7 +356,33 @@ function getDistanceTo(obj) {
     distance = geolocation.distance(JSON.parse(objPos)._ios, JSON.parse(currentPos)._ios);
   } else if(isAndroid) {
     console.log("Running on android.");
-    distance = 3;//geolocation.distance(JSON.parse(objPos)._android, JSON.parse(currentPos)._android);
+
+    // TODO: Jonkun pitää tarkistaa laskento, mittaus ei ole tarkka!
+    /*
+    kilometri-metri-muunnoksessa -80 ei ole millään tavoin perusteltu vakio, se vaan saa lähietäisyydellä tuloksen tuntumaan
+    tarkemmalta.
+
+    androidLat ja androidLon ovat vain kiertotie, saa keksiä paremmman
+    */
+
+    var R = 6371; // km , earth's mean radius
+    var lat1 = obj.position.latitude,
+        lat2 = androidLat,
+        lon1 = obj.position.longitude,
+        lon2 = androidLon;
+
+    var dLat = (lat2-lat1) * Math.PI / 180;
+    var dLon = (lon2-lon1) * Math.PI / 180;
+
+    var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+            Math.cos(lat1 * Math.PI / 180 * Math.cos(lat2 * Math.PI / 180)) *
+            Math.sin(dLon/2) * Math.sin(dLon/2);
+
+    var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+    var d = R * c;
+
+    distance = d * 1000 - 80; // = geolocation.distance(obj.position, currentPosition);
+
   } else {
     distance = "error";
     console.log("Could not find distance.");
