@@ -154,6 +154,9 @@ export class MapPageComponent implements OnInit {
             tempUser.prizes.push(prizeId);
             global.loggedUser = tempUser;
             this.markerIsSelected = false;
+
+            //mapView.removeMarker(selectedMarker);
+
             console.log(prizeId);
             console.log("User: " + global.loggedUser.email + "\nPassword: " + global.loggedUser.password + "\nPrizes: " + global.loggedUser.prizes);
         });
@@ -161,22 +164,17 @@ export class MapPageComponent implements OnInit {
   }
 
   collectButtonTapped() {
-    // TODO: Tähän se keräystoiminto, if distance jtn, niin tuolta toi collect()
+
     // This might be stupid, but works for now :)
     //TODO: adding collected marker to a list etc. b4 removing
 
-      collectDistance = 50;
-      if(getDistanceTo(selectedMarker) < collectDistance) {
         let amount = howManyCollected();
         this.collect(amount, selectedMarker);
         //alert("Venture point collected. \nCollected: " + amount);
         collectedMarkers.push(selectedMarker);
         mapView.removeMarker(selectedMarker);
-        //
+
         console.log("You have " + collectedMarkers.length + " collected markers.")
-      } else {
-        console.log("\nMarker too far away, move closer.");
-      }
 
   }
 
@@ -201,6 +199,7 @@ export class MapPageComponent implements OnInit {
       marker.userData = {index: 1};
       mapView.addMarker(marker);
     }
+
   }
 
   //Map events
@@ -216,6 +215,7 @@ export class MapPageComponent implements OnInit {
     var gMap = mapView.gMap;
 
     this.addWenturePoints(mapView);
+
 
   };
 
@@ -347,41 +347,19 @@ export function endWatch() {
 
 // TODO: toimimaan androidille kanssa
 function getDistanceTo(obj) {
-  let objPos = JSON.stringify(obj.position);
-  let currentPos = JSON.stringify(currentPosition);
+
   let distance = null;
 
   if(isIOS) {
-    //console.log("Running on ios.")
+    let objPos = JSON.stringify(obj.position);
+    let currentPos = JSON.stringify(currentPosition);
+
     distance = geolocation.distance(JSON.parse(objPos)._ios, JSON.parse(currentPos)._ios);
   } else if(isAndroid) {
-    console.log("Running on android.");
-
-    // TODO: Jonkun pitää tarkistaa laskento, mittaus ei ole tarkka!
-    /*
-    kilometri-metri-muunnoksessa -80 ei ole millään tavoin perusteltu vakio, se vaan saa lähietäisyydellä tuloksen tuntumaan
-    tarkemmalta.
-
-    androidLat ja androidLon ovat vain kiertotie, saa keksiä paremmman
-    */
-
-    var R = 6371; // km , earth's mean radius
-    var lat1 = obj.position.latitude,
-        lat2 = androidLat,
-        lon1 = obj.position.longitude,
-        lon2 = androidLon;
-
-    var dLat = (lat2-lat1) * Math.PI / 180;
-    var dLon = (lon2-lon1) * Math.PI / 180;
-
-    var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
-            Math.cos(lat1 * Math.PI / 180 * Math.cos(lat2 * Math.PI / 180)) *
-            Math.sin(dLon/2) * Math.sin(dLon/2);
-
-    var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
-    var d = R * c;
-
-    distance = d * 1000 - 80; // = geolocation.distance(obj.position, currentPosition);
+    //parameter order = lat1, lat2, lon1, lon2
+    var d = getDistanceFromLatLon(obj.position.latitude, androidLat, obj.position.longitude, androidLon);
+    //multiply by 1000 to get d in meters
+    distance = d * 1000;
 
   } else {
     distance = "error";
@@ -395,10 +373,27 @@ function howManyCollected() {
   return collectedMarkers.length + 1;
 }
 
-//handles the collection and returns message
-function collect(amount, mark) {
-  dialogsModule.alert({
-    message: "Wenture point " + mark.title + " collected! \nYou have: " + amount,
-    okButtonText: "OK"
-  });
+/*
+Uses Haversine formula to calculate distance of two locations
+NOT taking into account that earth is not a perfect sphere!
+Return unit is km
+*/
+function getDistanceFromLatLon(lat1, lat2, lon1, lon2) {
+  var R = 6371; // km , earth's mean radius
+
+  var dLat = degToRad(lat2-lat1);
+  var dLon = degToRad(lon2-lon1);
+
+  var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+          Math.cos(degToRad(lat1)) * Math.cos(degToRad(lat2)) *
+          Math.sin(dLon/2) * Math.sin(dLon/2);
+
+  var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+  var d = R * c;
+  return d;
+}
+
+//Takes degrees as parameter and returns same angle as radians
+function degToRad(deg) {
+   return deg * (Math.PI / 180);
 }

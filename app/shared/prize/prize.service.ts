@@ -22,7 +22,7 @@ export class PrizeService extends Observable {
 
     populate() {
       this.prizes.push(
-        new Prize("Fonum", "-15% from products", "12/2017")
+        new Prize("Fonum", "-10% from products", "12/2017")
       );
       this.prizes.push(
         new Prize("Matsi Bar", "0.5l beer from tap 2 €", "10/2017")
