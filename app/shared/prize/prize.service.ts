@@ -16,16 +16,12 @@ export class PrizeService extends Observable {
       return this.prizes;
     }
 
-    getPrizesString() {
-        return this.prizes.toString();
-    }
-
     populate() {
       this.prizes.push(
-        new Prize("Fonum", "-10% from products", "12/2017")
+        new Prize("One Company", "-10% from products", "12/2017")
       );
       this.prizes.push(
-        new Prize("Matsi Bar", "0.5l beer from tap 2 €", "10/2017")
+        new Prize("Another Inc.", "Extended free trial", "10/2017")
       );
     }
 }

@@ -1,39 +1,32 @@
 import { Component, ElementRef, OnInit, ViewChild, ViewContainerRef } from "@angular/core";
 import { isAndroid, isIOS } from "platform";
-import {registerElement} from "nativescript-angular/element-registry";
+import { registerElement } from "nativescript-angular/element-registry";
 import { ModalDialogService, ModalDialogOptions } from "nativescript-angular/modal-dialog";
 import * as geolocation from "nativescript-geolocation";
 import { TNSFontIconService } from 'nativescript-ngx-fonticon';
 import { Router } from "@angular/router";
 import { Page } from "ui/page";
-import { Button } from "ui/button";
 import { Color } from "color";
-//import { Image } from "ui/image";
-import { ImageSource } from "image-source";
-import { WenturePoint } from "../../shared/wenturepoint/wenturepoint";
 import { WenturePointService } from "../../shared/wenturepoint/wenturepoint.service";
-import { Prize } from "../../shared/prize/prize";
 import { PrizeService } from "../../shared/prize/prize.service";
 import { TnsSideDrawer } from 'nativescript-sidedrawer';
-import { TnsSideDrawerOptionsListener } from 'nativescript-sidedrawer';
 import { PrizeViewComponent } from "./prize-view";
 
-var mapsModule = require("nativescript-google-maps-sdk");
-var dialogsModule = require("ui/dialogs");
-var Image = require("ui/image").Image;
-var imageSource = require("image-source");
+let mapsModule = require("nativescript-google-maps-sdk");
+let Image = require("ui/image").Image;
+let imageSource = require("image-source");
 
-var watchId: any;
-var currentPosition: Location;
-var currentPosCircle: any;
-var collectDistance: number; //distance in m on how close to enable collect-property
-var mapView: any;
-var collectedMarkers = [];
-var selectedMarker;
+let watchId: any;
+let currentPosition: Location;
+let currentPosCircle: any;
+let collectDistance: number = 50; // How close the user needs to be in order to collect marker
+let mapView: any;
+let collectedMarkers = [];
+let selectedMarker;
 
-//lat and long for android distance workaround
-var androidLat;
-var androidLon;
+// Latitude and longitude for android distance workaround
+let androidLat;
+let androidLng;
 
 registerElement("MapView", () => require("nativescript-google-maps-sdk").MapView);
 
@@ -46,246 +39,252 @@ registerElement("MapView", () => require("nativescript-google-maps-sdk").MapView
 
 
 export class MapPageComponent implements OnInit {
-  @ViewChild("MapView") mapView: ElementRef;
-  @ViewChild("collectButton") collectButton: ElementRef;
+    @ViewChild("MapView") mapView: ElementRef;
+    @ViewChild("collectButton") collectButton: ElementRef;
 
-  latitude: number;
-  longitude: number;
-  altitude: number;
-  wenturePointTitle: string;
-  wenturePointInfo: string;
-  markerIsSelected: boolean;
-  isCloseEnoughToCollect: boolean;
-  isSidedrawerVisible: boolean = false;
-  //i stores the index value of menu
-  private _i: number = 0;
-	get i(): number {
-		return this._i;
-	}
-  //i saadaan menun sisäänrakennetusta kuuntelijasta
-	set i(i: number) {
-		this._i = i;
-    this.menuListener(i);
+    wenturePointTitle: string;
+    wenturePointInfo: string;
+    markerIsSelected: boolean;
+    isCloseEnoughToCollect: boolean;
 
-  }
-  // TODO: tähän menun toiminnallisuus
-  menuListener(i) {
-    this.page.actionBarHidden = false;
-    console.log(i);
-    if(i == 1) {
-      alert("Routes are yet to come");
+    private _menuIndex: number = 0;
+
+    constructor(private router: Router,
+              private fonticon: TNSFontIconService,
+              private page: Page,
+              private _modalService: ModalDialogService,
+              private vcRef: ViewContainerRef) {
+
+        global.prizeService.populate();
+        global.wenturePointService.populate();
     }
 
-    if(i == 2) {
-        this.router.navigate(["/prize-list"]);
-    }
 
-    if(i == 4) {
-        this.router.navigate(["/"]);
-        global.loggedUser = null;
-    }
-  }
-
-  constructor(private router: Router, private fonticon: TNSFontIconService, private page: Page, private _modalService: ModalDialogService, private vcRef: ViewContainerRef) {
-    global.prizeService.populate();
-    global.wenturePointService.populate();
-  }
-
-  ngOnInit() {
-    // TODO: Loader?
-    // TODO: menuitem iconit puuttuu, actionbarin mahd piilottaminen(?)
-    TnsSideDrawer.build({
-      templates: [{
-          title: 'Wenturepoints',
-          //androidIcon: 'ic_home_white_24dp',
-          //iosIcon: 'ic_home_white',
-      }, {
-          title: 'Routes',
-          //androidIcon: 'ic_gavel_white_24dp',
-          //iosIcon: 'ic_gavel_white',
-      }, {
-          title: 'My Prizes',
-          //androidIcon: 'ic_account_balance_white_24dp',
-          //iosIcon: 'ic_account_balance_white',
-      }, {
-          title: 'Settings',
-        //  androidIcon: 'ic_build_white_24dp',
-        //  iosIcon: 'ic_build_white',
-      }, {
-          title: 'Log out',
-        //  androidIcon: 'ic_account_circle_white_24dp',
-        //  iosIcon: 'ic_account_circle_white',
-      }],
-      textColor: new Color("white"), // color of all text including title, subtitle, and items
-	    headerBackgroundColor: new Color("#383838"),
-      backgroundColor: new Color("#282828"), // background color under the header
-      logoImage: imageSource.fromResource('icon'),
-      title: 'Wenture',
-      subtitle: 'your urban adventure!',
-      listener: (index) => {
-          this.i = index
-      },
-      context: this,
-    });
-  }
-
-  TnsSideDrawerOptionsListener = (index) => {
-    console.log(index)
-  };
-
-  toggleSideDrawer() {
-    TnsSideDrawer.toggle();
-    this.page.actionBarHidden = true;
-  }
-
-
-  createModelView(mark) {
-    let that = this;
-    let options: ModalDialogOptions = {
-        viewContainerRef: this.vcRef,
-        context: mark,
-        fullscreen: true
-    };
-    // >> returning-result
-    this._modalService.showModal(PrizeViewComponent, options)
-        .then((prizeId) => {
-            // TODO: Remove that god damn marker
-            let tempUser = global.loggedUser;
-            tempUser.prizes.push(prizeId);
-            global.loggedUser = tempUser;
-            this.markerIsSelected = false;
-
-            //mapView.removeMarker(selectedMarker);
-
-            console.log(prizeId);
-            console.log("User: " + global.loggedUser.email + "\nPassword: " + global.loggedUser.password + "\nPrizes: " + global.loggedUser.prizes);
+    ngOnInit() {
+        TnsSideDrawer.build({
+            templates: [{
+                title: 'Wenturepoints'
+            }, {
+                title: 'Routes'
+            }, {
+                title: 'My Prizes'
+            }, {
+                title: 'Settings'
+            }, {
+                title: 'Log out'
+            }],
+            textColor: new Color("white"),
+            headerBackgroundColor: new Color("#383838"),
+            backgroundColor: new Color("#282828"),
+            logoImage: imageSource.fromResource('icon'),
+            title: 'Wenture',
+            subtitle: 'your urban adventure!',
+            listener: (index) => {
+                this.menuIndex = index
+            },
+            context: this,
         });
-    // << returning-result
-  }
+    }
 
-  collectButtonTapped() {
+    get menuIndex(): number {
+      return this._menuIndex;
+    }
 
-    // This might be stupid, but works for now :)
-    //TODO: adding collected marker to a list etc. b4 removing
+    set menuIndex(menuIndex: number) {
+        this._menuIndex = menuIndex;
+        this.menuListener(menuIndex);
+    }
 
-        let amount = howManyCollected();
-        this.collect(amount, selectedMarker);
-        //alert("Venture point collected. \nCollected: " + amount);
+    menuListener(index) {
+        this.page.actionBarHidden = false;
+
+        switch(index) {
+            case 1: {
+                alert("Routes are yet to come");
+                break;
+            }
+
+            case 2: {
+                alert("Prize list is yet to come")
+                break;
+            }
+
+            case 3: {
+                alert("Settings are yet to come")
+                break;
+            }
+
+            case 4: {
+                this.router.navigate(["/"]);
+                global.loggedUser = null;
+                break;
+            }
+        }
+    }
+
+    toggleSideDrawer() {
+        TnsSideDrawer.toggle();
+        this.page.actionBarHidden = true;
+    }
+
+    collectButtonTapped() {
+        this.collect(selectedMarker);
         collectedMarkers.push(selectedMarker);
         mapView.removeMarker(selectedMarker);
-
-        console.log("You have " + collectedMarkers.length + " collected markers.")
-
-  }
-
-  collect(amount, mark) {
-    this.createModelView(mark);
-  }
-
-  addWenturePoints(mapView) {
-    for (var i = 0; i < global.wenturePointService.getPoints().length; i++) {
-      var wPoint = global.wenturePointService.getPoints().getItem(i);
-      var marker = new mapsModule.Marker();
-
-      marker.position = mapsModule.Position.positionFromLatLng(wPoint.lat, wPoint.lng);
-      marker.title = wPoint.title;
-      marker.snippet = "";
-      //Androidilla toimii. Iosille pitää katsoa miten resource toimii. PC:llä ei pystytä testaamaan
-      //Ikonia joutuu hiemna muokkaamaan(pienemmäksi ja lisätään pieni osoitin alalaitaan)
-      var icon = new Image();
-      icon.imageSource = imageSource.fromResource('hat_marker');
-      marker.icon = icon;
-      marker.draggable = true;
-      marker.userData = {index: 1};
-      mapView.addMarker(marker);
     }
 
-  }
-
-  //Map events
-  onMapReady = (event) => {
-    startWatch(event);
-
-    // Check if location services are enabled
-    if (!geolocation.isEnabled()) {
-        geolocation.enableLocationRequest();
-    } else console.log("Location services enabled.");
-
-    mapView = event.object;
-    var gMap = mapView.gMap;
-
-    this.addWenturePoints(mapView);
-
-
-  };
-
-  onCoordinateTapped = (event) => {
-    mapView = event.object;
-    this.wenturePointTitle = "";
-    this.wenturePointInfo = "";
-    this.markerIsSelected = false;
-    this.page.actionBarHidden = false;
-  };
-
-  onCoordinateLongPress = (event) => {
-    var mapView = event.object;
-    var lat = event.position.latitude;
-    var lng = event.position.longitude;
-  };
-
-  onMarkerSelect = (event) => {
-
-    interface PositionObject {
-      "latitude": string,
-      "longitude": string
+    collect(marker) {
+        this.createModelView(marker);
     }
 
-    var mapView = event.object;
+    createModelView(mark) {
+        let options: ModalDialogOptions = {
+            viewContainerRef: this.vcRef,
+            context: mark,
+            fullscreen: true
+        };
+        // >> returning-result
+        this._modalService.showModal(PrizeViewComponent, options)
+            .then((prizeId) => {
+                // TODO: Remove that god damn marker
+                let tempUser = global.loggedUser;
+                tempUser.prizes.push(prizeId);
+                global.loggedUser = tempUser;
+                this.markerIsSelected = false;
 
-    let markerPos = JSON.stringify(event.marker.position);
-    let currentPos = JSON.stringify(currentPosition);
-    let distance = getDistanceTo(event.marker);
-
-    // Make bottom bar visible
-    this.markerIsSelected = true;
-
-    // Change the content of the bottom bar text
-    this.wenturePointTitle = event.marker.title;
-
-    for (var i = 0; i < global.wenturePointService.getPoints().length; i++) {
-      if (event.marker.title === global.wenturePointService.getPoints().getItem(i).title) {
-        this.wenturePointInfo = global.wenturePointService.getPoints().getItem(i).info;
-      }
+                console.log(prizeId);
+                console.log("User: " + global.loggedUser.email +
+                    "\nPassword: " + global.loggedUser.password +
+                    "\nPrizes: " + global.loggedUser.prizes);
+            });
+        // << returning-result
     }
 
-    event.marker.snippet = "Distance: " + distance.toFixed(0) + " m";
-    if (distance < 50) {
-      this.isCloseEnoughToCollect = true;
-    } else this.isCloseEnoughToCollect = false;
+    onMapReady = (event) => {
+        startWatch(event);
 
-    selectedMarker = event.marker;
+        if (!geolocation.isEnabled()) {
+            geolocation.enableLocationRequest();
+        } else {
+            console.log("Location services enabled.");
+        }
 
-  };
+        mapView = event.object;
 
-  onMarkerBeginDragging = (event) => {
-    console.log("MarkerBeginDragging");
-  };
+        this.addWenturePoints(mapView);
+    };
 
-  onMarkerEndDragging = (event) => {
-    console.log("MarkerEndDragging");
-  };
+    addWenturePoints(mapView) {
+        for (let i = 0; i < global.wenturePointService.getPoints().length; i++) {
+            let wPoint = global.wenturePointService.getPoints().getItem(i);
+            let marker = new mapsModule.Marker();
+            let icon = new Image();
 
-  onMarkerDrag = (event) => {
-    console.log("MarkerDrag");
-  };
+            marker.position = mapsModule.Position.positionFromLatLng(wPoint.lat, wPoint.lng);
+            marker.title = wPoint.title;
+            marker.snippet = "";
+            icon.imageSource = imageSource.fromResource('hat_marker');
+            marker.icon = icon;
+            marker.draggable = true;
+            marker.userData = {index: 1};
+            mapView.addMarker(marker);
+        }
+    }
 
-  onCameraChanged = (event) => {
-    //
-  };
+    onCoordinateTapped = (event) => {
+        mapView = event.object;
+        this.wenturePointTitle = "";
+        this.wenturePointInfo = "";
+        this.markerIsSelected = false;
+        this.page.actionBarHidden = false;
+    };
 
-  onShapeSelect = (event) => {
-    console.log("Shape selected.");
-  };
+    onCoordinateLongPress = (event) => {
+
+    };
+
+    onMarkerSelect = (event) => {
+        let distance = this.getDistanceTo(event.marker);
+
+        this.markerIsSelected = true;
+        this.wenturePointTitle = event.marker.title;
+        for (let i = 0; i < global.wenturePointService.getPoints().length; i++) {
+            if (event.marker.title === global.wenturePointService.getPoints().getItem(i).title) {
+                this.wenturePointInfo = global.wenturePointService.getPoints().getItem(i).info;
+            }
+        }
+
+        event.marker.snippet = "Distance: " + distance.toFixed(0) + " m";
+        this.isCloseEnoughToCollect = distance < collectDistance;
+
+        selectedMarker = event.marker;
+    };
+
+    getDistanceTo(obj) {
+
+        let distance = null;
+
+        if(isIOS) {
+            let objPos = JSON.stringify(obj.position);
+            let currentPos = JSON.stringify(currentPosition);
+
+            distance = geolocation.distance(JSON.parse(objPos)._ios, JSON.parse(currentPos)._ios);
+        } else if(isAndroid) {
+            //parameter order = lat1, lat2, lon1, lon2
+            let d = this.getDistanceFromLatLng(obj.position.latitude, obj.position.longitude, androidLat, androidLng);
+            //multiply by 1000 to get d in meters
+            distance = d * 1000;
+
+        } else {
+            distance = "error";
+            console.log("Could not find distance.");
+        }
+        return distance;
+    }
+
+    /*
+     Uses Haversine formula to calculate distance of two locations
+     NOT taking into account that earth is not a perfect sphere!
+     Return unit is km
+     */
+    getDistanceFromLatLng(lat1, lon1, lat2, lon2) {
+    let R = 6371; // km , earth's mean radius
+
+    let dLat = this.degToRad(lat2-lat1);
+    let dLon = this.degToRad(lon2-lon1);
+
+    let a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+        Math.cos(this.degToRad(lat1)) * Math.cos(this.degToRad(lat2)) *
+        Math.sin(dLon/2) * Math.sin(dLon/2);
+
+    let c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+    let d = R * c;
+    return d;
+    }
+
+    degToRad(deg) {
+        return deg * (Math.PI / 180);
+    }
+
+    onMarkerBeginDragging = (event) => {
+        console.log("MarkerBeginDragging");
+    };
+
+    onMarkerEndDragging = (event) => {
+        console.log("MarkerEndDragging");
+    };
+
+    onMarkerDrag = (event) => {
+        console.log("MarkerDrag");
+    };
+
+    onCameraChanged = (event) => {
+
+    };
+
+    onShapeSelect = (event) => {
+        console.log("Shape selected.");
+    };
 }
 
 export function startWatch(event) {
@@ -301,7 +300,7 @@ export function startWatch(event) {
     "timestamp":string
   }
 
-  var mapView = event.object;
+  let mapView = event.object;
   currentPosCircle = new mapsModule.Circle();
   currentPosCircle.center = mapsModule.Position.positionFromLatLng(0, 0);
   currentPosCircle.visible = true;
@@ -320,9 +319,9 @@ export function startWatch(event) {
           this.longitude = obj.longitude;
           this.altitude = obj.altitude;
 
-          //lat and long for android distance workaround
+          // Latitude and longitude for android distance workaround
           androidLat = obj.latitude;
-          androidLon = obj.longitude;
+          androidLng = obj.longitude;
 
           currentPosition = mapsModule.Position.positionFromLatLng(obj.latitude, obj.longitude);
 
@@ -335,65 +334,5 @@ export function startWatch(event) {
   function(e){
       console.log("Error: " + e.message);
   },
-  {desiredAccuracy: 3, updateDistance: 10, minimumUpdateTime : 1000 * 2});
-}
-
-export function endWatch() {
-    if (watchId) {
-        geolocation.clearWatch(watchId);
-        console.log("My watch is ended... T. Jon Snow");
-    }
-}
-
-// TODO: toimimaan androidille kanssa
-function getDistanceTo(obj) {
-
-  let distance = null;
-
-  if(isIOS) {
-    let objPos = JSON.stringify(obj.position);
-    let currentPos = JSON.stringify(currentPosition);
-
-    distance = geolocation.distance(JSON.parse(objPos)._ios, JSON.parse(currentPos)._ios);
-  } else if(isAndroid) {
-    //parameter order = lat1, lat2, lon1, lon2
-    var d = getDistanceFromLatLon(obj.position.latitude, androidLat, obj.position.longitude, androidLon);
-    //multiply by 1000 to get d in meters
-    distance = d * 1000;
-
-  } else {
-    distance = "error";
-    console.log("Could not find distance.");
-  }
-    return distance;
-}
-
-
-function howManyCollected() {
-  return collectedMarkers.length + 1;
-}
-
-/*
-Uses Haversine formula to calculate distance of two locations
-NOT taking into account that earth is not a perfect sphere!
-Return unit is km
-*/
-function getDistanceFromLatLon(lat1, lat2, lon1, lon2) {
-  var R = 6371; // km , earth's mean radius
-
-  var dLat = degToRad(lat2-lat1);
-  var dLon = degToRad(lon2-lon1);
-
-  var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
-          Math.cos(degToRad(lat1)) * Math.cos(degToRad(lat2)) *
-          Math.sin(dLon/2) * Math.sin(dLon/2);
-
-  var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
-  var d = R * c;
-  return d;
-}
-
-//Takes degrees as parameter and returns same angle as radians
-function degToRad(deg) {
-   return deg * (Math.PI / 180);
+  {desiredAccuracy: 3, updateDistance: 10, minimumUpdateTime : 500 * 2});
 }
