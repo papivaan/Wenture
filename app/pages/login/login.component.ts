@@ -23,8 +23,8 @@ export class LoginComponent implements OnInit {
 
   constructor(private router: Router, private userService: UserService, private page: Page) {
     this.user = new User();
-    this.user.email = "jalkanen@jaakko.fi";
-    this.user.password = "pasipekka";
+    this.user.email = "testimies@testaa.fi";
+    this.user.password = "salasana";
   }
   ngOnInit() {
     this.page.actionBarHidden = true;
@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit {
     }
   }
   login() {
-    if (this.user.email === "jalkanen@jaakko.fi" && this.user.password === "pasipekka") {
+    if (this.user.email === "testimies@testaa.fi" && this.user.password === "salasana") {
       this.router.navigate(["/map-page"]);
       global.loggedUser = this.user;
     } else alert("Unfortunately we could not find your account.");
