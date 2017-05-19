@@ -2,6 +2,7 @@
 <!---
 One Paragraph of project description goes here
 --->
+![WentureApp](https://lh3.googleusercontent.com/Ws_Qy-R9tATdMYwsmKAMMFwVn-DjmYRTeeCf1u8FQE1O0MJox7I32C6TQxelfsYhkGeee8jNE5XMCr0=w3106-h1932)
 
 ## Getting Started
 
