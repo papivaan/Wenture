@@ -20,7 +20,7 @@ You can find a quick-setup instructions from here: http://docs.nativescript.org/
 
 ### Installing
 
-Aftewr executing the following commands on the command line you will have a working copy of the application on your local environment. You will also have all the dependencies installed and Wenture App up and running on your emulator.
+After executing the following commands on the command line you will have a working copy of the application on your local environment. You will also have all the dependencies installed and Wenture App up and running on your emulator.
 
 ```
 $ git clone https://github.com/rennehir/Wenture.git
